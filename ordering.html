@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/order.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Readex+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Store</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header_logo">
+          <img src="images/main_page/logo.svg" alt="logo" />
+        </div>
+        <nav class="nav">
+          <div class="nav_block">
+            <ul class="nav_list">
+              <li>Главная</li>
+              <li>Категории</li>
+              <li>О магазине</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+        </nav>
+        <div class="user_block">
+          <div class="user_page">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="20px"
+              id="user_page"
+            >
+              <path
+                d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"
+              />
+            </svg>
+          </div>
+          <div class="user_basket">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              id="user_basket"
+              width="27px"
+            >
+              <path
+                d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z"
+              />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="row">
+          <div class="first_column">
+            <div class="main_order">
+              <h1 class="main_oreder_text">Ordering</h1>
+            </div>
+            <div class="main_data">
+              <div class="main_data_bayer">
+                <h3 class="main_text_data_bayer">Buyer data</h3>
+              </div>
+              <form class="form" id="userInfo">
+                <div class="text-field text-field_floating-3">
+                  <input
+                    type="text"
+                    id="text"
+                    name="text"
+                    class="text-field__input"
+                  />
+                  <label for="text" class="text-field__label">Name</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="text-field__input"
+                  />
+                  <label for="email" class="text-field__label">E - mail</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input type="text" id="text" class="text-field__input" />
+                  <label for="text" class="text-field__label">Phone</label>
+                </div>
+              </form>
+            </div>
+            <div class="main_adress">
+              <div class="form_header_adress">
+                <h3 class="form_header_adress_text">Receiver address</h3>
+              </div>
+              <form class="form" id="userAddress">
+                <div class="text-field text-field_floating-3">
+                  <input type="text" id="text" class="text-field__input" />
+                  <label for="text" class="text-field__label">Country</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input type="text" id="city" class="text-field__input" />
+                  <label for="city" class="text-field__label">City</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input type="text" id="street" class="text-field__input" />
+                  <label for="street" class="text-field__label">Street</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input type="text" class="text-field__input" id="house" />
+                  <label class="text-field__label" for="house">House</label>
+                </div>
+                <div class="text-field text-field_floating-3">
+                  <input type="text" class="text-field__input" id="apartment" />
+                  <label for="apartment" class="text-field__label"
+                    >Apartment</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="main_comment">
+              <div class="main_comment_div">
+                <h3 class="main_comment_text">Comments</h3>
+              </div>
+              <div class="main_comment_textarea">
+                <textarea
+                  name="text"
+                  class="main_comment_country_text"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="second_column">
+            <div class="checked_header">
+              <h3 class="checked_header_text">You order</h3>
+            </div>
+            <table>
+              <tr class="checked_product">
+                <td class="checked_product_text">Products</td>
+                <td class="checked_product_text">Total</td>
+              </tr>
+              <tr class="checked_product">
+                <td class="checked_product_text">choose from user</td>
+                <td class="checked_product_text">$$</td>
+              </tr>
+              <tr class="checked_total">
+                <td class="checked_total_text">TOTAL</td>
+                <td class="checked_total_text">$$</td>
+              </tr>
+            </table>
+            <div class="checked_payment">
+              <div class="payment">
+                <h3 class="payment_text">Payment method</h3>
+              </div>
+              <div class="payment_chose">
+                <div class="payment_chose_cash">
+                  <input type="checkbox" checked />
+                  <span class="payment_chose_cash_text">Payment by cash</span>
+                </div>
+              </div>
+              <div class="confirm_order">
+                <p class="confirm_order_text">Confirm Order</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_col">
+            <div class="logo_footer">
+              <img src="images/main_page/logo.svg" alt="logo" />
+              <p class="logo_about">
+                Sign up for texts to be notified about our best offers on the
+                perfect gifts
+              </p>
+            </div>
+            <div class="footer_list">
+              <h3 class="list_title">All products</h3>
+              <ul class="list">
+                <li>Phones</li>
+                <li>Watch</li>
+                <li>Tablet</li>
+                <li>Laptops</li>
+              </ul>
+            </div>
+            <div class="footer_list">
+              <h3 class="list_title">Company</h3>
+              <ul class="list">
+                <li>About</li>
+                <li>Support</li>
+              </ul>
+            </div>
+            <div class="footer_list">
+              <h3 class="list_title">Follow Us</h3>
+              <a class="tel" href="tel:+380503332255">+38050-333-22-55</a>
+              <a class="mail" href="mailto:california@gmail.com"
+                >california@gmail.com</a
+              >
+              <a class="footer_link" href=""
+                ><img src="images/main_page/instagram.svg" alt="instagram"
+              /></a>
+              <a class="footer_link" href=""
+                ><img src="images/main_page/facebook.svg" alt="facebook"
+              /></a>
+              <a class="footer_link" href=""
+                ><img src="images/main_page/twitter.svg" alt="twitter"
+              /></a>
+              <img
+                class="visa"
+                src="images/main_page/visa-mastercard.svg"
+                alt="visa-mastercard"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
