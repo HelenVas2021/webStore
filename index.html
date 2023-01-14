@@ -18,10 +18,20 @@
             <nav class="nav">
                 <div class="nav_block">
                     <ul class="nav_list">
-                        <li>Главная</li>
-                        <li>Категории</li>
-                        <li>О магазине</li>
-                        <li>Контакты</li>
+                        <li>all products</li>
+                        <li role="button" data-path="nav_menu" class="list">categories
+                            <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+                            <svg id="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                        </li>
+                            <ul class="menu_item" data-target="nav_menu" >
+                                <li class="item">Phones</li>
+                                <li class="item">Watch</li>
+                                <li class="item">Tablet</li>
+                                <li class="item">Laptops</li>
+                            </ul>
+                        </li>
+                        <li>about</li>
+                        <li>contacts</li>
                     </ul>
                 </div>
             </nav>
@@ -39,27 +49,58 @@
             </div>
         </header>
         <main>
-            <div class="slider_block">
-                <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1_54)">
-                    <path d="M13 25L1 13L13 1" stroke="#08090D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                </svg>
-                <div class="slider_one">
-                    <div class="slider_text">
-                        <h1>The new phones are here take a look.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
-                        <button class="slider_btn">Подробнее</button>
+            <div class="slider">
+                <div class="btn_block">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="btn_previous" class="btn_previous">
+                        <g clip-path="url(#clip0_1_54)">
+                        <path d="M13 25L1 13L13 1"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="slider_block">
+                    <div class="slider_one slider_set">
+                        <div class="slider_text">
+                            <h1>The new phones are here take a look.</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
+                            <button class="slider_btn">Подробнее</button>
+                        </div>
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/2.png" alt="images">
+                        </div>
                     </div>
-                    <div class="slider_img">
-                        <img src="images/main_page/slider/2.png" alt="images">
+                    <div class="slider_two slider_set">
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/1.jpg" alt="images">
+                        </div>
+                    </div>
+                    <div class="slider_three slider_set">
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/3.jpg" alt="images">
+                        </div>
+                    </div>
+                    <div class="slider_four slider_set">
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/4.png" alt="images">
+                        </div>
+                    </div>
+                    <div class="slider_five slider_set">
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/5.png" alt="images">
+                        </div>
+                    </div>
+                    <div class="slider_five slider_set">
+                        <div class="slider_img">
+                            <img src="images/main_page/slider/6.png" alt="images">
+                        </div>
                     </div>
                 </div>
-                <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1_56)">
-                    <path d="M1 1L13 13L1 25" stroke="#08090D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                </svg>
+                <div class="btn_block">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="btn_next" class="btn_next">
+                        <g clip-path="url(#clip0_1_56)">
+                        <path d="M1 1L13 13L1 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </div>
             </div>
             <div class="category_block">
                 <h2 class="title_block">Shop our latest offers and categories</h2>
@@ -208,5 +249,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
