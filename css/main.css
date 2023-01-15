@@ -90,9 +90,11 @@ body {
 
 /* Slider */
 .slider_block {
-    border-radius: 10px;
-    background-color: none;
     margin: 0 auto;
+    width: 1200px;
+}
+.slider_shadow {
+    box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
 }
 
 .slider {
@@ -101,11 +103,10 @@ body {
     align-items: center;
     gap: 30px;
     padding: 0 30px;
-    border-radius: 10px;
+    
 }
 .slider_set {
     display: flex;
-    border-radius: 10px;
     justify-content: space-between;
 }
 .slider_one {
@@ -113,9 +114,6 @@ body {
     padding: 0 40px;
 }
 
-.slider_img img {
-    border-radius: 10px;
-}
 .slider_text {
     display: flex;
     flex-direction: column;
@@ -345,4 +343,7 @@ body {
 }
 .active {
     visibility: block;
+}
+.active_menu {
+    display: block;
 }

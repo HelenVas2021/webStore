@@ -8,7 +8,7 @@ document.querySelectorAll('.list').forEach(e => {
         const down = document.querySelector('#down');
         document.querySelectorAll('.menu_item').forEach(e => {
             if (!list.classList.contains('open')) {
-                list.classList.add('active');
+                list.classList.add('active_menu');
                 up.classList.add('active_mod');
                 down.classList.add('hidden');
                 down.classList.remove('active_mod');
@@ -18,7 +18,7 @@ document.querySelectorAll('.list').forEach(e => {
             }
             if (list.classList.contains('open')) {
                 clearTimeout(intervalId);
-                list.classList.remove('active');
+                list.classList.remove('active_menu');
                 down.classList.add('active_mod');
                 up.classList.remove('active_mod');
                 intervalId = setTimeout (() => {
