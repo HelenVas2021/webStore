@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Store</title>
 </head>
 <body>
@@ -213,6 +214,38 @@
                 </div>
             </div>
         </main>
+        <!-- страница товара -->
+    <div class="body oneItem container">
+        <div class="oneItem-header">
+            <h1 class="title"> Sweet Shot</h1>
+            <ul class="oneItem-header__breadcrumbs">
+                <li class="oneItem-header__breadcrumbs-li">Главная</li>
+                <li class="oneItem-header__breadcrumbs-li">Свитшоты</li>
+                <li class="oneItem-header__breadcrumbs-li">Свитшот Sweet Shot</li>
+            </ul>
+        </div>
+        <div class="oneItem-information">
+            <div class="oneItem-information__img">
+                <img src="./img/img.jpg" alt="">
+            </div>
+            <div class="oneItem-informationDiv" >
+                <p class="oneItem-information__price">311$</p>
+                <ul class="oneItem-information__feature" id="listCharacteristic">
+                </ul>
+                <div class="buy">
+                    <input type="text" value="6" class="buy__amount">
+                    <button type="button" class="button">Add to Shopping Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="response" id="response">
+            <div class="response-header">
+                <h2 class="title">Reviews:</h2>
+                <button type="button" class="button">Give feedback</button>
+            </div>
+            <div class="response-list" id="response-list"> </div>
+        </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="container">
@@ -252,5 +285,7 @@
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/helpers.js"></script>
+    <script src="js/response.js"></script>
+    <script src="js/productPage.js"></script>
 </body>
 </html>
