@@ -1,14 +1,10 @@
-/* .body {
+.container_slim {
   font-family: "Raleway", sans-serif;
-  font-style: normal;
   font-weight: 500;
-  width: 1600px;
-}
-.container {
-  max-width: 1110px;
+  width: 1100px;
   margin: 0 auto;
   background-color: #ffffff;
-} */
+}
 .oneItem-header {
   color: #000000;
   padding-top: 70px;
