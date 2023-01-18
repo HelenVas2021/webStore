@@ -1,0 +1,11 @@
+.allProductPage-title {
+  margin: 40px 0;
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+}
+.allProduct {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+}

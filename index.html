@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styleProductPage.css">
+    <link rel="stylesheet" href="css/modifier.css">
+    <link rel="stylesheet" href="css/allProducts.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Store</title>
@@ -20,7 +22,7 @@
             <nav class="nav">
                 <div class="nav_block">
                     <ul class="nav_list">
-                        <li>all products</li>
+                        <li id="allProductBtn">all products</li>
                         <li role="button" data-path="nav_menu" class="list">categories
                             <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
                             <svg id="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -47,7 +49,7 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="mainPage">
             <div class="slider">
                 <div class="btn_block">
                     <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="btn_previous" class="btn_previous">
@@ -213,7 +215,7 @@
             </div>
         </div>
         <!-- страница товара -->
-        <div class="oneitem container_slim hidden">
+        <div class="container_slim oneitem hidden">
             <div class="oneitem-header">
                 <h1 class="title"> sweet shot</h1>
                 <ul class="oneitem-header__breadcrumbs">
@@ -228,7 +230,7 @@
                 </div>
                 <div class="oneitem-informationdiv">
                     <p class="oneitem-information__price">311$</p>
-                    <ul class="oneitem-information__feature" id="listcharacteristic">
+                    <ul class="oneitem-information__feature" id="listCharacteristic">
                     </ul>
                     <div class="buy">
                         <input type="text" value="6" class="buy__amount">
@@ -244,11 +246,10 @@
                 <div class="response-list" id="response-list"> </div>
             </div>
         </div>
-        <!-- страница категорий -->
-        <div class="container_slim">
-            <div class="categories_view">
-                <div class="categories_card"></div>
-            </div>
+        <!-- страница allProduct -->
+        <div id="allProductPage" class="container_slim hidden">
+            <h1 class="allProductPage-title">All store items</h1>
+            <div id="allProducts"></div>
         </div>
     </main>
     <footer class="footer">
@@ -289,9 +290,11 @@
     <script src="js/data.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/helpers.js"></script>
-    <script src="js/category_menu.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="js/app1.js"></script>
     <script src="./js/response.js"></script>
     <script src="./js/productPage.js"></script>   
+    <script src="./js/allProducts.js"></script>
+
 </body>
 </html>
