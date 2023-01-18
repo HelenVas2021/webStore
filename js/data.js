@@ -9,7 +9,7 @@ const data = [
         color: "Black",
         memory: "128GB/8GB",
         processor: "Android",
-        img: 'sumsung1.jpg',
+        img: 'samsung1.jpg',
       },
       {
         name: "Apple iPhone 13",
@@ -36,7 +36,7 @@ const data = [
         color: "White",
         memory: "256GB/8GB",
         processor: "Samsung Exynos 1280",
-        img: 'sumsung2.jpg',
+        img: 'samsung2.jpg',
       },
       {
         name: "Apple iPhone 11",
