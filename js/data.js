@@ -9,6 +9,7 @@ const data = [
         color: "Black",
         memory: "128GB/8GB",
         processor: "Android",
+        img: 'sumsung1.jpg',
       },
       {
         name: "Apple iPhone 13",
@@ -17,6 +18,7 @@ const data = [
         color: "Pink",
         memory: "128GB",
         processor: "iOS",
+        img: 'apple1.jpg',
       },
       {
         name: "Motorola G32",
@@ -25,6 +27,7 @@ const data = [
         color: "Rose Gold",
         memory: "128GB/6GB",
         processor: "Android",
+        img: 'moto1.jpg',
       },
       {
         name: "Samsung Galaxy A53",
@@ -33,6 +36,7 @@ const data = [
         color: "White",
         memory: "256GB/8GB",
         processor: "Samsung Exynos 1280",
+        img: 'sumsung2.jpg',
       },
       {
         name: "Apple iPhone 11",
@@ -41,6 +45,7 @@ const data = [
         color: "Black",
         memory: "128GB/4GB",
         processor: "iOS",
+        img: 'apple1.jpg',
       },
       {
         name: "Motorola E40",
@@ -49,6 +54,7 @@ const data = [
         color: "Gray",
         memory: "64GB/4GB",
         processor: "Android",
+        img: 'moto2.jpg',
       },
       {
         name: "Nokia G11",
@@ -57,6 +63,7 @@ const data = [
         color: "Chocolate",
         memory: "32GB/3GB",
         processor: "Android",
+        img: 'nokia1.jpg',
       },
       {
         name: "Xiaomi Redmi Note 11",
@@ -65,6 +72,7 @@ const data = [
         color: "Gray",
         memory: "128GB/4GB",
         processor: "Android",
+        img: 'xiaomi1.jpg',
       },
       {
         name: "Apple iPhone 14 Pro",
@@ -73,6 +81,7 @@ const data = [
         color: "Gold",
         memory: "1TB",
         processor: "iOS",
+        img: 'apple3.jpg',
       },
     ],
   },
@@ -87,6 +96,7 @@ const data = [
         processor: "Octa-core Apple M1",
         OS: "macOS Big Sur",
         memory: "256GB/8GB",
+        img: 'mac1.jpg',
       },
       {
         name: "Aser Aspire 7",
@@ -159,6 +169,7 @@ const data = [
         processor: "Octa-core  Apple M2",
         OS: "macOS Montery",
         memory: "512GB/8GB",
+        img: 'mac2.jpg',
       },
     ],
   },
