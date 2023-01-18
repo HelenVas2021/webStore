@@ -247,14 +247,24 @@
             </div>
         </div>
         <!-- страница allProduct -->
-        <div id="allProductPage" class="container_slim hidden">
+        <div id="allProductPage" class="container hidden">
             <h1 class="allProductPage-title">All store items</h1>
-            <div id="allProducts"></div>
-        </div>
-        <!-- страница Category -->
-        <div class="container_slim">
-            <div class="category">
-                <div class="categories_card"></div>
+            <div class="AllProductsAndFilters">
+                <aside id="filters">
+                    <div class="filters-productType">
+                        <p class="filters-productType__title">Product type:</p>
+                        <form class='filters-productType-form'>
+                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="PHONES"
+                                    type="checkbox" value="PHONES">Phones</label>
+                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct"
+                                    id='LAPTOPS' type="checkbox" value="LAPTOPS">Laptops</label>
+                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct"
+                                    id="WATCHES" type="checkbox" value="WATCHES">Watches</label>
+                        </form>
+                    </div>
+                    <!-- <button type="button" id="filters_btn">Save</button> -->
+                </aside>
+                <div id="allProducts"></div>
             </div>
         </div>
     </main>
