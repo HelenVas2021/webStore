@@ -25,12 +25,7 @@
                             <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
                             <svg id="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                         </li>
-                            <ul class="menu_item" data-target="nav_menu" >
-                                <li class="item">Phones</li>
-                                <li class="item">Watch</li>
-                                <li class="item">Tablet</li>
-                                <li class="item">Laptops</li>
-                            </ul>
+                            <ul class="menu_item" data-target="nav_menu" ></ul>
                         </li>
                         <li>about</li>
                         <li>contacts</li>
@@ -218,7 +213,7 @@
             </div>
         </div>
         <!-- страница товара -->
-        <div class="oneitem container_slim">
+        <div class="oneitem container_slim hidden">
             <div class="oneitem-header">
                 <h1 class="title"> sweet shot</h1>
                 <ul class="oneitem-header__breadcrumbs">
@@ -247,6 +242,12 @@
                     <button type="button" class="button">give feedback</button>
                 </div>
                 <div class="response-list" id="response-list"> </div>
+            </div>
+        </div>
+        <!-- страница категорий -->
+        <div class="container_slim">
+            <div class="categories_view">
+                <div class="categories_card"></div>
             </div>
         </div>
     </main>
@@ -285,10 +286,11 @@
             </div>
         </div>
     </footer>
+    <script src="js/data.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/helpers.js"></script>
-    <script src="js/app1.js"></script>
+    <script src="js/category_menu.js"></script>
     <script src="./js/response.js"></script>
     <script src="./js/productPage.js"></script>   
 </body>

@@ -347,3 +347,8 @@ body {
 .active_menu {
     display: block;
 }
+
+/* categories_card */
+.categories_card {
+    display: flex;
+}

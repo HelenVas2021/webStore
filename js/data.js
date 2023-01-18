@@ -9,6 +9,8 @@ const data = [
         color: "Black",
         memory: "128GB/8GB",
         processor: "Android",
+        // main_images: 'images/phones/samsung1.jpg',
+        // img_arr: ['images/phones/samsung1.jpg', 'images/phones/samsung1.1.jpg', 'images/phones/samsung1.2.jpg'],
       },
       {
         name: "Apple iPhone 13",
