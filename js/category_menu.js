@@ -1,5 +1,8 @@
 let a = JSON.stringify(data);
 let arrCategories = JSON.parse(a);
+const mainPage = document.querySelector('#mainPage');
+const categoryBlock = document.querySelector('#category');
+const allProducts = document.getElementById('allProductPage');
 
 
 //подтягивает название категорий в меню
@@ -17,25 +20,32 @@ function showCategories() {
 showCategories();
 // взаимодеймтвие с категориями
 function showProducts(event) {
+    categoryBlock.classList.remove('hidden');
+    mainPage.classList.add('hidden');
+    allProducts.classList.add('hidden');
+
     const categoryIndex = event.target.getAttribute('data-category');
-    const products = data[categoryIndex].products;
+    const products = arrCategories[categoryIndex].products;
     const containerProduct = document.querySelector('.categories_card');
     containerProduct.innerHTML = '';
+    
+    let availability = 'on sale';
     
     for(let i = 0; i < products.length; i++) {
         const elem = createElement(
             'div', 
-            {'data-product': i, 'className': 'product', 'data-category': categoryIndex}, 
+            {'data-product': i, 'className': arrCategories[categoryIndex].name + ' allProducts-card _mod_size', 'data-category': categoryIndex}, 
             {click: showDetails}, 
             null,
             containerProduct);
-            elem.innerHTML= `
-                             <p><b>Name:</b> ${products[i].name}
-                             </p><p><b>Price:</b> ${products[i].price}</p>`
+            createElement('span', { className: 'allProductName'}, null, products[i].name, elem);
+            createElement('img', { src: `${products[i].main_images}`, className: 'allProductImg' }, null, null, elem);
+            createElement('span', { className: 'allProductPrice' }, null, `${products[i].price} UAN`, elem);
+            createElement('span', { className: 'allProductAvailability' }, null, availability, elem);
+            createElement('button', { type: 'button', className: 'allProduct_btn'  }, null, 'explore' , elem);
       }
   }
   function showDetails() {
 
   }
 
-// <div><img src="${products[i].main_images}"></div>

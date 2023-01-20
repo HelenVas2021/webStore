@@ -1,7 +1,7 @@
 let intervalId;
 
 document.querySelectorAll('.list').forEach(e => {
-    e.addEventListener('click', e => {
+    e.addEventListener('mouseenter', e => {
         const menu = e.currentTarget.dataset.path;
         const list = document.querySelector(`[data-target=${menu}]`);
         const up = document.querySelector('#up');
