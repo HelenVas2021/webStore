@@ -253,20 +253,53 @@
         <div id="allProductPage" class="container hidden">
             <h1 class="allProductPage-title">All store items</h1>
             <div class="AllProductsAndFilters">
-                <aside id="filters">
-                    <div class="filters-productType">
-                        <p class="filters-productType__title">Product type:</p>
-                        <form class='filters-productType-form'>
-                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="PHONES"
-                                    type="checkbox" value="PHONES">Phones</label>
-                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct"
-                                    id='LAPTOPS' type="checkbox" value="LAPTOPS">Laptops</label>
-                            <label class="filters-form__label"><input class="filters-form__input" name="typeProduct"
-                                    id="WATCHES" type="checkbox" value="WATCHES">Watches</label>
-                        </form>
-                    </div>
-                    <!-- <button type="button" id="filters_btn">Save</button> -->
-                </aside>
+                <form class='filters-productType-form' id="filters">
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Product type:</legend>
+                        <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="PHONES"
+                                type="checkbox" value="PHONES">Phones</label>
+                        <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id='LAPTOPS'
+                                type="checkbox" value="LAPTOPS">Laptops</label>
+                        <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="WATCHES"
+                                type="checkbox" value="WATCHES">Watches</label>
+                        <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="All"
+                                type="checkbox" value="ALL">All Products</label>
+                    </fieldset>
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Color</legend>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Black" type="checkbox"
+                                value="Black">Black</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Silver" type="checkbox"
+                                value="Silver">Silver</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="White" type="checkbox"
+                                value="White">White</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gold" type="checkbox"
+                                value="Gold">Golden</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
+                                value="Pink">Pink</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple" type="checkbox"
+                                value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple" type="checkbox"
+                                value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green"
+                                type="checkbox" value="Green">Green</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gray" type="checkbox"
+                                value="Gray">Gray</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Blue" type="checkbox"
+                                value="Blue">Blue</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Yellow"
+                                type="checkbox" value="Yellow">Yellow</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Chocolate"
+                                type="checkbox" value="Chocolate">Chocolate</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Brown"
+                                type="checkbox" value="Brown">Brown</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Red" type="checkbox"
+                                value="Red">Red</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="ALLColor"
+                                type="checkbox" value="ALLColor">All Color</label>
+                    </fieldset>
+                    <button class="allProduct_btn" type="button" id="buttonSaveFilter">Save</button>
+                </form>
                 <div id="allProducts"></div>
             </div>
         </div>
