@@ -10,6 +10,7 @@ const data = [
         memory: "128GB/8GB",
         processor: "Android",
         main_images: 'images/phones/samsung1.jpg',
+        image_arr:['images/phones/samsung1.jpg','images/phones/samsung1.1.jpg','images/phones/samsung1.2.jpg'],
       },
       {
         name: "Apple iPhone 13",
@@ -19,6 +20,7 @@ const data = [
         memory: "128GB",
         processor: "iOS",
         main_images: 'images/phones/apple1.jpg',
+        image_arr:['images/phones/apple1.jpg','images/phones/apple1.1.jpg','images/phones/apple1.2.jpg'],
       },
       {
         name: "Motorola G32",
@@ -28,6 +30,7 @@ const data = [
         memory: "128GB/6GB",
         processor: "Android",
         main_images: 'images/phones/moto1.jpg',
+        image_arr:['images/phones/moto1.jpg','images/phones/moto1.1.jpg','images/phones/moto1.2.jpg'],
       },
       {
         name: "Samsung Galaxy A53",
@@ -37,6 +40,7 @@ const data = [
         memory: "256GB/8GB",
         processor: "Samsung Exynos 1280",
         main_images: 'images/phones/samsung2.jpg',
+        image_arr:['images/phones/samsung2.jpg','images/phones/samsung2.1.jpg','images/phones/samsung2.2.jpg'],
       },
       {
         name: "Apple iPhone 11",
@@ -46,6 +50,7 @@ const data = [
         memory: "128GB/4GB",
         processor: "iOS",
         main_images: 'images/phones/apple2.jpg',
+        image_arr:['images/phones/apple2.jpg','images/phones/apple2.1.jpg','images/phones/apple2.2.jpg'],
       },
       {
         name: "Motorola E40",
@@ -55,6 +60,7 @@ const data = [
         memory: "64GB/4GB",
         processor: "Android",
         main_images: 'images/phones/moto2.jpg',
+        image_arr:['images/phones/moto2.jpg','images/phones/moto2.1.jpg','images/phones/moto2.2.jpg'],
       },
       {
         name: "Nokia G11",
@@ -64,6 +70,7 @@ const data = [
         memory: "32GB/3GB",
         processor: "Android",
         main_images: 'images/phones/nokia1.jpg',
+        image_arr:['images/phones/nokia1.jpg','images/phones/nokia1.1.jpg','images/phones/nokia1.2.jpg'],
       },
       {
         name: "Xiaomi Redmi Note 11",
@@ -73,6 +80,7 @@ const data = [
         memory: "128GB/4GB",
         processor: "Android",
         main_images: 'images/phones/xiaomi1.jpg',
+        image_arr:['images/phones/xiaomi1.jpg','images/phones/xiaomi1.1.jpg','images/phones/xiaomi1.2.jpg'],
       },
       {
         name: "Apple iPhone 14 Pro",
@@ -82,6 +90,7 @@ const data = [
         memory: "1TB",
         processor: "iOS",
         main_images: 'images/phones/apple3.jpg',
+        image_arr:['images/phones/apple3.jpg','images/phones/apple3.1.jpg','images/phones/apple3.2.jpg'],
       },
     ],
   },
@@ -97,6 +106,7 @@ const data = [
         OS: "macOS Big Sur",
         memory: "256GB/8GB",
         main_images: 'images/laptops/mac1.jpg',
+        image_arr:['images/laptops/mac1.jpg','images/laptops/mac1.1.jpg','images/laptops/mac1.2.jpg'],
       },
       {
         name: "Acer Aspire 7",
@@ -106,7 +116,8 @@ const data = [
         processor: "Six-core AMD Rizen 5",
         OS: "without OS",
         memory: "512GB/8GB",
-        main_images:'images/laptops/aser1.jpg'
+        main_images:'images/laptops/aser1.jpg',
+        image_arr:['images/laptops/aser1.jpg','images/laptops/aser1.1.jpg','images/laptops/aser1.2.jpg'],
       },
       {
         name: "Acer Aspire 5",
@@ -116,7 +127,8 @@ const data = [
         processor: "Quad Core AMD Rizen 3",
         OS: "without OS",
         memory: "512GB/8GB",
-        main_images:'images/laptops/aser2.jpg'
+        main_images:'images/laptops/aser2.jpg',
+        image_arr:['images/laptops/aser2.jpg','images/laptops/aser2.1.jpg','images/laptops/aser2.2.jpg'],
       },
       {
         name: "ASUS Laptop X515EA-BQ3231",
@@ -126,7 +138,8 @@ const data = [
         processor: "Dual Core Intel Core i3",
         OS: "without OS",
         memory: "512GB/16GB",
-        main_images: 'images/laptops/asus1.jpg'
+        main_images: 'images/laptops/asus1.jpg',
+        image_arr:['images/laptops/asus1.jpg','images/laptops/asus1.1.jpg','images/laptops/asus1.2.jpg'],
       },
       {
         name: "ASUS TUF Gaming F15",
@@ -136,7 +149,8 @@ const data = [
         processor: "Six-core AMD Rizen 5",
         OS: "without OS",
         memory: "512GB/16GB",
-        main_images:'images/laptops/asus2.jpg'
+        main_images:'images/laptops/asus2.jpg',
+        image_arr:['images/laptops/asus2.jpg','images/laptops/asus2.1.jpg','images/laptops/asus2.2.jpg'],
       },
       {
         name: "Asus Vivobook 15 M1502IA-BQ091",
@@ -146,7 +160,8 @@ const data = [
         processor: "8-core AMD Ryzen 7",
         OS: "without OS",
         memory: "512GB/12GB",
-        main_images:'images/laptops/asus3.jpg'
+        main_images:'images/laptops/asus3.jpg',
+        image_arr:['images/laptops/asus3.jpg','images/laptops/asus3.1.jpg','images/laptops/asus3.2.jpg'],
       },
       {
         name: "Lenovo IdeaPad Gaming 3",
@@ -156,7 +171,8 @@ const data = [
         processor: "Quad Core Intel Core i5",
         OS: "without OS",
         memory: "256GB/8GB",
-        main_images:'images/laptops/lenovo1.jpg'
+        main_images:'images/laptops/lenovo1.jpg',
+        image_arr:['images/laptops/lenovo1.jpg','images/laptops/lenovo1.1.jpg','images/laptops/lenovo1.2.jpg'],
       },
       {
         name: "Lenovo IdeaPad 5 Pro 16ACH6",
@@ -166,7 +182,8 @@ const data = [
         processor: "AMD Ryzen 7 5800H ",
         OS: "Windows 10 Pro",
         memory: "512GB/16GB",
-        main_images:'images/laptops/lenovo2.jpg'
+        main_images:'images/laptops/lenovo2.jpg',
+        image_arr:['images/laptops/lenovo2.jpg','images/laptops/lenovo2.1.jpg','images/laptops/lenovo2.2.jpg'],
       },
       {
         name: "Apple MacBook M1 Pro",
@@ -177,6 +194,7 @@ const data = [
         OS: "macOS Montery",
         memory: "512GB/16GB",
         main_images: 'images/laptops/mac2.jpg',
+        image_arr:['images/laptops/mac2.jpg','images/laptops/mac2.1.jpg','images/laptops/mac2.2.jpg'],
       },
     ],
   },
@@ -190,7 +208,8 @@ const data = [
         color: "Golden",
         memory: "16GB/1.5GB",
         processor: "Android Wear",
-        main_images: 'images/watches/samsungWatch1.1.jpg'
+        main_images: 'images/watches/samsungWatch1.1.jpg',
+        image_arr:['images/watches/samsungWatch1.1.jpg','images/watches/samsungWatch1.jpg','images/watches/samsungWatch1.2.jpg'],
       },
       {
         name: "Samsung Galaxy Watch 5",
@@ -199,7 +218,8 @@ const data = [
         color: "Silver",
         memory: "16GB/1.5GB",
         processor: "Android",
-        main_images:'images/watches/samWa2.jpg'
+        main_images:'images/watches/samWa2.jpg',
+        image_arr:['images/watches/samWa2.jpg','images/watches/samWa2.1.jpg','images/watches/samWa2.2.jpg'],
       },
       {
         name: "Amazfit GTR 4",
@@ -208,7 +228,8 @@ const data = [
         color: "Brown",
         memory: "32GB/4GB",
         processor: "Another",
-        main_images:'images/watches/amazfitWatch1.jpg'
+        main_images:'images/watches/amazfitWatch1.jpg',
+        image_arr:['images/watches/amazfitWatch1.jpg','images/watches/amazfitWatch1.1.jpg','images/watches/amazfitWatch1.2.jpg'],
       },
       {
         name: "Xiaomi Watch S1",
@@ -217,7 +238,8 @@ const data = [
         color: "Blue",
         memory: "16GB/1.5GB",
         processor: "Android",
-        main_images:'images/watches/xiaomiWatch1.jpg'
+        main_images:'images/watches/xiaomiWatch1.jpg',
+        image_arr:['images/watches/xiaomiWatch1.jpg','images/watches/xiaomiWatch1.1.jpg','images/watches/xiaomiWatch1.2.jpg'],
       },
       {
         name: "Amazfit Bip 3",
@@ -226,7 +248,8 @@ const data = [
         color: "Pink",
         memory: "16GB/1.7GB",
         processor: "Android",
-        main_images: 'images/watches/amazfitW2.jpg'
+        main_images: 'images/watches/amazfitW2.jpg',
+        image_arr:['images/watches/amazfitW2.jpg','images/watches/amazfitW2.1.jpg','images/watches/amazfitW2.2.jpg'],
       },
       {
         name: "Amazfit Bip 3 Pro",
@@ -235,7 +258,8 @@ const data = [
         color: "Black",
         memory: "16GB/1.7GB",
         processor: "Android",
-        main_images: 'images/watches/amazfitW3.jpg'
+        main_images: 'images/watches/amazfitW3.jpg',
+        image_arr:['images/watches/amazfitW3.jpg','images/watches/amazfitW3.1.jpg','images/watches/amazfitW3.2.jpg'],
       },
       {
         name: "Aura X1 Pro",
@@ -244,7 +268,8 @@ const data = [
         color: "White",
         memory: "8GB/1.0GB",
         processor: "Android",
-        main_images: 'images/watches/auraW1.jpg'
+        main_images: 'images/watches/auraW1.jpg',
+        image_arr:['images/watches/auraW1.jpg','images/watches/auraW1.1.jpg','images/watches/auraW1.2.jpg'],
       },
       {
         name: "Canyon Badian SW-68",
@@ -253,7 +278,8 @@ const data = [
         color: "Black",
         memory: "8GB/1.0GB",
         processor: "Android",
-        main_images: 'images/watches/amazfitW3.jpg'
+        main_images: 'images/watches/amazfitW3.jpg',
+        image_arr:['images/watches/amazfitW3.jpg','images/watches/amazfitW3.1.jpg','images/watches/amazfitW3.2.jpg'],
       },
       {
         name: "Aura X2 Pro",
@@ -262,8 +288,114 @@ const data = [
         color: "Red",
         memory: "16GB/1.6GB",
         processor: "Android",
-        main_images: 'images/watches/auraW2.jpg'
+        main_images: 'images/watches/auraW2.jpg',
+        image_arr:['images/watches/auraW2.jpg','images/watches/auraW2.1.jpg','images/watches/auraW2.2.jpg'],
       },
     ],
   },
+  {
+    name: "TABLETS",
+    products:[
+      {
+        name: "Apple iPad",
+        diagonal: 10.2,
+        price: 16999,
+        color: "Silver",
+        processor: "A13 Bionic",
+        OS: "iPadOS",
+        memory: "64GB",
+        main_images: 'images/tablets/appleAipad1.jpg',
+        image_arr:['images/tablets/appleAipad1.jpg','images/tablets/appleAipad1.1.jpg','images/tablets/appleAipad1.2.jpg'],
+      },
+      {
+        name: "Lenovo Tab M10 Plus",
+        diagonal: 10.61,
+        price: 12499,
+        color: "Grey",
+        processor: "Qualcomm Snapdragon 680",
+        OS: "Android",
+        memory: "128GB/4GB",
+        main_images: 'images/tablets/lenovoTab1.1.jpg',
+        image_arr:['images/tablets/lenovoTab1.1.jpg','images/tablets/lenovoTab1.jpg','images/tablets/lenovoTab1.2.jpg'],
+      },
+      {
+        name: "Samsung Galaxy Tab A7",
+        diagonal: 8.7,
+        price: 6199,
+        color: "Grey",
+        processor: "MediaTek Helio P22T",
+        OS: "Android",
+        memory: "32GB/3GB",
+        main_images: 'images/tablets/samsungTab1.jpg',
+        image_arr:['images/tablets/samsungTab1.jpg','images/tablets/samsungTab1.1.jpg','images/tablets/samsungTab1.2.jpg'],
+      },
+      {
+        name: "Samsung Galaxy Tab S7",
+        diagonal: 12.4,
+        price: 23699,
+        color: "Silver",
+        processor: "Qualcomm Snapdragon 750G",
+        OS: "Android",
+        memory: "64GB/4GB",
+        main_images: 'images/tablets/samsungTab2.jpg',
+        image_arr:['images/tablets/samsungTab2.jpg','images/tablets/samsungTab2.1.jpg','images/tablets/samsungTab2.2.jpg'],
+      },
+      {
+        name: "Lenovo Tab M10 Plus",
+        diagonal: 12.4,
+        price: 10999,
+        color: "Grey",
+        processor: "Qualcomm Snapdragon 680",
+        OS: "Android",
+        memory: "128GB/4GB",
+        main_images: 'images/tablets/lenovoTab2.jpg',
+        image_arr:['images/tablets/lenovoTab2.jpg','images/tablets/lenovoTab2.1.jpg','images/tablets/lenovoTab2.2.jpg'],
+      },
+      {
+        name: "Apple iPad Air",
+        diagonal: 10.9,
+        price: 29999,
+        color: "Grey",
+        processor: "Apple M1",
+        OS: "iPadOS",
+        memory: "64GB/8GB",
+        main_images: 'images/tablets/appleTab2.jpg',
+        image_arr:['images/tablets/appleTab2.jpg','images/tablets/appleTab2.1.jpg','images/tablets/appleTab2.2.jpg'],
+      },
+      {
+        name: "Xiaomi Redmi Pad",
+        diagonal: 10.61,
+        price: 8999,
+        color: "Grey",
+        processor: "MediaTek Helio G99 ",
+        OS: "Android",
+        memory: "64GB/3GB",
+        main_images: 'images/tablets/xiaomiTab1.jpg',
+        image_arr:['images/tablets/xiaomiTab1.jpg','images/tablets/xiaomiTab1.1.jpg','images/tablets/xiaomiTab1.2.jpg'],
+      },
+      {
+        name: "Huawei Matepad",
+        diagonal: 10.4,
+        price: 10999,
+        color: "Grey",
+        processor: "Huawei Kirin 710A",
+        OS: "HarmonyOS 2.0",
+        memory: "128GB/4GB",
+        main_images: 'images/tablets/huaweiTab1.jpg',
+        image_arr:['images/tablets/huaweiTab1.jpg','images/tablets/huaweiTab1.1.jpg','images/tablets/huaweiTab1.2.jpg'],
+      },
+      {
+        name: "Xiaomi Mi Pad 5",
+        diagonal: 11.0,
+        price: 14999,
+        color: "Grey",
+        processor: "Qualcomm Snapdragon 860",
+        OS: "Android",
+        memory: "128GB/6GB",
+        main_images: 'images/tablets/mixiaomiTab2.jpg',
+        image_arr:['images/tablets/mixiaomiTab2.jpg','images/tablets/mixiaomiTab2.1.jpg','images/tablets/mixiaomiTab2.2.jpg'],
+      },
+    ]
+
+  }
 ];
