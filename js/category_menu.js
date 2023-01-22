@@ -1,9 +1,5 @@
 let a = JSON.stringify(data);
 let arrCategories = JSON.parse(a);
-const mainPage = document.querySelector('#mainPage');
-const categoryBlock = document.querySelector('#category');
-const allProducts = document.getElementById('allProductPage');
-
 
 //подтягивает название категорий в меню
 function showCategories() {
@@ -23,6 +19,8 @@ function showProducts(event) {
     categoryBlock.classList.remove('hidden');
     mainPage.classList.add('hidden');
     allProducts.classList.add('hidden');
+    about.classList.add('hidden');
+    contacts.classList.add('hidden');
 
     const categoryIndex = event.target.getAttribute('data-category');
     const products = arrCategories[categoryIndex].products;

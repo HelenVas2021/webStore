@@ -16,7 +16,9 @@ document.querySelectorAll('.list').forEach(e => {
                     list.classList.add('open');
                 },0);
             }
-            if (list.classList.contains('open')) {
+        })
+        document.querySelectorAll('.menu_item').forEach(e => {
+            e.addEventListener('mouseleave', e => {
                 clearTimeout(intervalId);
                 list.classList.remove('active_menu');
                 down.classList.add('active_mod');
@@ -24,8 +26,9 @@ document.querySelectorAll('.list').forEach(e => {
                 intervalId = setTimeout (() => {
                     list.classList.remove('open');
                 },0);
-            }
+            })
         })
     });     
 });
+
 

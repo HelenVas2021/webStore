@@ -28,8 +28,8 @@
                         </li>
                             <ul class="menu_item" data-target="nav_menu"></ul>
                         </li>
-                        <li>about</li>
-                        <li>contacts</li>
+                        <li id="aboutBtn">about</li>
+                        <li id="contactsBtn">contacts</li>
                     </ul>
                 </div>
             </nav>
@@ -48,6 +48,7 @@
         </div>
     </header>
     <main>
+        <!-- страница main -->
         <div class="container" id="mainPage">
             <div class="slider">
                 <div class="btn_block">
@@ -250,7 +251,7 @@
             </div>
         </div>
         <!-- страница allProduct -->
-        <div id="allProductPage" class="container hidden">
+        <div class="container hidden" id="allProductPage">
             <h1 class="allProductPage-title">All store items</h1>
             <div class="AllProductsAndFilters">
                 <form class='filters-productType-form' id="filters">
@@ -320,6 +321,51 @@
                 <div id="allProducts"></div>
             </div>
         </div>
+        <!-- страница about -->
+        <div class="container_slim about hidden" id="about">
+            <div class="about_block">
+                <div class="about_text">
+                    <h2>about us</h2>
+                    <p>We, <span class="name_logo">"California"</span> are experts in the field of gadgets. Having started our history in 2020 with one outlet in Ukraine, we have grown into a group of companies that includes a national retail chain of more than 50 stores, an online marketplace <span class="name_logo">california.com</span>, a wholesale company and a portfolio of own brands of accessories for Apple and Samsung products.</p>
+                </div>
+                <div class="about_img">
+                    <img src="images/about/3.webp" alt="about_us">
+                </div>
+            </div>
+        </div>
+        <!-- страница contacts -->
+        <div class="container_slim contacts hidden" id="contacts">
+            <div class="contacts-block">
+                <div class="contacts-block_adress">
+                    <div class="adress">
+                        <p>Khreshchatyk street, 38, Kyiv, 01001</p>
+                    </div>
+                    <div class="contact-tel">
+                        <p class="tel"><a href="tel:+380503332255">+38050-333-22-55</a></p>
+                        <p><a class="mail" href="mailto:california@gmail.com">california@gmail.com</a></p>
+                    </div>
+                    <div class="page">
+                        <a class="footer_link" href=""><img src="images/main_page/instagram.svg" alt="instagram"></a>
+                        <a class="footer_link" href=""><img src="images/main_page/facebook.svg" alt="facebook"></a>
+                        <a class="footer_link" href=""><img src="images/main_page/twitter.svg" alt="twitter"></a>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10163.16204060085!2d30.51128649621849!3d50.44500261937618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfb1fa95245d%3A0x315e64e66a95dc45!2zSmFjYWRpINCm0KPQnA!5e0!3m2!1sru!2sua!4v1674336865808!5m2!1sru!2sua" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contacts-block_form">
+                    <form action="#" method="get">
+                        <h2>Have any questions? Contact us</h2>
+                        <p><input type="text" id="name" name="name" placeholder="Name"></p>
+                        <p><input type="text" id="message" name="message" placeholder="Message"></p>
+                        <h3>How to answer you?</h3>
+                        <p><input type="tel" name="tel" id="tel" placeholder="Phone number"></p>
+                        <p><input type="email" name="email" id="email" placeholder="Email"></p>
+                        <button class="btn-accent">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -330,7 +376,7 @@
                 </div>
                 <div class="footer_list">
                     <h3 class="list_title">All products</h3>
-                    <ul class="list">
+                    <ul class="fooret_list">
                         <li>Phones</li>
                         <li>Watch</li>
                         <li>Tablet</li>
@@ -339,7 +385,7 @@
                 </div>
                 <div class="footer_list">
                     <h3 class="list_title">Company</h3>
-                    <ul class="list">
+                    <ul class="fooret_list">
                         <li>About</li>
                         <li>Support</li>
                     </ul>
@@ -357,6 +403,7 @@
         </div>
     </footer>
     <script src="js/data.js"></script>
+    <script src="js/main_app.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
     <script src="./js/helpers.js"></script>
