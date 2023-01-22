@@ -14,31 +14,34 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 1100px; /* изменила */
+  width: 1100px;
   justify-content: space-evenly;
 }
 /* изменила */
 .allProducts-card {
   display: grid;
-  grid-template-rows: 70px 200px 40px 30px; /* изменила */
-  padding: 20px 30px; /* изменила */
+  grid-template-rows: 70px 200px 40px 30px;
+  padding: 20px 30px;
   width: 250px;
   margin-bottom: 15px;
-  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15); /* изменила */
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 ._mod_size {
   width: 300px;
 }
 .allProducts-card:hover {
-  transform: scale(1.02); /* изменила */
-  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%); /* изменила */
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
   cursor: pointer;
+}
+.allProducts-card__notActive {
+  opacity: 0.4;
 }
 .allProductName {
   font-family: "Inter", sans-serif;
-  font-size: 18px; /* изменила */
-  line-height: 24px; /* изменила */
+  font-size: 18px;
+  line-height: 24px;
   margin: 10px;
   text-transform: uppercase;
 }
@@ -47,47 +50,50 @@
   margin-top: auto;
   margin-bottom: auto;
   width: 100%;
-  max-height: 200px; /* изменила */
+  max-height: 200px;
 }
 .allProductPrice {
   font-family: "Inter";
   font-weight: 400;
-  font-size: 16px; /* изменила */
-  line-height: 18px; /* изменила */
-  margin-top: 20px; /* изменила */
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 20px;
 }
 .allProductAvailability {
-  font-size: 15px; /* изменила */
-  line-height: 18px; /* изменила */
+  font-size: 15px;
+  line-height: 18px;
   margin: 10px 0;
   color: green;
 }
 .allProduct_btn {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px; /* изменила */
-  line-height: 18px; /* изменила */
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   padding: 10px 40px;
-  border: 1px solid #6e9c9f; /* изменила */
-  background: #6e9c9f; /* изменила */
+  border: 1px solid #6e9c9f;
+  background: #6e9c9f;
   margin: 10px 0px;
-  color: #ffffff; /* изменила */
+  color: #ffffff;
   border-radius: 5px;
 }
 .allProduct_btn:hover {
-  background-color: #579763; /* изменила */
-  color: #ffffff; /* изменила */
-  border: 1px solid #579763; /* изменила */
+  background-color: #579763;
+  color: #ffffff;
+  border: 1px solid #579763;
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
   cursor: pointer;
 }
 #filters {
   display: block;
   width: 200px;
-  background-color: #f8f9fa;
   border-radius: 15px;
   padding: 10px;
+}
+.filters-title {
+  font-size: 42px;
+  line-height: 52px;
 }
 .filters-productType__title {
   font-size: 22px;
@@ -101,9 +107,12 @@
   text-align: start;
   margin-left: 10px;
 }
+/*  */
 .filters-form__label {
   font-size: 20px;
   line-height: 25px;
+  display: flex;
+  align-items: center;
 }
 .hiddenAllProducts {
   display: none;
@@ -112,7 +121,17 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  margin-top: 20px;
+  border: 1px solid #6e9c9f;
+  border-radius: 15px;
+  padding-bottom: 5px;
 }
+.filters-fieldset:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 40%);
+  cursor: pointer;
+}
+
 .filters-form__input,
 .filters-form__color {
   appearance: none;
@@ -145,4 +164,64 @@
   color: white;
   padding: initial;
   font-weight: bold;
+}
+.filter-price {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 5px;
+}
+.filters-price__value {
+  width: 55px;
+  height: 35px;
+  display: block;
+  font-family: inherit;
+  background-color: #f8f9fa;
+  border: 1px solid #6e9c9f;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: center;
+}
+.filters-price__text {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 5px;
+}
+.filters-price__value:hover {
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+}
+.filters-price__value:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.filter-price__slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #aaa8a8;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.filter-price__slider:hover {
+  opacity: 1;
+}
+
+.filter-price__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6e9c9f;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.filter-notAviability {
+  color: red;
 }

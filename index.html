@@ -262,6 +262,8 @@
                                 type="checkbox" value="LAPTOPS">Laptops</label>
                         <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="WATCHES"
                                 type="checkbox" value="WATCHES">Watches</label>
+                        <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="TABLETS" type="checkbox"
+                                value="TABLETS">Tablets</label>
                         <label class="filters-form__label"><input class="filters-form__input" name="typeProduct" id="All"
                                 type="checkbox" value="ALL">All Products</label>
                     </fieldset>
@@ -269,20 +271,20 @@
                         <legend class="filters-productType__title">Color</legend>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Black" type="checkbox"
                                 value="Black">Black</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Silver" type="checkbox"
-                                value="Silver">Silver</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Silver"
+                                type="checkbox" value="Silver">Silver</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="White" type="checkbox"
                                 value="White">White</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gold" type="checkbox"
                                 value="Gold">Golden</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
                                 value="Pink">Pink</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple" type="checkbox"
-                                value="Purple">Purple</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple" type="checkbox"
-                                value="Purple">Purple</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green"
-                                type="checkbox" value="Green">Green</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green" type="checkbox"
+                                value="Green">Green</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gray" type="checkbox"
                                 value="Gray">Gray</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Blue" type="checkbox"
@@ -291,12 +293,27 @@
                                 type="checkbox" value="Yellow">Yellow</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Chocolate"
                                 type="checkbox" value="Chocolate">Chocolate</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Brown"
-                                type="checkbox" value="Brown">Brown</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Brown" type="checkbox"
+                                value="Brown">Brown</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Red" type="checkbox"
                                 value="Red">Red</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="ALLColor"
                                 type="checkbox" value="ALLColor">All Color</label>
+                    </fieldset>
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Price</legend>
+                        <span class="filters-price__text"> Min price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-minPriceValue" class="filters-price__value" value="0">
+                            <input id="filters-minPriceBtn" type="range" min="0" max="100000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                        <span class="filters-price__text"> Max price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-maxPriceValue" class="filters-price__value" value="0">
+                            <input id="filters-maxPriceBtn" type="range" min="0" max="150000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
                     </fieldset>
                     <button class="allProduct_btn" type="button" id="buttonSaveFilter">Save</button>
                 </form>
