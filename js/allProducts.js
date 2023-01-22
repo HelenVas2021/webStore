@@ -13,8 +13,11 @@ document.getElementById("filters-maxPriceBtn").oninput = function () {
 
 function showAllProduct() {
     document.getElementById('allProducts').textContent = '';
-    document.getElementById('mainPage').classList.add('hidden');
     document.getElementById('allProductPage').classList.remove('hidden');
+    let pagesArr = ['category', 'mainPage']
+    for (let i = 0; i < pagesArr.length; i++) {
+        document.getElementById(pagesArr[i]).classList.add('hidden');
+    }
     const allProducts = document.getElementById('allProducts');
     let index = 0;
     let availability;
