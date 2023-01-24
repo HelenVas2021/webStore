@@ -14,12 +14,14 @@ document.getElementById("filters-maxPriceBtn").oninput = function () {
 function showAllProduct() {
     document.getElementById('allProducts').textContent = '';
     document.getElementById('allProductPage').classList.remove('hidden');
-    let pagesArr = ['category', 'mainPage']
+    let pagesArr = ['category', 'mainPage', 'oneItem']
     for (let i = 0; i < pagesArr.length; i++) {
         document.getElementById(pagesArr[i]).classList.add('hidden');
     }
     const allProducts = document.getElementById('allProducts');
     let index = 0;
+    let indexParent = 0;
+    let indexChild = 0;
     let availability;
     for (let i = 0; i < data.length; i++) {
         for (let j = 0; j < data[i].products.length; j++){
@@ -37,7 +39,7 @@ function showAllProduct() {
             createElement('img', { id: `img${index}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elem);
             createElement('span', {id: data[i].products[j].price , className: 'allProductPrice' }, null, `${data[i].products[j].price} UAH`, elem);
             createElement('span', { id: `availability${index}`, className: 'allProductAvailability' }, null, availability, elem);
-            createElement('button', { type: 'button', className: 'allProduct_btn' }, null, 'explore', elem);
+            createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParent, 'data-product': indexChild }, { click: showProductPage }, 'explore', elem);
             let card = document.getElementById(index);
             if (availability === 'is expected') {  
                 let elem = document.getElementById(`availability${index}`);
@@ -45,7 +47,10 @@ function showAllProduct() {
                 card.classList.add('allProducts-card__notActive')
             }
             index++
+            indexChild++
         }
+        indexParent++
+        indexChild = 0;
     }
 }
 function getCheckedCheckBoxes() {

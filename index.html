@@ -219,22 +219,22 @@
             <div class="categories_card allProducts"></div>
         </div>
         <!-- страница товара -->
-        <div class="container_slim oneitem hidden">
-            <div class="oneitem-header">
-                <h1 class="title">sweet shot</h1>
-                <ul class="oneitem-header__breadcrumbs">
+        <div class="container_slim oneitem hidden" id="oneItem">
+            <div class="oneItem-header">
+                <h1 class="title" id="titleOneItem"></h1>
+                <!-- <ul class="oneitem-header__breadcrumbs">
                     <li class="oneitem-header__breadcrumbs-li">главная</li>
                     <li class="oneitem-header__breadcrumbs-li">свитшоты</li>
                     <li class="oneitem-header__breadcrumbs-li">свитшот sweet shot</li>
-                </ul>
+                </ul> -->
             </div>
-            <div class="oneitem-information">
-                <div class="oneitem-information__img">
-                    <img src="images/phones/apple1.1.jpg" alt="">
+            <div class="oneItem-information">
+                <div class="oneItem-information__img" id="oneItemImg">
+                    <img src="images/phones/apple1.1.jpg" alt="" id="imgOneItem">
                 </div>
-                <div class="oneitem-informationdiv">
-                    <p class="oneitem-information__price">311$</p>
-                    <ul class="oneitem-information__feature" id="listCharacteristic">
+                <div class="oneItem-informationdiv">
+                    <p class="oneItem-information__price" id="priceOneItem"></p>
+                    <ul class="oneItem-information__feature" id="listCharacteristic">
                     </ul>
                     <div class="buy">
                         <input type="text" value="6" class="buy__amount">
@@ -409,8 +409,8 @@
     <script src="./js/helpers.js"></script>
     <script src="js/category_menu.js"></script>
     <script src="./js/response.js"></script>
-    <script src="./js/productPage.js"></script>   
     <script src="./js/allProducts.js"></script>
+    <script src="./js/productPage.js"></script>
 
 </body>
 </html>
