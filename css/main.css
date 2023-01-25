@@ -362,6 +362,8 @@ body {
 /* categories_card */
 .categories_card {
     display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
 }
 /* category */
 .category_btn {
@@ -386,9 +388,7 @@ body {
     background: #ffffff;
     cursor: pointer;
 }
-.descending {
-    margin-right: 25px;
-}
+
 .ascending:hover, .descending:hover {
     border: 1px solid  #579763;
     color:  #579763;

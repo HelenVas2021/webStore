@@ -245,3 +245,9 @@
   border: 1px solid #579763;
   color: #579763;
 }
+/* добавила */
+.categories_card {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
