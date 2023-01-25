@@ -1,6 +1,7 @@
 body {
   height: 100%;
   background-color: #e5e5e5;
+  position: relative;
 }
 
 html {
@@ -8,6 +9,7 @@ html {
 }
 main {
   flex: 1 1 auto;
+  
 }
 
 .main_order {
@@ -29,10 +31,13 @@ main {
   font-size: 55px;
   line-height: 61px;
 }
-.container {
+/* .container {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+} */
+.hiddenPage {
+  visibility: hidden;
 }
 .main_data_bayer {
   text-align: left;
@@ -260,23 +265,111 @@ textarea {
   width: 180px;
   height: 24px;
 }
-span {
+/* span {
   font-size: 17px;
   line-height: 28.3px;
   letter-spacing: 2%;
-}
-.confirm_order {
+} */
+.confirm_order_text{
   width: 246px;
   height: 68px;
-  padding: 22px, 50px, 22px, 50px;
+  padding: 22px, 50px, 12px, 50px;
   background-color: #6e9c9f;
   border-radius: 5%;
   margin-top: 15px;
+  float: left;
 }
-.confirm_order_text {
+button {
+  border: none;
+  background-color: #6e9c9f;
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 2%;
-  color: #ffffff;
-  padding-top: 22px;
+  color: #fff;
+}
+.confirm_order_text:hover{
+  background-color: #F8F9FA;
+  color:#6E9C9F;
+  border: 1px solid #579763;
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+  cursor: pointer;
+  
+}
+
+.text-field__message {
+  display: block;
+  width: 80%;
+  margin-top: .25rem;
+  font-size: .875rem;
+  text-align: right;
+  color: #dc3545;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5625rem center;
+  background-size: 15.125rem 1.125rem;
+}
+
+.hidden{
+  visibility: hidden;
+  
+}
+.final_confirm{
+  position: absolute;
+  top: 269px;
+  left: 250px;
+}
+.get_order{
+  width: 500px;
+  height: 61px;
+  font-size: 55px;
+  line-height: 61px;
+  text-align: left;
+}
+.marker_square{
+  width: 72px;
+  height: 84px;
+  padding-left: 30px;
+  padding-top:250px;
+}
+.marker_arrow{
+  position: absolute;
+  top: 340px;
+  left:50px
+}
+.confirm_text_header{
+  position: absolute;
+  top: 300px;
+  left:120px;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: left;
+}
+.confirm_connection_text{
+  position: absolute;
+  top: 335px;
+  left:120px;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: left;
+}
+.confirm_button{
+  position: absolute;
+  top: 320px;
+  margin-left: 500px;
+  width: 272px;
+  height: 68px;
+  font-size: 17px;
+
+}
+.confirm_button:hover{
+  background-color: #F8F9FA;
+  color:#6E9C9F;
+  border: 1px solid #579763;
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+  cursor: pointer;
+  
+}
+.final_confirm {
+  flex: 1 1 auto;
+  
 }
