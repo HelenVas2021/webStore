@@ -36,14 +36,17 @@ function showProducts(event) {
         const elem = createElement(
             'div', 
             {'id': i, 'className': arrCategories[categoryIndex].name + ' allProducts-card _mod_size', 'data-category': categoryIndex, 'data-price': products[i].price}, 
-            {click: showDetails}, 
+            null, 
             null,
             containerProduct);
+            elem.classList.add('allProducts-card');
+            elem.classList.add('showAllProducts');
+            elem.classList.add(products[i].color);
             createElement('span', { className: 'allProductName'}, null, products[i].name, elem);
             createElement('img', { src: `${products[i].main_images}`, className: 'allProductImg' }, null, null, elem);
-            createElement('span', { className: 'allProductPrice' }, null, `${products[i].price} UAN`, elem);
+            createElement('span', { id: products[i].price, className: 'allProductPrice' }, null, `${products[i].price} UAN`, elem);
             createElement('span', { id: `availability${i}`, className: 'allProductAvailability' }, null, availability, elem);
-            createElement('button', { type: 'button', className: 'allProduct_btn'  }, null, 'explore' , elem);
+            createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category': categoryIndex, 'data-product': i}, { click: showProductPage }, 'explore' , elem);
             let card = document.getElementById(i);
             if (availability === 'is expected') {  
                 let elem = document.getElementById(`availability${i}`);
@@ -51,9 +54,6 @@ function showProducts(event) {
                 card.classList.add('allProducts-card__notActive');
             }
       }
-  }
-  function showDetails() {
-
   }
 
 // сортировка

@@ -1,5 +1,5 @@
 .container_slim {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   width: 1100px;
   margin: 0 auto;
@@ -11,14 +11,16 @@
   padding-bottom: 50px;
 }
 .oneItem-title {
-  font-size: 55px;
-  line-height: 110%;
-  letter-spacing: 0.02em;
-  margin: 0;
+  font-size: 35px;
+    line-height: 50%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: #579763;
 }
 .oneItem-header__breadcrumbs {
   display: flex;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.02em;
   list-style-type: none;
@@ -26,6 +28,7 @@
   margin-bottom: 20px;
   margin-left: 25px;
   text-transform: uppercase;
+  color: #717171;
 }
 .oneItem-header__breadcrumbs-li {
   padding-right: 13px;
@@ -45,9 +48,12 @@
 .oneItem-information {
   display: flex;
   margin-bottom: 20px;
+  padding: 0 50px;
 }
 .oneItem-information__img {
   width: 535px;
+  max-height: 550px;
+  margin-right: 20px;
 }
 #oneItem {
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
@@ -58,12 +64,13 @@
 }
 .oneItem-information__price {
   font-family: "Inter";
-  font-size: 40px;
+  font-size: 38px;
   line-height: 110%;
   letter-spacing: 0.02em;
   color: black;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 25px;
+  text-align: left;
 }
 .oneItem-information__feature {
   font-size: 22px;
@@ -74,6 +81,9 @@
   text-align: start;
   margin-bottom: 20px;
 }
+#imgOneItem {
+  max-height: 350px;
+} 
 #allPhoto {
   display: flex;
   height: 150px;
@@ -95,8 +105,8 @@
 .buy__amount {
   text-align: center;
   margin: 0;
-  width: 66px;
-  height: 66px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #6e9c9f;
   font-weight: 400;
   font-size: 20px;
@@ -111,11 +121,11 @@
   outline-offset: 0;
 }
 .button {
-  width: 268px;
-  height: 68px;
+  width: 230px;
+  height: 56px;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
   padding: 10px 40px;
@@ -145,7 +155,7 @@
   grid-row-gap: 15px;
 }
 #responsiveName {
-  font-size: 40px;
+  font-size: 28px;
   letter-spacing: 0.02em;
   margin: 10px 0 0 0;
 }
@@ -153,11 +163,13 @@
   grid-column-start: 1;
   grid-column-end: -1;
   margin: 10px 0;
+  font-size: 18px;
+  color: #579763;
 }
 #responsiveContent {
   grid-column-start: 1;
   grid-column-end: -1;
-  font-size: 20px;
+  font-size: 16px;
 }
 #responsiveDate {
   text-align: end;

@@ -21,6 +21,7 @@
             <nav class="nav">
                 <div class="nav_block">
                     <ul class="nav_list">
+                        <li id="main_page_btn">main page</li>
                         <li id="allProductBtn">all products</li>
                         <li role="button" data-path="nav_menu" class="list">categories
                             <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
@@ -220,7 +221,60 @@
                 <button id="ascending" class="ascending">from cheap to expensive</button>
                 <button id="descending" class="descending">from expensive to cheap</button>
             </div>
-            <div class="categories_card allProducts"></div>
+            <div class="AllProductsAndFilters">
+                <form class='filters-productType-form' id="filters">
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Color</legend>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Black" type="checkbox"
+                                value="Black">Black</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Silver"
+                                type="checkbox" value="Silver">Silver</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="White" type="checkbox"
+                                value="White">White</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gold" type="checkbox"
+                                value="Gold">Golden</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
+                                value="Pink">Pink</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green" type="checkbox"
+                                value="Green">Green</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gray" type="checkbox"
+                                value="Gray">Gray</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Blue" type="checkbox"
+                                value="Blue">Blue</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Yellow"
+                                type="checkbox" value="Yellow">Yellow</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Chocolate"
+                                type="checkbox" value="Chocolate">Chocolate</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Brown" type="checkbox"
+                                value="Brown">Brown</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Red" type="checkbox"
+                                value="Red">Red</label>
+                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="ALLColor"
+                                type="checkbox" value="ALLColor">All Color</label>
+                    </fieldset>
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Price</legend>
+                        <span class="filters-price__text"> Min price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-minPriceValue" class="filters-price__value" value="0">
+                            <input id="filters-minPriceBtn" type="range" min="0" max="100000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                        <span class="filters-price__text"> Max price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-maxPriceValue" class="filters-price__value" value="0">
+                            <input id="filters-maxPriceBtn" type="range" min="0" max="150000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                    </fieldset>
+                    <button class="allProduct_btn" type="button" id="buttonSaveFilter">Save</button>
+                </form>
+                <div class="categories_card allProducts"></div>
+            </div>
         </div>
         <!-- страница товара -->
         <div class="container_slim oneitem hidden" id="oneItem">

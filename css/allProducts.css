@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 ._mod_size {
-  width: 300px;
+  width: 280px;
 }
 .allProducts-card:hover {
   transform: scale(1.02);
@@ -111,7 +111,7 @@
 }
 /*  */
 .filters-form__label {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   display: flex;
   align-items: center;
