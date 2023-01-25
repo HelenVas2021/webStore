@@ -54,7 +54,22 @@ function showProducts(event) {
                 card.classList.add('allProducts-card__notActive');
             }
       }
+      breadcrumbsCategory(categoryIndex, pageArr);
   }
+  // Хлебные крошки
+function breadcrumbsCategory(categoryIndex, pagesArr) {
+    let breadcrumbsOne = document.getElementById('breadcrumbsOne_cat');
+    breadcrumbsOne.addEventListener('click', () => {
+        for (let i = 0; i < pagesArr.length; i++) {
+        document.getElementById(pagesArr[i]).classList.add('hidden');
+        }
+        document.getElementById('mainPage').classList.remove('hidden');
+    })
+    let breadcrumbsTwo = document.getElementById('breadcrumbsTwo_cat');
+    breadcrumbsTwo.innerHTML = data[categoryIndex].name;
+    breadcrumbsTwo.setAttribute('data-category', categoryIndex)
+    breadcrumbsTwo.addEventListener('click', showProducts);
+}
 
 // сортировка
 document.getElementById('ascending').addEventListener('click', () => {

@@ -365,6 +365,10 @@ body {
     justify-content: space-between;
     margin-left: 30px;
 }
+.oneItem-header_modCat {
+    padding: 0;
+    margin: 0;
+}
 /* category */
 .category_btn {
     display: flex;
@@ -372,7 +376,7 @@ body {
     width: 100%;
     align-items: center;
     gap: 15px;
-    margin: 30px 0;
+    margin-bottom: 30px;
 }
 
 .ascending, .descending {

@@ -15,7 +15,7 @@
     line-height: 50%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin-top: 40px;
     color: #579763;
 }
 .oneItem-header__breadcrumbs {
@@ -25,14 +25,12 @@
   letter-spacing: 0.02em;
   list-style-type: none;
   padding-inline-start: 0;
-  margin-bottom: 20px;
   margin-left: 25px;
   text-transform: uppercase;
   color: #717171;
 }
 .oneItem-header__breadcrumbs-li {
   padding-right: 13px;
-  border-bottom: 1px solid none;
 }
 .oneItem-header__breadcrumbs-li::after {
   content: "—";
