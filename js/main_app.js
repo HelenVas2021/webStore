@@ -24,3 +24,4 @@ document.querySelector('#main_page_btn').addEventListener('click', ()=> {
     }
     mainPage.classList.remove('hidden');
 });
+

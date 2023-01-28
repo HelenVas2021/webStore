@@ -1,5 +1,6 @@
 
 function showProductPage(event) {
+    window.scrollTo(0,0);
     let pagesArr = ['category', 'mainPage', 'oneItem', 'allProductPage']
     for (let i = 0; i < pagesArr.length; i++) {
         document.getElementById(pagesArr[i]).classList.add('hidden');

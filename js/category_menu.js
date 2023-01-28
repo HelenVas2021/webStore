@@ -16,6 +16,7 @@ function showCategories() {
 showCategories();
 // взаимодеймтвие с категориями
 function showProducts(event) {
+    window.scrollTo(0,0);
     for (let i = 0; i < pageArr.length; i++) {
         document.getElementById(pageArr[i]).classList.add('hidden');
     }
@@ -66,7 +67,7 @@ function breadcrumbsCategory(categoryIndex, pagesArr) {
         document.getElementById('mainPage').classList.remove('hidden');
     })
     let breadcrumbsTwo = document.getElementById('breadcrumbsTwo_cat');
-    breadcrumbsTwo.innerHTML = data[categoryIndex].name;
+    breadcrumbsTwo.innerHTML = arrCategories[categoryIndex].name;
     breadcrumbsTwo.setAttribute('data-category', categoryIndex)
     breadcrumbsTwo.addEventListener('click', showProducts);
 }
@@ -81,6 +82,9 @@ document.getElementById('descending').addEventListener('click', () => {
     sortDescending('data-price');
     document.getElementById('descending').classList.add('activ_btn_sort');
     document.getElementById('ascending').classList.remove('activ_btn_sort');
+});
+document.getElementById('availabilityBtn').addEventListener('click', () => {
+    checkAvailability();
 });
 function sortAscending(sortType) {
     let parent = document.querySelector('.categories_card');
@@ -107,5 +111,108 @@ function sortDescending(sortType) {
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
+function checkAvailability () {
+    let btn = document.getElementById('availabilityBtn');
+    if (btn.classList.contains('activ_btn_sort')) {
+        btn.classList.remove('activ_btn_sort');
+        let hiddenCardAvailability = document.getElementsByClassName('notAvailability');
+        for (let i = 0; i < hiddenCardAvailability.length; i++) {
+            hiddenCardAvailability[i].classList.remove('hidden');
+        }
+    } else {
+        btn.classList.add('activ_btn_sort');
+        let notAvailability = document.getElementsByClassName('allProducts-card__notActive');
+        for (let i = 0; i < notAvailability.length; i++) {
+            notAvailability[i].classList.add('hidden');
+            notAvailability[i].classList.add('notAvailability');
+        }
+    }
+}
+// картинки категорий на главной странице
+document.querySelector('#category_one').addEventListener('click', showProducts);
+document.querySelector('#category_two').addEventListener('click', showProducts);
+document.querySelector('#category_three').addEventListener('click', showProducts);
+document.querySelector('#category_four').addEventListener('click', showProducts);
 
+// фильтры
 
+document.getElementById('buttonSaveFilter_cat').addEventListener('click', getCheckedCheckBoxesCat);
+document.getElementById("filters-minPriceBtn_cat").oninput = function () {
+    let minPriceSlider = document.getElementById('filters-minPriceBtn_cat');
+    let minPriceInput = document.getElementById('filters-minPriceValue_cat');
+    minPriceInput.value = minPriceSlider.value;
+}
+document.getElementById("filters-maxPriceBtn_cat").oninput = function () {
+    let minPriceSlider = document.getElementById('filters-maxPriceBtn_cat');
+    let minPriceInput = document.getElementById('filters-maxPriceValue_cat');
+    minPriceInput.value = minPriceSlider.value;
+}
+
+function getCheckedCheckBoxesCat() {
+    // убираем сортировку
+    removeSort('ascending', 'descending', 'availabilityBtn');
+    // находим все товары
+    let allProductsArr = document.getElementsByClassName('allProducts-card');
+    for (let i = 0; i < allProductsArr.length; i++) {
+        allProductsArr[i].classList.remove('selectedColor');
+        allProductsArr[i].classList.remove('hiddenAllProducts');
+    }
+    
+    // довляем в массив цвета которые выбрал пользователь
+    const checkboxesColor = document.getElementsByClassName('filters-form__color_cat');
+    const colorArr = ['Black', 'Silver', 'White', 'Golden', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown',];
+    const countColor = checkboxesColor.length;
+    let checkboxesColorChecked = findFilter(checkboxesColor, colorArr, countColor);
+
+    // среди выбраных продуктов выбираем цвет
+    let selectedProductsArr = document.getElementsByClassName('showAllProducts');
+    for (let i = 0; i < selectedProductsArr.length; i++) {
+        for (let j = 0; j < checkboxesColorChecked.length; j++) {
+            if (selectedProductsArr[i].classList.contains(checkboxesColorChecked[j])) {
+                selectedProductsArr[i].classList.add('selectedColor');
+            }
+        }
+    }
+    for (let i = 0; i < selectedProductsArr.length; i++) {
+        for (let j = 0; j < checkboxesColorChecked.length; j++) {
+            if (!selectedProductsArr[i].classList.contains('selectedColor')) {
+                selectedProductsArr[i].classList.add('hiddenAllProducts');
+            }
+        }
+    }
+  
+// фильтр по мин цене
+    let minPriceSlider = document.getElementById('filters-minPriceValue_cat');
+    let minPriseArr = [];
+    if (minPriceSlider.value != 0) {
+        for (let i = 0; i < allProductsArr.length; i++) {
+        if (allProductsArr[i].classList.contains('selectedColor')) {
+            minPriseArr.push(allProductsArr[i]);
+            }
+        }        
+        for (let i = 0; i < minPriseArr.length; i++) {
+            if (Number(minPriseArr[i].childNodes[2].id) < Number(minPriceSlider.value)) {
+                minPriseArr[i].classList.add('hiddenAllProducts');
+                minPriseArr[i].classList.remove('selectedColor');
+            } 
+        }
+    }
+// фильтр по макс цене
+    let maxPriceSlider = document.getElementById('filters-maxPriceValue_cat');
+    let maxPriseArr = [];
+    if (maxPriceSlider.value != 0) {
+        console.log(maxPriceSlider.value);
+        for (let i = 0; i < allProductsArr.length; i++) {
+        if (allProductsArr[i].classList.contains('selectedColor')) {
+            maxPriseArr.push(allProductsArr[i]);
+            }
+        }        
+        for (let i = 0; i < maxPriseArr.length; i++) {
+            if (Number(maxPriseArr[i].childNodes[2].id) > Number(maxPriceSlider.value)) {
+                console.log(maxPriseArr[i].childNodes[2].id);
+                maxPriseArr[i].classList.add('hiddenAllProducts');
+                maxPriseArr[i].classList.remove('selectedColor');
+            } 
+        }
+    }
+}

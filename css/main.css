@@ -362,8 +362,9 @@ body {
 /* categories_card */
 .categories_card {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 30px;
+    gap: 12px;
 }
 .oneItem-header_modCat {
     padding: 0;

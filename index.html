@@ -109,14 +109,14 @@
                 <p class="info_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <div class="category_list">
                     <div class="category_one">
-                        <div><img src="images/main_page/category/laptop.png" alt="laptop"></div>
+                        <div><img src="images/main_page/category/laptop.png" alt="laptop" id="category_one" data-category="1"></div>
                         <div class="text_right category_text">
                             <p class="category_name">Laptops</p>
                             <p class="category_title">True Laptop Solution</p>
                         </div>
                     </div>
                     <div class="category_two">
-                        <div><img src="images/main_page/category/phone.png" alt="phone"></div>
+                        <div><img src="images/main_page/category/phone.png" alt="phone" id="category_two" data-category="0"></div>
                         <div class="category_text">
                             <p class="category_name">Phones</p>
                             <p class="category_title">Your day to day life</p>
@@ -127,10 +127,10 @@
                             <p class="category_name">Tablet</p>
                             <p class="category_title">Empower your <br>work</p>
                         </div>
-                        <div><img src="images/main_page/category/tablet.png" alt="Tablet"></div>
+                        <div><img src="images/main_page/category/tablet.png" alt="Tablet" id="category_three" data-category="3"></div>
                     </div>
                     <div class="category_four">
-                        <div><img src="images/main_page/category/watch.png" alt="Watch"></div>
+                        <div><img src="images/main_page/category/watch.png" alt="Watch" id="category_four" data-category="2"></div>
                         <div class="text_right category_text">
                             <p class="category_name">Watch</p>
                             <p class="category_title">Not just stylisht</p>
@@ -226,8 +226,60 @@
             <div class="category_btn">
                 <button id="ascending" class="ascending">from cheap to expensive</button>
                 <button id="descending" class="descending">from expensive to cheap</button>
+                <button id="availabilityBtn" class="filter-availabilityBtn">in stock</button>
             </div>
-            <div class="categories_card allProducts"></div>
+            <div class="AllProductsAndFilters">
+                <form class='filters-productType-form' id="filters_cat">
+                    <fieldset class="filters-fieldset _filterCat">
+                        <legend class="filters-productType__title">Color</legend>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Black" type="checkbox"
+                                value="Black">Black</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Silver"
+                                type="checkbox" value="Silver">Silver</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="White" type="checkbox"
+                                value="White">White</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Gold" type="checkbox"
+                                value="Gold">Golden</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Pink" type="checkbox"
+                                value="Pink">Pink</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Green" type="checkbox"
+                                value="Green">Green</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Gray" type="checkbox"
+                                value="Gray">Gray</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Blue" type="checkbox"
+                                value="Blue">Blue</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Yellow"
+                                type="checkbox" value="Yellow">Yellow</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Chocolate"
+                                type="checkbox" value="Chocolate">Chocolate</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Brown" type="checkbox"
+                                value="Brown">Brown</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Red" type="checkbox"
+                                value="Red">Red</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="ALLColor"
+                                type="checkbox" value="ALLColor">All Color</label>
+                    </fieldset>
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Price</legend>
+                        <span class="filters-price__text"> Min price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-minPriceValue_cat" class="filters-price__value" value="0">
+                            <input id="filters-minPriceBtn_cat" type="range" min="0" max="100000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                        <span class="filters-price__text"> Max price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-maxPriceValue_cat" class="filters-price__value" value="0">
+                            <input id="filters-maxPriceBtn_cat" type="range" min="0" max="150000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                    </fieldset>
+                    <button class="allProduct_btn" type="button" id="buttonSaveFilter_cat">Save</button>
+                </form>
+                <div class="categories_card allProducts"></div>
+            </div>
         </div>
         <!-- страница товара -->
         <div class="container_slim oneitem hidden" id="oneItem">
@@ -291,8 +343,6 @@
                                 value="Gold">Golden</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
                                 value="Pink">Pink</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
-                                type="checkbox" value="Purple">Purple</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
                                 type="checkbox" value="Purple">Purple</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green" type="checkbox"
