@@ -83,8 +83,8 @@ document.getElementById('descending').addEventListener('click', () => {
     document.getElementById('descending').classList.add('activ_btn_sort');
     document.getElementById('ascending').classList.remove('activ_btn_sort');
 });
-document.getElementById('availabilityBtn').addEventListener('click', () => {
-    checkAvailability();
+document.getElementById('availabilityBtn_cat').addEventListener('click', () => {
+    checkAvailabilityCat();
 });
 function sortAscending(sortType) {
     let parent = document.querySelector('.categories_card');
@@ -111,19 +111,19 @@ function sortDescending(sortType) {
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
-function checkAvailability () {
-    let btn = document.getElementById('availabilityBtn');
+function checkAvailabilityCat () {
+    let btn = document.getElementById('availabilityBtn_cat');
     if (btn.classList.contains('activ_btn_sort')) {
         btn.classList.remove('activ_btn_sort');
         let hiddenCardAvailability = document.getElementsByClassName('notAvailability');
         for (let i = 0; i < hiddenCardAvailability.length; i++) {
-            hiddenCardAvailability[i].classList.remove('hidden');
+            hiddenCardAvailability[i].classList.remove('hiddenAllProducts');
         }
     } else {
         btn.classList.add('activ_btn_sort');
         let notAvailability = document.getElementsByClassName('allProducts-card__notActive');
         for (let i = 0; i < notAvailability.length; i++) {
-            notAvailability[i].classList.add('hidden');
+            notAvailability[i].classList.add('hiddenAllProducts');
             notAvailability[i].classList.add('notAvailability');
         }
     }

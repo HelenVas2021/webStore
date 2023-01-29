@@ -247,6 +247,7 @@
   border-radius: 10px;
   background: #ffffff;
   margin-right: 30px;
+  cursor: pointer;
 }
 .filter-availabilityBtn:hover {
   border: 1px solid #579763;
