@@ -12,11 +12,13 @@
 }
 .oneItem-title {
   font-size: 35px;
-    line-height: 50%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    margin-top: 40px;
-    color: #579763;
+  line-height: 50%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #579763;
+}
+.oneItem-title__mrg {
+  margin-top: 30px;
 }
 .oneItem-header__breadcrumbs {
   display: flex;
@@ -59,6 +61,7 @@
 .oneItem-informationDiv {
   padding-left: 74px;
   padding-top: 117px;
+  margin-left: auto;
 }
 .oneItem-information__price {
   font-family: "Inter";
@@ -81,7 +84,7 @@
 }
 #imgOneItem {
   max-height: 350px;
-} 
+}
 #allPhoto {
   display: flex;
   height: 150px;
@@ -187,10 +190,76 @@
 .response-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #rating {
-  font-size: 40px;
+  font-size: 25px;
   letter-spacing: 0.02em;
   margin-top: 30px;
   text-align: right;
+  text-transform: none;
+  color: #579763;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(109, 148, 247, 0.664);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 20px 35px;
+}
+
+.content {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  /* background: #929292; */
+  position: relative;
+}
+.close-button {
+  font-size: xx-large;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.moodalBtn_save {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 20px;
+  padding: 18px;
+  width: 100%;
+  background: #6e9c9f;
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#reviewForm {
+  min-height: 100px;
+}
+.modal-hidden {
+  display: none;
+}
+.notResponse {
+  font-size: 25px;
+  letter-spacing: 0.02em;
+  margin: auto 0;
+  text-transform: none;
+  color: #579763;
 }

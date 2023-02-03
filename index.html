@@ -290,7 +290,7 @@
                     <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsTwo"></li>
                     <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsThree"></li>
                 </ul>
-                <h1 class="oneItem-title" id="titleOneItem"></h1>
+                <h1 class="oneItem-title oneItem-title__mrg" id="titleOneItem"></h1>
             </div>
             <div class="oneItem-information">
                 <div class="oneItem-information__img" id="oneItemImg">
@@ -309,9 +309,22 @@
             <div class="response" id="response">
                 <div class="response-header">
                     <h2 class="oneItem-title">Reviews:</h2>
-                    <button type="button" class="button">give feedback</button>
+                    <button type="button" class="button" id="responseBtn">give feedback</button>
                 </div>
                 <div class="response-list" id="response-list"> </div>
+            </div>
+        </div>
+        <!-- модальное с отзывом -->
+        <div class="modal modal-hidden" id="modal">
+            <div class="contacts-block_form content" >
+                <button type="button" class="close-button" id="closeModal">&#215;</button>
+                <form action="#" method="get">
+                    <h2>Write your review</h2>
+                    <p><input type="text" id="nameForm" name="name" placeholder="Name"></p>
+                    <p><input type="number" id="ratingForm" name="rating" placeholder="Rating(0-10)*" max="10"></p>
+                    <p><input type="text" id="reviewForm" name="review" placeholder="Your review"></p>
+                    <button type="button" class="moodalBtn_save" id="saveReviewBtn">Save feedback</button>
+                </form>
             </div>
         </div>
         <!-- страница allProduct -->
