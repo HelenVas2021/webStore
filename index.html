@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styleProductPage.css">
     <link rel="stylesheet" href="css/allProducts.css">
+    <link rel="stylesheet" href="./css/cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Store</title>
@@ -21,6 +22,7 @@
             <nav class="nav">
                 <div class="nav_block">
                     <ul class="nav_list">
+                        <li id="main_page_btn">main page</li>
                         <li id="allProductBtn">all products</li>
                         <li role="button" data-path="nav_menu" class="list">categories
                             <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
@@ -108,14 +110,14 @@
                 <p class="info_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <div class="category_list">
                     <div class="category_one">
-                        <div><img src="images/main_page/category/laptop.png" alt="laptop"></div>
+                        <div><img src="images/main_page/category/laptop.png" alt="laptop" id="category_one" data-category="1"></div>
                         <div class="text_right category_text">
                             <p class="category_name">Laptops</p>
                             <p class="category_title">True Laptop Solution</p>
                         </div>
                     </div>
                     <div class="category_two">
-                        <div><img src="images/main_page/category/phone.png" alt="phone"></div>
+                        <div><img src="images/main_page/category/phone.png" alt="phone" id="category_two" data-category="0"></div>
                         <div class="category_text">
                             <p class="category_name">Phones</p>
                             <p class="category_title">Your day to day life</p>
@@ -126,10 +128,10 @@
                             <p class="category_name">Tablet</p>
                             <p class="category_title">Empower your <br>work</p>
                         </div>
-                        <div><img src="images/main_page/category/tablet.png" alt="Tablet"></div>
+                        <div><img src="images/main_page/category/tablet.png" alt="Tablet" id="category_three" data-category="3"></div>
                     </div>
                     <div class="category_four">
-                        <div><img src="images/main_page/category/watch.png" alt="Watch"></div>
+                        <div><img src="images/main_page/category/watch.png" alt="Watch" id="category_four" data-category="2"></div>
                         <div class="text_right category_text">
                             <p class="category_name">Watch</p>
                             <p class="category_title">Not just stylisht</p>
@@ -216,11 +218,69 @@
         </div>
         <!-- страница Category -->
         <div class="container_slim category hidden" id="category">
+            <div class="oneItem-header_modCat">
+                <ul class="oneItem-header__breadcrumbs">
+                    <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsOne_cat">Main page</li>
+                    <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsTwo_cat"></li>
+                </ul>
+            </div>
             <div class="category_btn">
                 <button id="ascending" class="ascending">from cheap to expensive</button>
                 <button id="descending" class="descending">from expensive to cheap</button>
+                <button id="availabilityBtn_cat" class="filter-availabilityBtn">in stock</button>
             </div>
-            <div class="categories_card allProducts"></div>
+            <div class="AllProductsAndFilters">
+                <form class='filters-productType-form' id="filters_cat">
+                    <fieldset class="filters-fieldset _filterCat">
+                        <legend class="filters-productType__title">Color</legend>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Black" type="checkbox"
+                                value="Black">Black</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Silver"
+                                type="checkbox" value="Silver">Silver</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="White" type="checkbox"
+                                value="White">White</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Gold" type="checkbox"
+                                value="Gold">Golden</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Pink" type="checkbox"
+                                value="Pink">Pink</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Purple"
+                                type="checkbox" value="Purple">Purple</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Green" type="checkbox"
+                                value="Green">Green</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Gray" type="checkbox"
+                                value="Gray">Gray</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Blue" type="checkbox"
+                                value="Blue">Blue</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Yellow"
+                                type="checkbox" value="Yellow">Yellow</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Chocolate"
+                                type="checkbox" value="Chocolate">Chocolate</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Brown" type="checkbox"
+                                value="Brown">Brown</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="Red" type="checkbox"
+                                value="Red">Red</label>
+                        <label class="filters-form__label"><input class="filters-form__color_cat" name="colorProduct" data-color="ALLColor"
+                                type="checkbox" value="ALLColor">All Color</label>
+                    </fieldset>
+                    <fieldset class="filters-fieldset">
+                        <legend class="filters-productType__title">Price</legend>
+                        <span class="filters-price__text"> Min price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-minPriceValue_cat" class="filters-price__value" value="0">
+                            <input id="filters-minPriceBtn_cat" type="range" min="0" max="100000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                        <span class="filters-price__text"> Max price:</span>
+                        <div class="filter-price">
+                            <input type="text" id="filters-maxPriceValue_cat" class="filters-price__value" value="0">
+                            <input id="filters-maxPriceBtn_cat" type="range" min="0" max="150000" step="1000" class="filter-price__slider"
+                                value="0">
+                        </div>
+                    </fieldset>
+                    <button class="allProduct_btn" type="button" id="buttonSaveFilter_cat">Save</button>
+                </form>
+                <div class="categories_card allProducts"></div>
+            </div>
         </div>
         <!-- страница товара -->
         <div class="container_slim oneitem hidden" id="oneItem">
@@ -230,7 +290,7 @@
                     <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsTwo"></li>
                     <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsThree"></li>
                 </ul>
-                <h1 class="oneItem-title" id="titleOneItem"></h1>
+                <h1 class="oneItem-title oneItem-title__mrg" id="titleOneItem"></h1>
             </div>
             <div class="oneItem-information">
                 <div class="oneItem-information__img" id="oneItemImg">
@@ -241,17 +301,30 @@
                     <ul class="oneItem-information__feature" id="listCharacteristic">
                     </ul>
                     <div class="buy">
-                        <input type="text" value="1" class="buy__amount">
-                        <button type="button" class="button">Buy</button>
+                        <input type="text" value="1" class="buy__amount" id="numberOfGoods">
+                        <button type="button" class="button" id="addToShoppingCart">Buy</button>
                     </div>
                 </div>
             </div>
             <div class="response" id="response">
                 <div class="response-header">
                     <h2 class="oneItem-title">Reviews:</h2>
-                    <button type="button" class="button">give feedback</button>
+                    <button type="button" class="button" id="responseBtn">give feedback</button>
                 </div>
                 <div class="response-list" id="response-list"> </div>
+            </div>
+        </div>
+        <!-- модальное с отзывом -->
+        <div class="modal modal-hidden" id="modal">
+            <div class="contacts-block_form content" >
+                <button type="button" class="close-button" id="closeModal">&#215;</button>
+                <form action="#" method="get">
+                    <h2>Write your review</h2>
+                    <p><input type="text" id="nameForm" name="name" placeholder="Name"></p>
+                    <p><input type="number" id="ratingForm" name="rating" placeholder="Rating(0-10)*" max="10"></p>
+                    <p><input type="text" id="reviewForm" name="review" placeholder="Your review"></p>
+                    <button type="button" class="moodalBtn_save" id="saveReviewBtn">Save feedback</button>
+                </form>
             </div>
         </div>
         <!-- страница allProduct -->
@@ -284,8 +357,6 @@
                                 value="Gold">Golden</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
                                 value="Pink">Pink</label>
-                        <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
-                                type="checkbox" value="Purple">Purple</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
                                 type="checkbox" value="Purple">Purple</label>
                         <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green" type="checkbox"
@@ -378,6 +449,23 @@
                 </div>
             </div>
         </div>
+        <!-- корзина -->
+        <div class="container_slim hidden" id="pageShoppingCart" >
+            <h1 class="oneItem-title cart-title">Shopping cart</h1>
+            <ul class="oneItem-header__breadcrumbs">
+                <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsOneShopping">Main page</li>
+                <li class="oneItem-header__breadcrumbs-li" id="breadcrumbsTwoShopping">Shopping cart</li>
+            </ul>
+            <div class="cart-table" id="cartTable">
+                <div class="cart-table__title">
+                    <p>Article</p>
+                    <p>Price</p>
+                    <p>Amount</p>
+                    <p>Sum</p>
+                </div>
+            </div>
+            
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -423,6 +511,7 @@
     <script src="./js/response.js"></script>
     <script src="./js/allProducts.js"></script>
     <script src="./js/productPage.js"></script>
+    <script src="./js/shoppingCart.js"></script>
 
 </body>
 </html>

@@ -74,12 +74,12 @@ body {
     display: none;
     position: absolute;
     top: 120%;
-    left: 32%;
+    left: 45%;
     transform: translate3d(0px, 0px, 0px);
     padding: 20px 12px;
     width: 200px;
     text-align: left;
-    background-color: rgb(248, 249, 250, 0.8);
+    background-color: rgb(248, 249, 250, 0.9);
     z-index: 10;
 }
 .menu_item li {
@@ -362,6 +362,13 @@ body {
 /* categories_card */
 .categories_card {
     display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    gap: 12px;
+}
+.oneItem-header_modCat {
+    padding: 0;
+    margin: 0;
 }
 /* category */
 .category_btn {
@@ -370,7 +377,7 @@ body {
     width: 100%;
     align-items: center;
     gap: 15px;
-    margin: 30px 0;
+    margin-bottom: 30px;
 }
 
 .ascending, .descending {
@@ -384,10 +391,9 @@ body {
     border: 1px solid #717171;
     border-radius: 10px;
     background: #ffffff;
+    cursor: pointer;
 }
-.descending {
-    margin-right: 50px;
-}
+
 .ascending:hover, .descending:hover {
     border: 1px solid  #579763;
     color:  #579763;

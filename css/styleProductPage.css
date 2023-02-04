@@ -1,5 +1,5 @@
 .container_slim {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   width: 1100px;
   margin: 0 auto;
@@ -11,25 +11,28 @@
   padding-bottom: 50px;
 }
 .oneItem-title {
-  font-size: 55px;
-  line-height: 110%;
+  font-size: 35px;
+  line-height: 50%;
   letter-spacing: 0.02em;
-  margin: 0;
+  text-transform: uppercase;
+  color: #579763;
+}
+.oneItem-title__mrg {
+  margin-top: 30px;
 }
 .oneItem-header__breadcrumbs {
   display: flex;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.02em;
   list-style-type: none;
   padding-inline-start: 0;
-  margin-bottom: 20px;
   margin-left: 25px;
   text-transform: uppercase;
+  color: #717171;
 }
 .oneItem-header__breadcrumbs-li {
   padding-right: 13px;
-  border-bottom: 1px solid none;
 }
 .oneItem-header__breadcrumbs-li::after {
   content: "—";
@@ -45,9 +48,12 @@
 .oneItem-information {
   display: flex;
   margin-bottom: 20px;
+  padding: 0 50px;
 }
 .oneItem-information__img {
   width: 535px;
+  max-height: 550px;
+  margin-right: 20px;
 }
 #oneItem {
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
@@ -55,15 +61,17 @@
 .oneItem-informationDiv {
   padding-left: 74px;
   padding-top: 117px;
+  margin-left: auto;
 }
 .oneItem-information__price {
   font-family: "Inter";
-  font-size: 40px;
+  font-size: 38px;
   line-height: 110%;
   letter-spacing: 0.02em;
   color: black;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 25px;
+  text-align: left;
 }
 .oneItem-information__feature {
   font-size: 22px;
@@ -73,6 +81,9 @@
   list-style-type: none;
   text-align: start;
   margin-bottom: 20px;
+}
+#imgOneItem {
+  max-height: 350px;
 }
 #allPhoto {
   display: flex;
@@ -95,8 +106,8 @@
 .buy__amount {
   text-align: center;
   margin: 0;
-  width: 66px;
-  height: 66px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #6e9c9f;
   font-weight: 400;
   font-size: 20px;
@@ -111,11 +122,11 @@
   outline-offset: 0;
 }
 .button {
-  width: 268px;
-  height: 68px;
+  width: 230px;
+  height: 56px;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
   padding: 10px 40px;
@@ -145,7 +156,7 @@
   grid-row-gap: 15px;
 }
 #responsiveName {
-  font-size: 40px;
+  font-size: 28px;
   letter-spacing: 0.02em;
   margin: 10px 0 0 0;
 }
@@ -153,11 +164,13 @@
   grid-column-start: 1;
   grid-column-end: -1;
   margin: 10px 0;
+  font-size: 18px;
+  color: #579763;
 }
 #responsiveContent {
   grid-column-start: 1;
   grid-column-end: -1;
-  font-size: 20px;
+  font-size: 16px;
 }
 #responsiveDate {
   text-align: end;
@@ -177,10 +190,76 @@
 .response-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #rating {
-  font-size: 40px;
+  font-size: 25px;
   letter-spacing: 0.02em;
   margin-top: 30px;
   text-align: right;
+  text-transform: none;
+  color: #579763;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(109, 148, 247, 0.664);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 20px 35px;
+}
+
+.content {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  /* background: #929292; */
+  position: relative;
+}
+.close-button {
+  font-size: xx-large;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.moodalBtn_save {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 20px;
+  padding: 18px;
+  width: 100%;
+  background: #6e9c9f;
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#reviewForm {
+  min-height: 100px;
+}
+.modal-hidden {
+  display: none;
+}
+.notResponse {
+  font-size: 25px;
+  letter-spacing: 0.02em;
+  margin: auto 0;
+  text-transform: none;
+  color: #579763;
 }
