@@ -150,7 +150,7 @@ document.getElementById("filters-maxPriceBtn_cat").oninput = function () {
 
 function getCheckedCheckBoxesCat() {
     // убираем сортировку
-    removeSort('ascending', 'descending', 'availabilityBtn');
+    removeSort('ascending', 'descending', 'availabilityBtn_cat');
     // находим все товары
     let allProductsArr = document.getElementsByClassName('allProducts-card');
     for (let i = 0; i < allProductsArr.length; i++) {
