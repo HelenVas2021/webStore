@@ -4,6 +4,7 @@
   line-height: 52px;
   text-align: center;
 }
+
 .AllProductsAndFilters {
   display: flex;
   margin-top: 20px;
@@ -109,6 +110,7 @@
   text-align: start;
   margin-left: 10px;
 }
+
 /*  */
 .filters-form__label {
   font-size: 16px;

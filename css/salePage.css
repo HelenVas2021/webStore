@@ -1,0 +1,53 @@
+.allProductSalePage-title{ 
+    margin: 40px 0;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
+  }
+
+  /* .hidden{
+	display: none;
+  } */
+
+  .allSales-card {
+	display: grid;
+	grid-template-rows: 70px 200px 40px 30px;
+	padding: 20px 30px;
+	width: 250px;
+	margin-bottom: 15px;
+	box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+  }
+ 
+  .allSales-card:hover {
+	transform: scale(1.02);
+	box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+	cursor: pointer;
+  }
+
+  .allSalePrice {
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	margin-top: 20px;
+	text-decoration: line-through;
+  }
+  .allSaleWithDiscout{
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	margin-top: 20px;
+  }
+  .discount{
+	font-family: "Inter";
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 18px;
+	margin-top: 20px;
+    text-decoration: underline;
+	color: red;
+	text-shadow: rgba(214, 243, 51, 0.749) 1px 0 10px;;
+  }
+  

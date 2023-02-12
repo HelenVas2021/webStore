@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styleProductPage.css">
     <link rel="stylesheet" href="css/allProducts.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="css/salePage.css">
+    <!-- <link rel="stylesheet" href="./css/cart.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Store</title>
@@ -24,6 +25,7 @@
                     <ul class="nav_list">
                         <li id="main_page_btn">main page</li>
                         <li id="allProductBtn">all products</li>
+                        <li id="allSaleBtn">Sales</li>
                         <li role="button" data-path="nav_menu" class="list">categories
                             <svg id="up" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
                             <svg id="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -329,7 +331,10 @@
         </div>
         <!-- страница allProduct -->
         <div class="container hidden" id="allProductPage">
-            <h1 class="allProductPage-title">All store items</h1>
+            <h1 id = 'allProductHeader' class="allProductPage-title">All store items</h1>
+            <!--h1 для страницы Sale-->
+            <h1 id = "saleHeader"class="allProductSalePage-title">All Sales Items</h1>
+
             <div class="AllProductsAndFilters">
                 <form class='filters-productType-form' id="filters">
                     <fieldset class="filters-fieldset">
@@ -503,15 +508,17 @@
         </div>
     </footer>
     <script src="js/data.js"></script>
+    <script src="js/salesWithData.js"></script>
     <script src="js/main_app.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
     <script src="./js/helpers.js"></script>
     <script src="js/category_menu.js"></script>
     <script src="./js/response.js"></script>
-    <script src="./js/allProducts.js"></script>
     <script src="./js/productPage.js"></script>
-    <script src="./js/shoppingCart.js"></script>
+    <script src="./js/salesPage.js"></script>
+    <script src="./js/allProducts.js"></script>
+    <!-- <script src="./js/shoppingCart.js"></script> -->
 
 </body>
 </html>

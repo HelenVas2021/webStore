@@ -16,6 +16,11 @@ function showAllProduct() {
     removeSort('ascendingAllProducts', 'descendingAllProducts', 'filtersAvailabilityBtn');
     document.getElementById('allProducts').textContent = '';
     document.getElementById('allProductPage').classList.remove('hidden');
+    document.getElementById('allProductHeader').classList.remove('hidden');
+    document.getElementById('allProductHeader').className = 'allProductPage-title';
+    document.getElementById('saleHeader').className = 'hidden';
+document.getElementById('filtersAvailabilityBtn').classList.remove('hidden');
+document.getElementById('filtersAvailabilityBtn').className = 'filter-availabilityBtn';
     let pagesArr = ['category', 'mainPage', 'oneItem'];
     for (let i = 0; i < pagesArr.length; i++) {
         document.getElementById(pagesArr[i]).classList.add('hidden');
