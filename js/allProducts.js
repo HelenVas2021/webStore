@@ -1,6 +1,11 @@
-document.getElementById('allProductBtn').addEventListener('click', showAllProduct);
-document.getElementById('buttonSaveFilter').addEventListener('click', getCheckedCheckBoxes);
-document.getElementById('filtersAvailabilityBtn').addEventListener('click', checkAvailability);
+const allProductBtn = document.getElementById('allProductBtn');
+const buttonSaveFilter = document.getElementById('buttonSaveFilter');
+const filtersAvailabilityBtn = document.getElementById('filtersAvailabilityBtn');
+const allProductHeader = document.getElementById('allProductHeader');
+allProductBtn.addEventListener('click', showAllProduct);
+buttonSaveFilter.addEventListener('click', getCheckedCheckBoxes);
+filtersAvailabilityBtn.addEventListener('click', checkAvailability);
+
 document.getElementById("filters-minPriceBtn").oninput = function () {
     let minPriceSlider = document.getElementById('filters-minPriceBtn');
     let minPriceInput = document.getElementById('filters-minPriceValue');
@@ -15,16 +20,13 @@ document.getElementById("filters-maxPriceBtn").oninput = function () {
 function showAllProduct() {
     removeSort('ascendingAllProducts', 'descendingAllProducts', 'filtersAvailabilityBtn');
     document.getElementById('allProducts').textContent = '';
+    pageCleanup();
     document.getElementById('allProductPage').classList.remove('hidden');
-    document.getElementById('allProductHeader').classList.remove('hidden');
-    document.getElementById('allProductHeader').className = 'allProductPage-title';
+    allProductHeader.classList.remove('hidden');
+    allProductHeader.className = 'allProductPage-title';
     document.getElementById('saleHeader').className = 'hidden';
-document.getElementById('filtersAvailabilityBtn').classList.remove('hidden');
-document.getElementById('filtersAvailabilityBtn').className = 'filter-availabilityBtn';
-    let pagesArr = ['category', 'mainPage', 'oneItem'];
-    for (let i = 0; i < pagesArr.length; i++) {
-        document.getElementById(pagesArr[i]).classList.add('hidden');
-    }
+    filtersAvailabilityBtn.classList.remove('hidden');
+    filtersAvailabilityBtn.className = 'filter-availabilityBtn';
     const allProducts = document.getElementById('allProducts');
     let index = 0;
     let indexParent = 0;

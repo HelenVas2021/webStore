@@ -16,6 +16,21 @@ function showProductPage(event) {
     breadcrumbs(categoryIndex, productIndex, pagesArr);
     characteristic(categoryIndex, productIndex);
     responses(categoryIndex, productIndex);
+    function addToShoppingCart() {
+        const product = data[categoryIndex].products[productIndex];
+        const value = document.getElementById('numberOfGoods').value;
+        const order = {
+            img: product.main_images,
+            name: product.name,
+            price: product.price,
+            value: Number(value),
+            sum: value*product.price,
+        }
+        const orderArr = JSON.parse(localStorage.getItem('orderArr'))||[];
+        orderArr.push(order);
+        localStorage.setItem('orderArr', JSON.stringify(orderArr));
+        showShoppingCart()
+    }
 }
 // Хлебные крошки
 function breadcrumbs(categoryIndex, productIndex, pagesArr) {
