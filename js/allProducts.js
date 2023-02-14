@@ -27,6 +27,10 @@ function showAllProduct() {
     document.getElementById('saleHeader').className = 'hidden';
     filtersAvailabilityBtn.classList.remove('hidden');
     filtersAvailabilityBtn.className = 'filter-availabilityBtn';
+    
+    // фильтр по типу
+    showFilters();
+
     const allProducts = document.getElementById('allProducts');
     let index = 0;
     let indexParent = 0;
@@ -62,6 +66,60 @@ function showAllProduct() {
         indexChild = 0;
     }
 }
+function showFilters() {
+    const fieldsetType = document.getElementById('filtersType');
+    const typeArr = ['PHONES', 'LAPTOPS', 'WATCHES', 'TABLETS', 'ALL_PRODUCTS'];
+    for (let i = 0; i < typeArr.length; i++) {
+        let label = createElement('label', { className: 'filters-form__label' }, null, typeArr[i], fieldsetType);
+        createElement(
+            'input',
+            { className: 'filters-form__input', name: "typeProduct", type:"checkbox", value: typeArr[i]},
+            null,
+            null,
+            label
+        );
+    }
+    const fieldsetColor = document.getElementById('fieldsetColor');
+    const colorArr = ['Black', 'Silver', 'White', 'Gold', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown', 'All_Color'];
+     for (let i = 0; i < colorArr.length; i++) {
+        let label = createElement('label', { className: 'filters-form__label' }, null, colorArr[i], fieldsetColor);
+        createElement(
+            'input',
+            { className: 'filters-form__color', name: "colorProduct", type:"checkbox", value: colorArr[i]},
+            null,
+            null,
+            label
+        );
+    }
+}
+{/* <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Black" type="checkbox" */}
+//         value="Black">Black</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Silver"
+//         type="checkbox" value="Silver">Silver</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="White" type="checkbox"
+//         value="White">White</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gold" type="checkbox"
+//         value="Gold">Golden</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Pink" type="checkbox"
+//         value="Pink">Pink</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Purple"
+//         type="checkbox" value="Purple">Purple</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Green" type="checkbox"
+//         value="Green">Green</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Gray" type="checkbox"
+//         value="Gray">Gray</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Blue" type="checkbox"
+//         value="Blue">Blue</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Yellow"
+//         type="checkbox" value="Yellow">Yellow</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Chocolate"
+//         type="checkbox" value="Chocolate">Chocolate</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Brown" type="checkbox"
+//         value="Brown">Brown</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="Red" type="checkbox"
+//         value="Red">Red</label>
+// <label class="filters-form__label"><input class="filters-form__color" name="colorProduct" id="ALLColor"
+//         type="checkbox" value="ALLColor">All Color</label>
 function getCheckedCheckBoxes() {
     // убираем сортировку
     removeSort('ascendingAllProducts', 'descendingAllProducts', 'filtersAvailabilityBtn');
@@ -148,7 +206,7 @@ function findFilter(inputArr, filterArr, count) {
     let selectedFilter = [];
         for (let i = 0; i < inputArr.length; i++) {
             if (inputArr[i].checked) {
-                if (inputArr[i].value == 'ALL'|| inputArr[i].value == 'ALLColor' ) {
+                if (inputArr[i].value == 'ALL_PRODUCTS'|| inputArr[i].value == 'All_Color' ) {
                     for (let i = 0; i < filterArr.length; i++) {
                         selectedFilter.push(filterArr[i]);
                     }
