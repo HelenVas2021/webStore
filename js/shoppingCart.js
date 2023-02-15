@@ -5,11 +5,13 @@ function showShoppingCart() {
     const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
     let orders = document.getElementById('orders')
     let discountIndex = 0;
+    let totalPrice = 0;
+    price();
     orders.innerHTML = '';
     document.getElementById('discount').innerHTML = '';
     for (let i = 0; i < orderArr.length; i++){
-        
         let elem = createElement('div', { className: 'cart-table__title' }, null, null, orders);
+        let deleteProductBtn = createElement('span', {className: 'deleteBtn','data-delete': i }, {click: deleteProduct}, 'x', elem);
         let article = createElement('div',{className: "cart-table__order"}, null, null, elem);
         createElement('img', { src: orderArr[i].img }, null, null, article);
         createElement('span',null, null, orderArr[i].name, article);
@@ -29,30 +31,37 @@ function showShoppingCart() {
                 localStorage.setItem('orderArr', JSON.stringify(arr));
                 discountIndex = 0;
                 showShoppingCart();
-                price()
+                price();
             } else {
                 sum.innerHTML = orderArr[i].price * value.value + 'UAN';
                 arr[product].value = value.value;
-                arr[product].sum = orderArr[i].price * value.value
+                arr[product].sum = orderArr[i].price * value.value;
                 localStorage.setItem('orderArr', JSON.stringify(arr));
                 discountIndex = 0;
-                price()
+                price();
             }
         };
     }
+    function deleteProduct(event) {
+        deleteIndex = event.target.getAttribute('data-delete');
+        let arrDelete = JSON.parse(localStorage.getItem('orderArr'));
+        arrDelete.splice(deleteIndex, 1);
+        localStorage.setItem('orderArr', JSON.stringify(arrDelete));
+        showShoppingCart();
+        price();
+    }
     // total price
-    let totalPrice = 0;
     function price() {
         totalPrice = 0;
         let priceArr = JSON.parse(localStorage.getItem('orderArr'));
         for (let i = 0; i < priceArr.length; i++) {
-        totalPrice = totalPrice + priceArr[i].sum 
+            totalPrice = totalPrice + priceArr[i].sum;
         }
         document.getElementById('totalPrice').innerHTML = totalPrice + ' UAN';
     }
-    price()
+    price();
     // discount
-    document.getElementById('chekDiscount').addEventListener('click', chekDiscount)
+    document.getElementById('chekDiscount').addEventListener('click', chekDiscount);
     function chekDiscount() {
         const discount = document.getElementById('discount');
         if (discountIndex == 0) {

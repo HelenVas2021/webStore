@@ -4,34 +4,49 @@ let productIndex = 0;
 function showProductPage(event) {
     window.scrollTo(0,0);
     let pagesArr = ['category', 'mainPage', 'oneItem', 'allProductPage'];
-    for (let i = 0; i < pagesArr.length; i++) {
-        document.getElementById(pagesArr[i]).classList.add('hidden');
-    }
+    pageCleanup()
     document.getElementById('oneItem').classList.remove('hidden');
     document.getElementById('response-list').innerHTML = '';
     categoryIndex = event.target.getAttribute('data-category');
     productIndex = event.target.getAttribute('data-product');
     let button = document.getElementById('addToShoppingCart');
+    button.removeEventListener('click', addToShoppingCart);
     button.addEventListener('click', addToShoppingCart);
     breadcrumbs(categoryIndex, productIndex, pagesArr);
     characteristic(categoryIndex, productIndex);
     responses(categoryIndex, productIndex);
-    function addToShoppingCart() {
-        const product = data[categoryIndex].products[productIndex];
-        const value = document.getElementById('numberOfGoods').value;
-        const order = {
-            img: product.main_images,
-            name: product.name,
-            price: product.price,
-            value: Number(value),
-            sum: value*product.price,
-        }
-        const orderArr = JSON.parse(localStorage.getItem('orderArr'))||[];
-        orderArr.push(order);
-        localStorage.setItem('orderArr', JSON.stringify(orderArr));
-        showShoppingCart()
-    }
 }
+
+function addToShoppingCart() {
+    const product = data[categoryIndex].products[productIndex];
+    const value = document.getElementById('numberOfGoods').value;
+    const order = {
+        img: product.main_images,
+        name: product.name,
+        price: product.price,
+        value: Number(value),
+        sum: value*product.price,
+    }
+    const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
+    let indexProduct = undefined;
+    if (orderArr.length === 0) {
+        orderArr.push(order);
+    } else {
+        orderArr.forEach(function (product, i, orderArr) {
+        if (product.name === order.name) {
+            indexProduct = i;
+        }
+        })
+    }
+    if (indexProduct == undefined) {
+        orderArr.push(order);
+    } else {
+        orderArr[indexProduct].value += 1;
+        orderArr[indexProduct].sum = orderArr[indexProduct].value * orderArr[indexProduct].price;
+    }
+    localStorage.setItem('orderArr', JSON.stringify(orderArr));
+    showShoppingCart();
+    }
 // Хлебные крошки
 function breadcrumbs(categoryIndex, productIndex, pagesArr) {
     let breadcrumbsOne = document.getElementById('breadcrumbsOne');
@@ -162,23 +177,3 @@ function validRating() {
 function closeModal() {
     document.getElementById('modal').classList.add('modal-hidden');
 }
-// <!-- модальное с отзывом -->
-//         <div class="modal modal-hidden" id="modal">
-//             <div class="contacts-block_form content" >
-//                 <button type="button" class="close-button" id="closeModal">&#215;</button>
-//                 <form action="#" method="get">
-//                     <h2>Write your review</h2>
-//                     <p><input type="text" id="nameForm" name="name" placeholder="Name"></p>
-//                     <p><input type="number" id="ratingForm" name="rating" placeholder="Rating(0-10)*" max="10"></p>
-//                     <p><input type="text" id="reviewForm" name="review" placeholder="Your review"></p>
-//                     <button type="button" class="moodalBtn_save" id="saveReviewBtn">Save feedback</button>
-//                 </form>
-//             </div>
-//         </div>
-
-
-
-
-
-
-
