@@ -37,7 +37,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="user_block">
+            <div class="user_block" id="user_block">
                 <div class="user_page">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width = "20px" id="user_page">
                         <path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"/>
@@ -443,6 +443,32 @@
             </div>
             
         </div>
+        <!-- личный кабинет -->
+        <div class="container_slim hidden" id="personal_page">
+            <div class="personal_page_block">
+                <div class="orders_block">
+                    <h2>My Orders</h2>
+                </div>
+                <div class="person_info_block">
+                    <h2>Your personal information</h2>
+                    <svg id="img_person" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg>
+                </div>
+            </div>
+        </div>
+        <div class="orders_details hidden" id="details_order">
+            <h2>Your order details</h2>
+            <div class="order_more_info"></div>
+        </div>
+        <!-- popup -->
+        <div id="popup" class="popup">
+            <div class="popup_block">
+                <div class="popup_content">
+                    <p class="popup_text">Are you sure you want to delete this user?</p>
+                    <button id="popup_delete" class="popup_delete">Delete</button>
+                    <button id="popup_cancel" class="popup_cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -481,6 +507,7 @@
     </footer>
     <script src="js/data.js"></script>
     <script src="js/salesWithData.js"></script>
+    <script src="js/order.js"></script>
     <script src="js/main_app.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
@@ -491,6 +518,8 @@
     <script src="./js/salesPage.js"></script>
     <script src="./js/allProducts.js"></script>
     <script src="./js/shoppingCart.js"></script>
+    <script src="./js/personal_account.js"></script>
+
 
 </body>
 </html>
