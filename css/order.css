@@ -1,13 +1,12 @@
 body {
   height: 100%;
-  background-color: #e5e5e5;
   position: relative;
 }
 
 html {
   height: 100%;
 }
-main {
+ .order_main {
   flex: 1 1 auto;
   
 }
@@ -18,6 +17,7 @@ main {
   margin-top: 100px;
   margin-left: 292px;
 }
+
 .main_data,
 .main_adress,
 .main_comment {
@@ -30,15 +30,16 @@ main {
   letter-spacing: 2%;
   font-size: 55px;
   line-height: 61px;
-}
-/* .container {
+} 
+.container_order {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-} */
+}
 .hiddenPage {
   visibility: hidden;
 }
+
 .main_data_bayer {
   text-align: left;
   width: 500px;
@@ -46,6 +47,7 @@ main {
   margin-bottom: 25px;
   margin-left: 35px;
 }
+
 .main_text_data_bayer,
 .form_header_adress_text,
 .main_comment_text,
@@ -54,6 +56,7 @@ main {
   line-height: 35px;
   letter-spacing: 2%;
 }
+
 .form > div {
   width: 500px;
   text-align: left;
@@ -70,13 +73,15 @@ main {
 
 .text-field {
   margin-bottom: 1rem;
+  position: relative;
 }
 .text-field__label {
   display: block;
   margin-bottom: 0.25rem;
-  font-size: 17px;
-  line-height: 50px;
+  /* font-size: 17px;
+  line-height: 50px; */
 }
+
 .text-field__input {
   display: block;
   width: 50%;
@@ -94,34 +99,33 @@ main {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-.text-field__input[type="search"]::-webkit-search-decoration,
+} 
+ /* .text-field__input[type="search"]::-webkit-search-decoration,
 .text-field__input[type="search"]::-webkit-search-cancel-button,
 .text-field__input[type="search"]::-webkit-search-results-button,
 .text-field__input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
-}
+} */
+
 .text-field__input::placeholder {
   color: #212529;
-  opacity: 2;
-}
-.text-field__input :focus,
+  opacity: 0.4;
+} 
+.text-field__input :focus,email
 textarea:focus {
   color: #292321;
   background-color: #fff;
   border-color: #bdbdbd;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
-}
+} 
 
 .text-field__input:disabled,
 .text-field__input[readonly] {
   background-color: #f5f5f5;
   opacity: 1;
-}
-.text-field {
-  position: relative;
-}
+} 
+
 .text-field_floating-3 .text-field__input,
 textarea {
   border: none;
@@ -132,18 +136,19 @@ textarea {
   height: 40px;
   line-height: 1.25;
   padding: 1rem 0.75rem;
-  background-color: #e5e5e5;
-}
-
-.text-field__input:focus,
+  margin: 10px;
+  
+} 
+ 
+ .text-field__input:focus,
 textarea:focus {
   outline: 0;
   border-bottom: 1px solid #000;
   box-shadow: none;
-  background-color: #eee;
-}
-
-.text-field_floating-3 .text-field__label {
+  background-color: #c1e2f7da;
+} 
+/*
+ .text-field_floating-3 .text-field__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -152,7 +157,7 @@ textarea:focus {
   pointer-events: none;
   transform-origin: 0 0;
   transition: color 0.15s ease-in-out, transform 0.15s ease-in-out;
-}
+} 
 
 .text-field_floating-3 .text-field__input::-moz-placeholder {
   color: transparent;
@@ -174,14 +179,17 @@ textarea:focus {
   ~ .text-field__label {
   transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
   color: #868686;
-}
+}  */
 
-.main_comment_div {
+
+
+ .main_comment_div {
   margin-top: 35px;
   margin-left: 10px;
   width: 172px;
   height: 35px;
 }
+
 textarea {
   display: flex;
   margin-bottom: 5%;
@@ -192,6 +200,7 @@ textarea {
   border: none;
   border-bottom: 1px solid #000;
 }
+
 .main_comment_textarea_text {
   display: flex;
   margin-left: 35px;
@@ -200,6 +209,7 @@ textarea {
   letter-spacing: 2%;
   color: #868686;
 }
+
 .row {
   display: flex;
 }
@@ -217,6 +227,7 @@ textarea {
   height: 28px;
   margin-top: 17px;
 }
+
 .checked_product_text {
   font-size: 20px;
   line-height: 28px;
@@ -224,28 +235,25 @@ textarea {
   color: #000000;
   padding: 15px;
   text-align: left;
-}
-/* блок на доработку отображается то что вібрал пользователь */
-.checked_prod_user {
-  width: 123px;
-  height: 24px;
-  margin-top: 15px;
-}
-/* блок на доработку отображается то что вібрал пользователь */
-.checked_total {
-  width: 284px;
+} 
+
+
+ .checked_total {
   height: 57px;
   background-color: #f1eadc;
-  text-align: center;
+  text-align: left;
   margin-top: 15px;
 }
+
 .checked_total_text {
+ 
   text-align: left;
   padding: 15px;
   font-size: 20px;
   line-height: 28px;
   color: #000000;
   letter-spacing: 2%;
+
 }
 .checked_payment {
   margin-top: 160px;
@@ -264,13 +272,13 @@ textarea {
   margin-top: 20px;
   width: 180px;
   height: 24px;
-}
-/* span {
+} 
+ span {
   font-size: 17px;
   line-height: 28.3px;
   letter-spacing: 2%;
-} */
-.confirm_order_text{
+} 
+ .confirm_order_text{
   width: 246px;
   height: 68px;
   padding: 22px, 50px, 12px, 50px;
@@ -279,24 +287,39 @@ textarea {
   margin-top: 15px;
   float: left;
 }
-button {
+.confirm_order_text{
   border: none;
-  background-color: #6e9c9f;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 2%;
-  color: #fff;
+  width: 230px;
+  height: 56px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #6e9c9f;
+  background: #6e9c9f;
+  color: #ffffff;
+  border-radius: 5px;
 }
-.confirm_order_text:hover{
+.confirm_order_text:hover {
+  background-color: #f8f9fa;
+  color: #6e9c9f;
+  border: 1px solid #579763;
+  box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+  cursor: pointer;
+}
+ .confirm_order_text:hover{
   background-color: #F8F9FA;
   color:#6E9C9F;
   border: 1px solid #579763;
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
   cursor: pointer;
   
-}
+} 
 
 .text-field__message {
+    position: absolute;
+    /* padding-left: 5px; */
   display: block;
   width: 80%;
   margin-top: .25rem;
@@ -360,16 +383,16 @@ button {
   height: 68px;
   font-size: 17px;
 
-}
-.confirm_button:hover{
+} 
+ .confirm_button:hover{
   background-color: #F8F9FA;
   color:#6E9C9F;
   border: 1px solid #579763;
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
   cursor: pointer;
   
-}
+} 
 .final_confirm {
   flex: 1 1 auto;
   
-}
+} 

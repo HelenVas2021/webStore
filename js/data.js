@@ -12,6 +12,7 @@ const data = [
         main_images: 'images/phones/samsung1.jpg',
         image_arr: ['images/phones/samsung1.jpg', 'images/phones/samsung1.1.jpg', 'images/phones/samsung1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Apple iPhone 13",
@@ -34,6 +35,7 @@ const data = [
         main_images: 'images/phones/moto1.jpg',
         image_arr: ['images/phones/moto1.jpg', 'images/phones/moto1.1.jpg', 'images/phones/moto1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Samsung Galaxy A53",
@@ -56,6 +58,7 @@ const data = [
         main_images: 'images/phones/apple2.jpg',
         image_arr: ['images/phones/apple2.jpg', 'images/phones/apple2.1.jpg', 'images/phones/apple2.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Motorola E40",
@@ -117,6 +120,7 @@ const data = [
         main_images: 'images/laptops/mac1.jpg',
         image_arr: ['images/laptops/mac1.jpg', 'images/laptops/mac1.1.jpg', 'images/laptops/mac1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Acer Aspire 7",
@@ -153,6 +157,7 @@ const data = [
         main_images: 'images/laptops/asus1.jpg',
         image_arr: ['images/laptops/asus1.jpg', 'images/laptops/asus1.1.jpg', 'images/laptops/asus1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "ASUS TUF Gaming F15",
@@ -189,6 +194,7 @@ const data = [
         main_images:'images/laptops/lenovo1.jpg',
         image_arr: ['images/laptops/lenovo1.jpg', 'images/laptops/lenovo1.1.jpg', 'images/laptops/lenovo1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Lenovo IdeaPad 5 Pro 16ACH6",
@@ -229,6 +235,7 @@ const data = [
         main_images: 'images/watches/samsungWatch1.1.jpg',
         image_arr:['images/watches/samsungWatch1.1.jpg','images/watches/samsungWatch1.jpg','images/watches/samsungWatch1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Samsung Galaxy Watch 5",
@@ -240,6 +247,7 @@ const data = [
         main_images:'images/watches/samWa2.jpg',
         image_arr: ['images/watches/samWa2.jpg', 'images/watches/samWa2.1.jpg', 'images/watches/samWa2.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Amazfit GTR 4",
@@ -262,6 +270,7 @@ const data = [
         main_images:'images/watches/xiaomiWatch1.jpg',
         image_arr: ['images/watches/xiaomiWatch1.jpg', 'images/watches/xiaomiWatch1.1.jpg', 'images/watches/xiaomiWatch1.2.jpg'],
         availability : 4,
+        sale : true,
       },
       {
         name: "Amazfit Bip 3",

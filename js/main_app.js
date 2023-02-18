@@ -2,11 +2,11 @@
 let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart'];
 const mainPage = document.querySelector('#mainPage');
 const categoryBlock = document.querySelector('#category');
-const allProducts = document.getElementById('allProductPage');
 const about = document.querySelector('#about');
 const contacts = document.querySelector('#contacts');
 const userPage = document.querySelector('#personal_page');
 const shoppingCart = document.getElementById('pageShoppingCart');
+
 
 document.querySelector('#aboutBtn').addEventListener('click', ()=> {
     pageCleanup()

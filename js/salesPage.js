@@ -27,21 +27,23 @@ function showAllSaleProduct() {
     let indexSale = 0;
     let indexParentSale = 0;
     let indexChildSale = 0;
-	for (let i = 0; i < salesData.length; i++) {
-		for (let j = 0; j < salesData[i].products.length; j++){
-            createElement('div', { id: `card${indexSale}`, className: salesData[i].name, 'data-priceAllProducts' : salesData[i].products[j].price }, null, null, allProductsSale);
+	for (let i = 0; i < data.length; i++) {
+		for (let j = 0; j < data[i].products.length; j++){
+            if (data[i].products[j].sale === true) {
+            createElement('div', { id: `card${indexSale}`, className: data[i].name, 'data-priceAllProducts' : data[i].products[j].price }, null, null, allProductsSale);
             let elemSale = document.getElementById(`card${indexSale}`);
-			let elemValueWithSale = Math.round(salesData[i].products[j].price-(salesData[i].products[j].price/100*parseFloat(percent))) ;
+			let elemValueWithSale = Math.round(data[i].products[j].price-(data[i].products[j].price/100*parseFloat(percent))) ;
             elemSale.classList.add('allProducts-card');
             elemSale.classList.add('showAllProducts');
-            elemSale.classList.add(salesData[i].products[j].color);
-            createElement('span', { className: 'allProductName'}, null, salesData[i].products[j].name, elemSale);
-            createElement('img', { id: `img${indexSale}`, src: salesData[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
-            createElement('span', {id: salesData[i].products[j].price , className: 'allSalePrice' }, null, `${salesData[i].products[j].price}UAH`, elemSale);
-			createElement('span', {id: salesData[i].products[j].price , className: 'discount', id:'discount' }, null, `Discount: ${percent}`, elemSale);
-			createElement('span', {id: salesData[i].products[j].price , className: 'allSaleWithDiscout' }, null, `${elemValueWithSale}UAH`, elemSale);
+            elemSale.classList.add(data[i].products[j].color);
+            createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elemSale);
+            createElement('img', { id: `img${indexSale}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
+            createElement('span', {id: data[i].products[j].price , className: 'allSalePrice' }, null, `${data[i].products[j].price}UAH`, elemSale);
+			createElement('span', {id: data[i].products[j].price , className: 'discount', id:'discount' }, null, `Discount: ${percent}`, elemSale);
+			createElement('span', {id: data[i].products[j].price , className: 'allSaleWithDiscout' }, null, `${elemValueWithSale}UAH`, elemSale);
             createElement('span', { id: `availability${indexSale}`, className: 'allProductAvailability' }, null, null, elemSale);
             createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParentSale, 'data-product': indexChildSale }, { click: saleShowProductPage}, 'explore', elemSale);
+        } 
             indexSale++;
             indexChildSale++;
 		}
@@ -163,7 +165,7 @@ function saleShowProductPage(event) {
 }
 
 function saleCharacteristic(categoryIndexSale, productIndexSale) {
-    let productCharacteristicSale = salesData[categoryIndexSale].products[productIndexSale];
+    let productCharacteristicSale = data[categoryIndexSale].products[productIndexSale];
     const parentSale = document.getElementById('listCharacteristic');
     let elemValueWithSale = Math.round(productCharacteristicSale.price-(productCharacteristicSale.price/100*parseFloat(percent))) ;
     parentSale.innerHTML = '';
@@ -191,7 +193,7 @@ function saleCharacteristic(categoryIndexSale, productIndexSale) {
     }
     function miniPhotoShowSale(event) {
         const miniPhotoIndexSale = event.target.getAttribute('data-photo');
-        document.getElementById('imgOneItem'). setAttribute('src', salesData[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
+        document.getElementById('imgOneItem'). setAttribute('src', data[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
     }
 }
 
@@ -211,4 +213,3 @@ function breadcrumbsForSale(categoryIndex, productIndex, pagesArr) {
     breadcrumbsThree.innerHTML = data[categoryIndex].products[productIndex].name;
 }
 
-showAllSaleProduct();
