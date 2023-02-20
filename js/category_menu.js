@@ -27,7 +27,8 @@ function showProducts(event) {
     const products = arrCategories[categoryIndex].products;
     const containerProduct = document.querySelector('.categories_card');
     containerProduct.innerHTML = '';
-    
+
+    let discount = 20;
     let availability;
     for(let i = 0; i < products.length; i++) {
         if (products[i].availability === 0) {
@@ -46,7 +47,15 @@ function showProducts(event) {
             elem.classList.add(products[i].color);
             createElement('span', { className: 'allProductName'}, null, products[i].name, elem);
             createElement('img', { src: `${products[i].main_images}`, className: 'allProductImg' }, null, null, elem);
-            createElement('span', { id: products[i].price, className: 'allProductPrice' }, null, `${products[i].price} UAN`, elem);
+            if(products[i].sale === true) {
+                let newPrice = Math.round(products[i].price - (products[i].price * discount/100));
+                let img_sale = createElement('span', { className: 'img_sale' }, null, null, elem);
+                img_sale.innerHTML = `<svg id="sale_img"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                                      <span class="text_sale">-${discount}%</span>`;
+                createElement('span', { id: newPrice, className: 'allProductPrice _mod_discount' }, null, `${newPrice} UAN`, elem);
+            } else {
+                createElement('span', { id: products[i].price, className: 'allProductPrice' }, null, `${products[i].price} UAN`, elem);
+            }
             createElement('span', { id: `availability${i}`, className: 'allProductAvailability' }, null, availability, elem);
             createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category': categoryIndex, 'data-product': i}, { click: showProductPage }, 'explore' , elem);
             let card = document.getElementById(i);

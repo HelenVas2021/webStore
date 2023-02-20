@@ -11,9 +11,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
-    
-
+    text-align: center;  
 }
 
 .container {
@@ -74,7 +72,7 @@ body {
     display: none;
     position: absolute;
     top: 120%;
-    left: 45%;
+    left: 52%;
     transform: translate3d(0px, 0px, 0px);
     padding: 20px 12px;
     width: 200px;
