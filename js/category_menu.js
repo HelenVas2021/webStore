@@ -21,6 +21,7 @@ function showProducts(event) {
         document.getElementById(pageArr[i]).classList.add('hidden');
     }
     categoryBlock.classList.remove('hidden');
+    showFiltersCat();
 
     const categoryIndex = event.target.getAttribute('data-category');
     const products = arrCategories[categoryIndex].products;
@@ -111,6 +112,21 @@ function sortDescending(sortType) {
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
+function showFiltersCat() {
+    const fieldsetColor = document.getElementById('fieldsetColor_cat');
+    fieldsetColor.innerHTML = '';
+    const colorArr = ['Black', 'Silver', 'White', 'Gold', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown', 'All_Color'];
+     for (let i = 0; i < colorArr.length; i++) {
+        let label = createElement('label', { className: 'filters-form__label' }, null, colorArr[i], fieldsetColor);
+        createElement(
+            'input',
+            { className: 'filters-form__color', name: "colorProduct", type:"checkbox", value: colorArr[i]},
+            null,
+            null,
+            label
+        );
+    }
+}
 function checkAvailabilityCat () {
     let btn = document.getElementById('availabilityBtn_cat');
     if (btn.classList.contains('activ_btn_sort')) {
@@ -159,7 +175,7 @@ function getCheckedCheckBoxesCat() {
     }
     
     // довляем в массив цвета которые выбрал пользователь
-    const checkboxesColor = document.getElementsByClassName('filters-form__color_cat');
+    const checkboxesColor = document.getElementsByClassName('filters-form__color');
     const colorArr = ['Black', 'Silver', 'White', 'Golden', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown',];
     const countColor = checkboxesColor.length;
     let checkboxesColorChecked = findFilter(checkboxesColor, colorArr, countColor);

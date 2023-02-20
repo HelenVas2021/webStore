@@ -132,8 +132,12 @@
   border-radius: 15px;
   padding-bottom: 5px;
 }
+.cat_pad {
+  padding: 15px 10px 5px 5px;
+}
 ._filterCat {
   width: 160px;
+  padding-right: 10px;
 }
 .filters-fieldset:hover {
   transform: scale(1.02);
