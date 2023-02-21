@@ -29,6 +29,13 @@ body {
     width: 60%;
     margin: 10px auto;
 }
+.info_title_mod {
+    font-family: 'Inter';
+    width: 60%;
+    margin: 10px auto;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
 /* header */
 .header_block {
@@ -237,36 +244,57 @@ body {
 }
 .prodact_card {
     padding: 20px 0;
+    width: 300px;
 }
-.prodact_card:hover {
+.prodact_card_mod {
+    display: grid;
+    grid-template-rows: 300px 140px;
+    padding: 20px;
+    width: 310px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.prodact_card:hover, .prodact_card_mod:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
     cursor: pointer; 
 }
 .prodact_text {
     margin-top: 10px;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: flex-end;
+    grid-template-rows: 70px 60px 30px;
+    align-items: center;
 }
 .prodact_img {
     max-height: 215px;
 }
+.prodact_img img {
+    max-height: 230px;
+}
 .prodact_name {
-    font-size: 22px;
-    line-height: 28px;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 24px;
     margin: 10px;
+    text-transform: uppercase;
 }
 .prodact_about {
-    width: 70%;
     margin: 0 auto;
+    font-family: 'Inter';
+    font-size: 14px;
+    line-height: 18px;
+    width: 80%;
+    
 }
 .prodact_price {
     font-family: 'Inter';
-    font-weight: 400;
+    font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     margin: 10px 0;
+    color: rgb(237 37 37);
 }
 /* best price */ 
 .card_btn {

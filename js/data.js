@@ -13,6 +13,7 @@ const data = [
         image_arr: ['images/phones/samsung1.jpg', 'images/phones/samsung1.1.jpg', 'images/phones/samsung1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Apple iPhone 13",
@@ -24,7 +25,8 @@ const data = [
         main_images: 'images/phones/apple1.jpg',
         image_arr: ['images/phones/apple1.jpg', 'images/phones/apple1.1.jpg', 'images/phones/apple1.2.jpg'],
         availability : 0,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Motorola G32",
@@ -37,6 +39,7 @@ const data = [
         image_arr: ['images/phones/moto1.jpg', 'images/phones/moto1.1.jpg', 'images/phones/moto1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Samsung Galaxy A53",
@@ -48,7 +51,8 @@ const data = [
         main_images: 'images/phones/samsung2.jpg',
         image_arr: ['images/phones/samsung2.jpg', 'images/phones/samsung2.1.jpg', 'images/phones/samsung2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Apple iPhone 11",
@@ -61,6 +65,7 @@ const data = [
         image_arr: ['images/phones/apple2.jpg', 'images/phones/apple2.1.jpg', 'images/phones/apple2.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Motorola E40",
@@ -72,7 +77,8 @@ const data = [
         main_images: 'images/phones/moto2.jpg',
         image_arr: ['images/phones/moto2.jpg', 'images/phones/moto2.1.jpg', 'images/phones/moto2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Nokia G11",
@@ -84,7 +90,8 @@ const data = [
         main_images: 'images/phones/nokia1.jpg',
         image_arr: ['images/phones/nokia1.jpg', 'images/phones/nokia1.1.jpg', 'images/phones/nokia1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Xiaomi Redmi Note 11",
@@ -96,7 +103,8 @@ const data = [
         main_images: 'images/phones/xiaomi1.jpg',
         image_arr: ['images/phones/xiaomi1.jpg', 'images/phones/xiaomi1.1.jpg', 'images/phones/xiaomi1.2.jpg'],
         availability : 0,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Apple iPhone 14 Pro",
@@ -108,7 +116,8 @@ const data = [
         main_images: 'images/phones/apple3.jpg',
         image_arr: ['images/phones/apple3.jpg', 'images/phones/apple3.1.jpg', 'images/phones/apple3.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
     ],
   },
@@ -127,6 +136,7 @@ const data = [
         image_arr: ['images/laptops/mac1.jpg', 'images/laptops/mac1.1.jpg', 'images/laptops/mac1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Acer Aspire 7",
@@ -139,7 +149,8 @@ const data = [
         main_images:'images/laptops/aser1.jpg',
         image_arr: ['images/laptops/aser1.jpg', 'images/laptops/aser1.1.jpg', 'images/laptops/aser1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Acer Aspire 5",
@@ -152,7 +163,8 @@ const data = [
         main_images:'images/laptops/aser2.jpg',
         image_arr: ['images/laptops/aser2.jpg', 'images/laptops/aser2.1.jpg', 'images/laptops/aser2.2.jpg'],
         availability : 0,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "ASUS Laptop X515EA-BQ3231",
@@ -166,6 +178,7 @@ const data = [
         image_arr: ['images/laptops/asus1.jpg', 'images/laptops/asus1.1.jpg', 'images/laptops/asus1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "ASUS TUF Gaming F15",
@@ -178,7 +191,8 @@ const data = [
         main_images:'images/laptops/asus2.jpg',
         image_arr: ['images/laptops/asus2.jpg', 'images/laptops/asus2.1.jpg', 'images/laptops/asus2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Asus Vivobook 15 M1502IA-BQ091",
@@ -191,7 +205,8 @@ const data = [
         main_images:'images/laptops/asus3.jpg',
         image_arr: ['images/laptops/asus3.jpg', 'images/laptops/asus3.1.jpg', 'images/laptops/asus3.2.jpg'],
         availability : 0,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Lenovo IdeaPad Gaming 3",
@@ -205,6 +220,7 @@ const data = [
         image_arr: ['images/laptops/lenovo1.jpg', 'images/laptops/lenovo1.1.jpg', 'images/laptops/lenovo1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Lenovo IdeaPad 5 Pro 16ACH6",
@@ -217,7 +233,8 @@ const data = [
         main_images:'images/laptops/lenovo2.jpg',
         image_arr: ['images/laptops/lenovo2.jpg', 'images/laptops/lenovo2.1.jpg', 'images/laptops/lenovo2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Apple MacBook M1 Pro",
@@ -230,7 +247,8 @@ const data = [
         main_images: 'images/laptops/mac2.jpg',
         image_arr: ['images/laptops/mac2.jpg', 'images/laptops/mac2.1.jpg', 'images/laptops/mac2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
     ],
   },
@@ -248,6 +266,7 @@ const data = [
         image_arr:['images/watches/samsungWatch1.1.jpg','images/watches/samsungWatch1.jpg','images/watches/samsungWatch1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Samsung Galaxy Watch 5",
@@ -260,6 +279,7 @@ const data = [
         image_arr: ['images/watches/samWa2.jpg', 'images/watches/samWa2.1.jpg', 'images/watches/samWa2.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Amazfit GTR 4",
@@ -271,7 +291,8 @@ const data = [
         main_images:'images/watches/amazfitWatch1.jpg',
         image_arr: ['images/watches/amazfitWatch1.jpg', 'images/watches/amazfitWatch1.1.jpg', 'images/watches/amazfitWatch1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Xiaomi Watch S1",
@@ -284,6 +305,7 @@ const data = [
         image_arr: ['images/watches/xiaomiWatch1.jpg', 'images/watches/xiaomiWatch1.1.jpg', 'images/watches/xiaomiWatch1.2.jpg'],
         availability : 4,
         sale : true,
+        discount: 20,
       },
       {
         name: "Amazfit Bip 3",
@@ -295,7 +317,8 @@ const data = [
         main_images: 'images/watches/amazfitW2.jpg',
         image_arr: ['images/watches/amazfitW2.jpg', 'images/watches/amazfitW2.1.jpg', 'images/watches/amazfitW2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Amazfit Bip 3 Pro",
@@ -307,7 +330,8 @@ const data = [
         main_images: 'images/watches/amazfitW3.jpg',
         image_arr: ['images/watches/amazfitW3.jpg', 'images/watches/amazfitW3.1.jpg', 'images/watches/amazfitW3.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Aura X1 Pro",
@@ -319,7 +343,8 @@ const data = [
         main_images: 'images/watches/auraW1.jpg',
         image_arr: ['images/watches/auraW1.jpg', 'images/watches/auraW1.1.jpg', 'images/watches/auraW1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Canyon Badian SW-68",
@@ -331,7 +356,8 @@ const data = [
         main_images: 'images/watches/amazfitW3.jpg',
         image_arr: ['images/watches/amazfitW3.jpg', 'images/watches/amazfitW3.1.jpg', 'images/watches/amazfitW3.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Aura X2 Pro",
@@ -343,7 +369,8 @@ const data = [
         main_images: 'images/watches/auraW2.jpg',
         image_arr: ['images/watches/auraW2.jpg', 'images/watches/auraW2.1.jpg', 'images/watches/auraW2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
     ],
   },
@@ -361,7 +388,8 @@ const data = [
         main_images: 'images/tablets/appleAipad1.jpg',
         image_arr: ['images/tablets/appleAipad1.jpg', 'images/tablets/appleAipad1.1.jpg', 'images/tablets/appleAipad1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Lenovo Tab M10 Plus",
@@ -374,7 +402,8 @@ const data = [
         main_images: 'images/tablets/lenovoTab1.1.jpg',
         image_arr: ['images/tablets/lenovoTab1.1.jpg', 'images/tablets/lenovoTab1.jpg', 'images/tablets/lenovoTab1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Samsung Galaxy Tab A7",
@@ -387,7 +416,8 @@ const data = [
         main_images: 'images/tablets/samsungTab1.jpg',
         image_arr: ['images/tablets/samsungTab1.jpg', 'images/tablets/samsungTab1.1.jpg', 'images/tablets/samsungTab1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Samsung Galaxy Tab S7",
@@ -400,7 +430,8 @@ const data = [
         main_images: 'images/tablets/samsungTab2.jpg',
         image_arr: ['images/tablets/samsungTab2.jpg', 'images/tablets/samsungTab2.1.jpg', 'images/tablets/samsungTab2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Lenovo Tab M10 Plus",
@@ -413,7 +444,8 @@ const data = [
         main_images: 'images/tablets/lenovoTab2.jpg',
         image_arr: ['images/tablets/lenovoTab2.jpg', 'images/tablets/lenovoTab2.1.jpg', 'images/tablets/lenovoTab2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Apple iPad Air",
@@ -426,7 +458,8 @@ const data = [
         main_images: 'images/tablets/appleTab2.jpg',
         image_arr: ['images/tablets/appleTab2.jpg', 'images/tablets/appleTab2.1.jpg', 'images/tablets/appleTab2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Xiaomi Redmi Pad",
@@ -439,7 +472,8 @@ const data = [
         main_images: 'images/tablets/xiaomiTab1.jpg',
         image_arr: ['images/tablets/xiaomiTab1.jpg', 'images/tablets/xiaomiTab1.1.jpg', 'images/tablets/xiaomiTab1.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Huawei Matepad",
@@ -452,7 +486,8 @@ const data = [
         main_images: 'images/tablets/huaweiTab1.jpg',
         image_arr: ['images/tablets/huaweiTab1.jpg', 'images/tablets/huaweiTab1.1.jpg', 'images/tablets/huaweiTab1.2.jpg'],
         availability : 0,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
       {
         name: "Xiaomi Mi Pad 5",
@@ -465,7 +500,8 @@ const data = [
         main_images: 'images/tablets/mixiaomiTab2.jpg',
         image_arr: ['images/tablets/mixiaomiTab2.jpg', 'images/tablets/mixiaomiTab2.1.jpg', 'images/tablets/mixiaomiTab2.2.jpg'],
         availability : 4,
-        sale : false,
+        sale: false,
+        discount: 0,
       },
     ]
   }

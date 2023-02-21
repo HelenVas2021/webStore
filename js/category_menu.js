@@ -28,7 +28,6 @@ function showProducts(event) {
     const containerProduct = document.querySelector('.categories_card');
     containerProduct.innerHTML = '';
 
-    let discount = 20;
     let availability;
     for(let i = 0; i < products.length; i++) {
         if (products[i].availability === 0) {
@@ -36,6 +35,7 @@ function showProducts(event) {
         } else {
             availability = 'on sale';
         }
+        let discount = products[i].discount;
         const elem = createElement(
             'div', 
             {'id': i, 'className': arrCategories[categoryIndex].name + ' allProducts-card _mod_size', 'data-category': categoryIndex, 'data-price': products[i].price}, 
@@ -121,21 +121,7 @@ function sortDescending(sortType) {
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
-function showFiltersCat() {
-    const fieldsetColor = document.getElementById('fieldsetColor_cat');
-    fieldsetColor.innerHTML = '';
-    const colorArr = ['Black', 'Silver', 'White', 'Gold', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown', 'All_Color'];
-     for (let i = 0; i < colorArr.length; i++) {
-        let label = createElement('label', { className: 'filters-form__label' }, null, colorArr[i], fieldsetColor);
-        createElement(
-            'input',
-            { className: 'filters-form__color', name: "colorProduct", type:"checkbox", value: colorArr[i]},
-            null,
-            null,
-            label
-        );
-    }
-}
+
 function checkAvailabilityCat () {
     let btn = document.getElementById('availabilityBtn_cat');
     if (btn.classList.contains('activ_btn_sort')) {
@@ -153,6 +139,24 @@ function checkAvailabilityCat () {
         }
     }
 }
+
+//фильтры
+function showFiltersCat() {
+    const fieldsetColor = document.getElementById('fieldsetColor_cat');
+    fieldsetColor.innerHTML = '';
+    const colorArr = ['Black', 'Silver', 'White', 'Gold', 'Pink', 'Purple', 'Green', 'Gray', 'Blue', 'Yellow', 'Red', 'Chocolate', 'Brown', 'All_Color'];
+     for (let i = 0; i < colorArr.length; i++) {
+        let label = createElement('label', { className: 'filters-form__label' }, null, colorArr[i], fieldsetColor);
+        createElement(
+            'input',
+            { className: 'filters-form__color', name: "colorProduct", type:"checkbox", value: colorArr[i]},
+            null,
+            null,
+            label
+        );
+    }
+}
+
 // картинки категорий на главной странице
 document.querySelector('#category_one').addEventListener('click', showProducts);
 document.querySelector('#category_two').addEventListener('click', showProducts);
@@ -241,3 +245,41 @@ function getCheckedCheckBoxesCat() {
         }
     }
 }
+
+
+//показать карточки товаров с акциями на главной странице
+
+function showCardDiscount() {
+
+    let arrCardWithDiscount = [];
+    for (let key in arrCategories) {
+        const productsName = arrCategories[key].products;
+        for(let i=0; i < productsName.length; i++) {
+            if(productsName[i].sale === true) {
+                arrCardWithDiscount.push(productsName[i]);
+            }
+        }
+    }
+    let arrNumber = [];
+    while (arrNumber.length < 4) {
+        const randomNumber = Math.ceil(Math.random() * arrCardWithDiscount.length-1);
+        if(!arrNumber.includes(randomNumber)) {
+            arrNumber.push(randomNumber);
+        }
+    }
+    for(let i=0; i < arrNumber.length; i++) {
+        let discount = arrCardWithDiscount[arrNumber[i]].discount;
+        let newPrice = Math.round(arrCardWithDiscount[arrNumber[i]].price - (arrCardWithDiscount[arrNumber[i]].price * discount/100));
+        const parent = document.querySelector('.cards');
+        const elem = createElement('div', { className: 'prodact_card_mod'}, null, null, parent);
+        const parentImg = createElement('div', { className: 'prodact_img'}, null, null, elem);
+        createElement('img', { alt: `${arrCardWithDiscount[arrNumber[i]].name}`, src: `${arrCardWithDiscount[arrNumber[i]].main_images}` }, null, null, parentImg);
+        const parentText = createElement('div', { className: 'prodact_text'}, null, null, elem);
+        createElement('p', { className: 'prodact_name'}, null, arrCardWithDiscount[arrNumber[i]].name, parentText);
+        createElement('p', { className: 'prodact_about'}, null, `Color: ${arrCardWithDiscount[arrNumber[i]].color}, Processor: ${arrCardWithDiscount[arrNumber[i]].processor}, Memory: ${arrCardWithDiscount[arrNumber[i]].memory}`, parentText);
+        createElement('p', { className: 'prodact_price'}, null, `${newPrice} UAH`, parentText);
+    }
+}
+showCardDiscount();
+
+

@@ -36,4 +36,5 @@ function pageCleanup() {
         document.getElementById(pageArr[i]).classList.add('hidden');
     }
 }
+
     
