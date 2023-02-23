@@ -2,6 +2,7 @@ document.getElementById('confirm').addEventListener('click', userInfo);
 document.getElementById('checkout_btn').addEventListener('click', showOrderPage);
 
 let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
+let orderPage = JSON.parse(localStorage.getItem('ordersPage'));
 
 
 function showOrderPage(){
@@ -64,6 +65,10 @@ function saveInfo(userInfo){
 
 	historyOrders.push(userInfo);
 	localStorage.setItem('historyOrders', JSON.stringify(historyOrders));
+	for(let key in orderArr) {
+		orderPage.push(orderArr[key]);
+	}
+	localStorage.setItem('ordersPage',JSON.stringify(orderPage));
 }
 
 document.getElementById('final_confirm_page').addEventListener('click',() => {

@@ -267,7 +267,7 @@ function showCardDiscount() {
             arrNumber.push(randomNumber);
         }
     }
-    for(let i=0; i < arrNumber.length; i++) {
+    for(let i=0; i < arrNumber.length; i++) { 
         let discount = arrCardWithDiscount[arrNumber[i]].discount;
         let newPrice = Math.round(arrCardWithDiscount[arrNumber[i]].price - (arrCardWithDiscount[arrNumber[i]].price * discount/100));
         const parent = document.querySelector('.cards');
