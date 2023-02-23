@@ -28,6 +28,9 @@ function showShoppingCart() {
             let arr = JSON.parse(localStorage.getItem('orderArr'));
             if (value.value == 0) {
                 arr.splice(product, 1);
+                if (arr.length === 0) {
+                    countProduct = 0;
+                }
                 localStorage.setItem('orderArr', JSON.stringify(arr));
                 discountIndex = 0;
                 showShoppingCart();
@@ -46,6 +49,9 @@ function showShoppingCart() {
         deleteIndex = event.target.getAttribute('data-delete');
         let arrDelete = JSON.parse(localStorage.getItem('orderArr'));
         arrDelete.splice(deleteIndex, 1);
+        if (arrDelete.length === 0) {
+            countProduct = 0;
+        }
         localStorage.setItem('orderArr', JSON.stringify(arrDelete));
         showShoppingCart();
         price();

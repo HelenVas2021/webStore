@@ -1,5 +1,7 @@
 let categoryIndex = 0;
 let productIndex = 0;
+let countProduct = 0;
+
 
 function showProductPage(event) {
     window.scrollTo(0,0);
@@ -11,7 +13,17 @@ function showProductPage(event) {
     productIndex = event.target.getAttribute('data-product');
     let button = document.getElementById('addToShoppingCart');
     button.removeEventListener('click', addToShoppingCart);
-    button.addEventListener('click', addToShoppingCart);
+    let oneProduct = data[categoryIndex].products[productIndex];
+    if (oneProduct.availability === 0) {
+        button.classList.add('notButton');
+        button.classList.remove('button');
+        button.innerHTML='is expected'
+    } else {
+        button.addEventListener('click', addToShoppingCart);
+        button.classList.add('button');
+        button.classList.remove('notButton');
+        button.innerHTML='Buy'
+    }
     breadcrumbs(categoryIndex, productIndex, pagesArr);
     characteristic(categoryIndex, productIndex);
     responses(categoryIndex, productIndex);
@@ -20,15 +32,23 @@ function showProductPage(event) {
 function addToShoppingCart() {
     const product = data[categoryIndex].products[productIndex];
     const value = document.getElementById('numberOfGoods').value;
+    let price;
+    if (product.sale === true) {
+        let discount = product.discount;
+        price = Math.round(product.price - (product.price * discount / 100));
+    } else {
+        price = product.price;
+    }
     const order = {
         img: product.main_images,
         name: product.name,
-        price: product.price,
+        price: price,
         value: Number(value),
         sum: value*product.price,
     }
     const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
     let indexProduct = undefined;
+    
     if (orderArr.length === 0) {
         orderArr.push(order);
     } else {
@@ -39,11 +59,14 @@ function addToShoppingCart() {
         })
     }
     if (indexProduct == undefined) {
-        orderArr.push(order);
+        if (countProduct !== 0) {
+            orderArr.push(order);
+        }
     } else {
         orderArr[indexProduct].value += 1;
         orderArr[indexProduct].sum = orderArr[indexProduct].value * orderArr[indexProduct].price;
     }
+    countProduct++;
     localStorage.setItem('orderArr', JSON.stringify(orderArr));
     showShoppingCart();
     }
@@ -66,13 +89,27 @@ function breadcrumbs(categoryIndex, productIndex, pagesArr) {
  // Блок характеристик 
 function characteristic(categoryIndex, productIndex) {
     let productCharacteristic = data[categoryIndex].products[productIndex];
+    let discount = productCharacteristic.discount;
+    let priceParrent = document.getElementById('priceSpan')
+    priceParrent.innerHTML = '';
     const parent = document.getElementById('listCharacteristic');
     parent.innerHTML = '';
     document.getElementById('imgOneItem').setAttribute('src', productCharacteristic.main_images);
     document.getElementById('titleOneItem').innerHTML = productCharacteristic.name;
-    document.getElementById('priceOneItem').innerHTML = productCharacteristic.price + ' UAH';
+    let price = document.getElementById('priceOneItem');
+    if (price.classList.contains('oneItem-price__sale')) {
+        price.classList.remove('oneItem-price__sale')
+    }
+    if (productCharacteristic.sale != true) {
+        price.innerHTML = productCharacteristic.price + ' UAH';
+    } else {
+        let newPrice = Math.round(productCharacteristic.price - (productCharacteristic.price * discount / 100));
+        price.innerHTML = productCharacteristic.price + ' UAH';
+        price.classList.add('oneItem-price__sale')
+        createElement('p', { className: 'oneItem__sale' }, null, newPrice + 'UAH', priceParrent);
+    } 
     for (let key in productCharacteristic) {
-        if (key !== 'main_images' && key !== 'image_arr' && key !== 'availability') {
+        if (key !== 'main_images' && key !== 'image_arr' && key !== 'availability' && key !== 'sale' && key !== 'discount') {
             createElement('li', { className: `oneItem-information__feature-li`, }, null, key + ' : ' +productCharacteristic[key] , parent);
         }
     }
