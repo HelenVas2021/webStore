@@ -68,7 +68,7 @@
                         <div class="slider_text">
                             <h1>Best prices for new phone models</h1>
                             <p>Go to the category tab and choose the best product at the best price</p>
-                            <button class="slider_btn">more</button>
+                            <button class="slider_btn" id="slider_btn" data-category="0">more</button>
                         </div>
                         <div class="slider_img">
                             <img src="images/main_page/slider/2.png" alt="images">
@@ -145,8 +145,7 @@
             <div class="best_prodact">
                 <h2 class="title_block">Save on our most selled items</h2>
                 <p class="info_title">The best deals at the best prices!</p>
-                <div class="cards">
-                    
+                <div class="cards">            
             </div>
             </div>
             <div class="best_price">
@@ -156,7 +155,7 @@
                     <div class="prodact_card price">
                         <p class="prodact_about">Smart light bulb pack</p>
                         <p class="prodact_name">Latest and gratest</p>
-                        <button class="card_btn">Explore</button>
+                        <button class="card_btn" data-category="2" id="btn_main_watch">Explore</button>
                         <div class="prodact_img">
                             <img src="images/main_page/prodact/watch.png" alt="watch">
                         </div>  
@@ -164,7 +163,7 @@
                     <div class="prodact_card price">
                         <p class="prodact_about">Smart light bulb pack</p>
                         <p class="prodact_name">Best selling</p>
-                        <button class="card_btn">Explore</button>
+                        <button class="card_btn" data-category="0" id="btn_main_phone">Explore</button>
                         <div class="prodact_img">
                             <img src="images/main_page/prodact/best.png" alt="best">
                         </div>  
@@ -172,7 +171,7 @@
                     <div class="prodact_card price">
                         <p class="prodact_about">Smart light bulb pack</p>
                         <p class="prodact_name">Every product</p>
-                        <button class="card_btn">Explore</button>
+                        <button class="card_btn" data-category="1" id="btn_main_laptop">Explore</button>
                         <div class="prodact_img">
                             <img src="images/main_page/prodact/every.png" alt="every">
                         </div>  
@@ -545,19 +544,11 @@
                 </div>
                 <div class="footer_list">
                     <h3 class="list_title">All products</h3>
-                    <ul class="fooret_list">
-                        <li>Phones</li>
-                        <li>Watch</li>
-                        <li>Tablet</li>
-                        <li>Laptops</li>
-                    </ul>
+                    <ul class="fooret_list"></ul>
                 </div>
                 <div class="footer_list">
                     <h3 class="list_title">Company</h3>
-                    <ul class="fooret_list">
-                        <li>About</li>
-                        <li>Support</li>
-                    </ul>
+                    <ul class="fooret_list _about"></ul>
                 </div>
                 <div class="footer_list">
                     <h3 class="list_title">Follow Us</h3>

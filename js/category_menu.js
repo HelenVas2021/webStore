@@ -12,7 +12,31 @@ function showCategories() {
             arrCategories[i].name, 
             containerCategories);
       }
+    const containerCategoriesFooter = document.querySelector('.fooret_list');
+    for (let i = 0; i < arrCategories.length; i++) {
+        const elem = createElement(
+            'li', 
+            {'data-category': i}, 
+            {click: showProducts}, 
+            arrCategories[i].name, 
+            containerCategoriesFooter);
+      }
+    const containerFooterListAbout = document.querySelector('._about');
+    createElement('li', null, {click: showAbout}, 'ABOUT', containerFooterListAbout);
+    createElement('li', null, {click: showContacts}, 'CONTACTS', containerFooterListAbout);
+
 }
+function showAbout() {
+    window.scrollTo(0,0);
+    pageCleanup()
+    about.classList.remove('hidden');
+}
+function showContacts() {
+    window.scrollTo(0,0);
+    pageCleanup()
+    contacts.classList.remove('hidden');
+}
+
 showCategories();
 // взаимодеймтвие с категориями
 function showProducts(event) {
@@ -162,6 +186,12 @@ document.querySelector('#category_one').addEventListener('click', showProducts);
 document.querySelector('#category_two').addEventListener('click', showProducts);
 document.querySelector('#category_three').addEventListener('click', showProducts);
 document.querySelector('#category_four').addEventListener('click', showProducts);
+
+document.querySelector('#slider_btn').addEventListener('click', showProducts);
+document.querySelector('#btn_main_watch').addEventListener('click', showProducts);
+document.querySelector('#btn_main_phone').addEventListener('click', showProducts);
+document.querySelector('#btn_main_laptop').addEventListener('click', showProducts);
+
 
 // фильтры
 
