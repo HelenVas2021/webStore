@@ -9,8 +9,8 @@ function showProductPage(event) {
     pageCleanup()
     document.getElementById('oneItem').classList.remove('hidden');
     document.getElementById('response-list').innerHTML = '';
-    categoryIndex = event.target.getAttribute('data-category');
-    productIndex = event.target.getAttribute('data-product');
+    categoryIndex = Number(event.target.getAttribute('data-category'));
+    productIndex = Number(event.target.getAttribute('data-product'));
     let button = document.getElementById('addToShoppingCart');
     button.removeEventListener('click', addToShoppingCart);
     let oneProduct = data[categoryIndex].products[productIndex];
