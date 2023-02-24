@@ -20,7 +20,31 @@ function showCategories() {
             arrCategories[i].name, 
             containerCategories);
       }
+    const containerCategoriesFooter = document.querySelector('.fooret_list');
+    for (let i = 0; i < arrCategories.length; i++) {
+        const elem = createElement(
+            'li', 
+            {'data-category': i}, 
+            {click: showProducts}, 
+            arrCategories[i].name, 
+            containerCategoriesFooter);
+      }
+    const containerFooterListAbout = document.querySelector('._about');
+    createElement('li', null, {click: showAbout}, 'ABOUT', containerFooterListAbout);
+    createElement('li', null, {click: showContacts}, 'CONTACTS', containerFooterListAbout);
+
 }
+function showAbout() {
+    window.scrollTo(0,0);
+    pageCleanup()
+    about.classList.remove('hidden');
+}
+function showContacts() {
+    window.scrollTo(0,0);
+    pageCleanup()
+    contacts.classList.remove('hidden');
+}
+
 showCategories();
 // взаимодеймтвие с категориями
 function showProducts(event) {
@@ -171,6 +195,12 @@ document.querySelector('#category_two').addEventListener('click', showProducts);
 document.querySelector('#category_three').addEventListener('click', showProducts);
 document.querySelector('#category_four').addEventListener('click', showProducts);
 
+document.querySelector('#slider_btn').addEventListener('click', showProducts);
+document.querySelector('#btn_main_watch').addEventListener('click', showProducts);
+document.querySelector('#btn_main_phone').addEventListener('click', showProducts);
+document.querySelector('#btn_main_laptop').addEventListener('click', showProducts);
+
+
 // фильтры
 
 document.getElementById('buttonSaveFilter_cat').addEventListener('click', getCheckedCheckBoxesCat);
@@ -264,6 +294,8 @@ function showCardDiscount() {
         const productsName = arrCategories[key].products;
         for(let i=0; i < productsName.length; i++) {
             if(productsName[i].sale === true) {
+                productsName[i].category = key;
+                productsName[i].productId = i;
                 arrCardWithDiscount.push(productsName[i]);
             }
         }
@@ -279,13 +311,13 @@ function showCardDiscount() {
         let discount = arrCardWithDiscount[arrNumber[i]].discount;
         let newPrice = Math.round(arrCardWithDiscount[arrNumber[i]].price - (arrCardWithDiscount[arrNumber[i]].price * discount/100));
         const parent = document.querySelector('.cards');
-        const elem = createElement('div', { className: 'prodact_card_mod'}, null, null, parent);
+        const elem = createElement('div', { className: 'prodact_card_mod', 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId}, { click: showProductPage }, null, parent);
         const parentImg = createElement('div', { className: 'prodact_img'}, null, null, elem);
-        createElement('img', { alt: `${arrCardWithDiscount[arrNumber[i]].name}`, src: `${arrCardWithDiscount[arrNumber[i]].main_images}` }, null, null, parentImg);
+        createElement('img', { alt: `${arrCardWithDiscount[arrNumber[i]].name}`, 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId, src: `${arrCardWithDiscount[arrNumber[i]].main_images}` }, null, null, parentImg);
         const parentText = createElement('div', { className: 'prodact_text'}, null, null, elem);
-        createElement('p', { className: 'prodact_name'}, null, arrCardWithDiscount[arrNumber[i]].name, parentText);
-        createElement('p', { className: 'prodact_about'}, null, `Color: ${arrCardWithDiscount[arrNumber[i]].color}, Processor: ${arrCardWithDiscount[arrNumber[i]].processor}, Memory: ${arrCardWithDiscount[arrNumber[i]].memory}`, parentText);
-        createElement('p', { className: 'prodact_price'}, null, `${newPrice} UAH`, parentText);
+        createElement('p', { className: 'prodact_name', 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId}, null, arrCardWithDiscount[arrNumber[i]].name, parentText);
+        createElement('p', { className: 'prodact_about', 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId}, null, `Color: ${arrCardWithDiscount[arrNumber[i]].color}, Processor: ${arrCardWithDiscount[arrNumber[i]].processor}, Memory: ${arrCardWithDiscount[arrNumber[i]].memory}`, parentText);
+        createElement('p', { className: 'prodact_price', 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId}, null, `${newPrice} UAH`, parentText);
     }
 }
 showCardDiscount();

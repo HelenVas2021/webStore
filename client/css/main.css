@@ -580,6 +580,8 @@ body {
 }
 .orders_details h2 {
     margin-top: 50px;
+    margin-bottom: 0;
+
 }
 .order_info {
     font-size: 18px;
@@ -622,7 +624,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 700px;
+    width: 785px;
     min-height: 500px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -678,6 +680,13 @@ body {
     color: #6E9C9F;
     font-weight: 600;
     text-transform: uppercase;
+}
+._order_mod {
+    color: #579763;
+}
+.price_mod {
+    font-size: 20px;
+    font-weight: 600;
 }
 /* popup */
 

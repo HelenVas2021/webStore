@@ -70,11 +70,13 @@ function showDetailsOrder (event) {
             const details = createElement('div', { className: 'orders_details_block'}, null, null, parentOrderDet);
             details.innerHTML = `<p><span class="text_mod_order">Data of purchase:</span> ${arrLocalStorageOrder[i].dateOrder}</p>
                                  <p><span class="text_mod_order">Name:</span> ${arrLocalStorageOrder[i].name} </p>
-                                 <p><span class="text_mod_order">Price:</span> ${arrLocalStorageOrder[i].price} UAN</p>
+                                 <p><span class="text_mod_order">Price:</span> ${arrLocalStorageOrder[i].price} UAH</p>
                                  <p><span class="text_mod_order">Color:</span> ${arrLocalStorageOrder[i].color}</p>
                                  <p><span class="text_mod_order">Diagonal:</span> ${arrLocalStorageOrder[i].diagonal}</p>
                                  <p><span class="text_mod_order">Processor:</span> ${arrLocalStorageOrder[i].processor}</p>
-                                 <p><span class="text_mod_order">Your comment:</span> ${arrLocalStorageOrder[i].comment} </p> `
+                                 <p><span class="text_mod_order">Your comment:</span> ${arrLocalStorageOrder[i].comment} </p>
+                                 <p><span class="text_mod_order">Number of goods purchased:</span> ${arrLocalStorageOrder[i].value}
+                                 <p class="price_mod"><span class="text_mod_order _order_mod">Total cost:</span> ${arrLocalStorageOrder[i].sum} UAH</p> `
             createElement('img', { className: 'orders_details_img', src:`${arrLocalStorageOrder[i].main_images}`}, null, null, parentOrderDet);
         }
     }
