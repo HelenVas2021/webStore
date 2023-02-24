@@ -12,6 +12,8 @@ const order = [
         main_images: 'images/phones/samsung1.jpg',
         image_arr: ['images/phones/samsung1.jpg', 'images/phones/samsung1.1.jpg', 'images/phones/samsung1.2.jpg'],
         availability : 4,
+        sum: 29999,
+        value: 1,
     },
     {
         id_order: "order_2",
@@ -26,6 +28,8 @@ const order = [
         main_images: 'images/phones/apple1.jpg',
         image_arr: ['images/phones/apple1.jpg', 'images/phones/apple1.1.jpg', 'images/phones/apple1.2.jpg'],
         availability : 0,
+        sum: 35999,
+        value: 1,
     },
     {
         id_order: "order_1",
@@ -41,5 +45,7 @@ const order = [
         main_images:'images/laptops/lenovo2.jpg',
         image_arr: ['images/laptops/lenovo2.jpg', 'images/laptops/lenovo2.1.jpg', 'images/laptops/lenovo2.2.jpg'],
         availability : 4,
+        sum: 48888,
+        value: 1,
     }
 ]

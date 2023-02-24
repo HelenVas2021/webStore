@@ -55,7 +55,7 @@ function userInfo(){
 	 for(let i=0; i < orderArr.length; i++) {
 		let comment = document.querySelector('#comment').value;
 		let dataOrder = new Date().toLocaleDateString();
-		let orderId = `order_${orderArr[i].name}`;
+		let orderId = `order_${orderArr[i].name}${Date.now()}`;
 		orderArr[i].comment = comment;
 		orderArr[i].dateOrder = dataOrder;
 		orderArr[i].id_order = orderId;
