@@ -27,29 +27,34 @@ function showAllSaleProduct() {
     let indexSale = 0;
     let indexParentSale = 0;
     let indexChildSale = 0;
-	for (let i = 0; i < data.length; i++) {
-		for (let j = 0; j < data[i].products.length; j++){
-            if (data[i].products[j].sale === true) {
-            createElement('div', { id: `card${indexSale}`, className: data[i].name, 'data-priceAllProducts' : data[i].products[j].price }, null, null, allProductsSale);
-            let elemSale = document.getElementById(`card${indexSale}`);
-			let elemValueWithSale = Math.round(data[i].products[j].price-(data[i].products[j].price/100*parseFloat(percent))) ;
-            elemSale.classList.add('allProducts-card');
-            elemSale.classList.add('showAllProducts');
-            elemSale.classList.add(data[i].products[j].color);
-            createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elemSale);
-            createElement('img', { id: `img${indexSale}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
-            createElement('span', {id: data[i].products[j].price , className: 'allSalePrice' }, null, `${data[i].products[j].price}UAH`, elemSale);
-			createElement('span', {id: data[i].products[j].price , className: 'discount', id:'discount' }, null, `Discount: ${percent}`, elemSale);
-			createElement('span', {id: data[i].products[j].price , className: 'allSaleWithDiscout' }, null, `${elemValueWithSale}UAH`, elemSale);
-            createElement('span', { id: `availability${indexSale}`, className: 'allProductAvailability' }, null, null, elemSale);
-            createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParentSale, 'data-product': indexChildSale }, { click: saleShowProductPage}, 'explore', elemSale);
-        } 
-            indexSale++;
-            indexChildSale++;
-		}
-        indexParentSale++;
-        indexChildSale = 0;
-		}
+    fetch(API_CATEGORIES_LIST)
+        .then(res => res.json())
+        .then(data => {
+            for (let i = 0; i < data.length; i++) {
+                for (let j = 0; j < data[i].products.length; j++){
+                    if (data[i].products[j].sale === true) {
+                    createElement('div', { id: `card${indexSale}`, className: data[i].name, 'data-priceAllProducts' : data[i].products[j].price }, null, null, allProductsSale);
+                    let elemSale = document.getElementById(`card${indexSale}`);
+                    let elemValueWithSale = Math.round(data[i].products[j].price-(data[i].products[j].price/100*parseFloat(percent))) ;
+                    elemSale.classList.add('allProducts-card');
+                    elemSale.classList.add('showAllProducts');
+                    elemSale.classList.add(data[i].products[j].color);
+                    createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elemSale);
+                    createElement('img', { id: `img${indexSale}`, src: `./client/`+ data[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
+                    createElement('span', {id: data[i].products[j].price , className: 'allSalePrice' }, null, `${data[i].products[j].price}UAH`, elemSale);
+                    createElement('span', {id: data[i].products[j].price , className: 'discount', id:'discount' }, null, `Discount: ${percent}`, elemSale);
+                    createElement('span', {id: data[i].products[j].price , className: 'allSaleWithDiscout' }, null, `${elemValueWithSale}UAH`, elemSale);
+                    createElement('span', { id: `availability${indexSale}`, className: 'allProductAvailability' }, null, null, elemSale);
+                    createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParentSale, 'data-product': indexChildSale }, { click: saleShowProductPage}, 'explore', elemSale);
+                } 
+                indexSale++;
+                indexChildSale++;
+            }
+            indexParentSale++;
+            indexChildSale = 0;
+            }
+        }
+    )
 }
 // убираем сортировку! Передаем Id кнопок 
 function removeSalesSort(saleAscending, SaleDescending) {

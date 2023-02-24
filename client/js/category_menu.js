@@ -1,5 +1,13 @@
 let a = JSON.stringify(data);
 let arrCategories = JSON.parse(a);
+console.log(arrCategories)
+
+fetch(API_CATEGORIES_LIST)
+    .then(res => res.json())
+    .then(categories => {
+        console.log(categories)
+    }) 
+    // arrCategories ===  categories 
 
 //подтягивает название категорий в меню
 function showCategories() {
