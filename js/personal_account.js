@@ -39,7 +39,7 @@ function deleteOrder(event) {
             document.querySelector('#popup_delete').addEventListener ('click', function() {
 
             arrLocalStorageOrder.splice(orderIndex, 1);
-            localStorage.setItem('orders', JSON.stringify(arrLocalStorageOrder));        
+            localStorage.setItem('ordersPage', JSON.stringify(arrLocalStorageOrder));        
             event.target.closest('div').remove();
 
             document.querySelector('#popup').classList.remove('open');

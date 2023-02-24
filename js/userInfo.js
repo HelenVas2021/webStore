@@ -2,7 +2,7 @@ document.getElementById('confirm').addEventListener('click', userInfo);
 document.getElementById('checkout_btn').addEventListener('click', showOrderPage);
 
 let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
-let orderPage = JSON.parse(localStorage.getItem('ordersPage'));
+let orderPersonalPage = JSON.parse(localStorage.getItem('ordersPage'));
 
 
 function showOrderPage(){
@@ -29,6 +29,7 @@ basket.className = 'hidden';
 
 
 function userInfo(){
+	orderArr = JSON.parse(localStorage.getItem('orderArr'));
 	const orderPage = document.getElementById('order_page');
 	const confirmWindow = document.getElementById('confirm_window');
 	const userInfo = {
@@ -51,9 +52,19 @@ function userInfo(){
 	 document.forms[4].reset();
 	 document.forms[5].reset();
 
+	 for(let i=0; i < orderArr.length; i++) {
+		let comment = document.querySelector('#comment').value;
+		let dataOrder = new Date().toLocaleDateString();
+		let orderId = `order_${orderArr[i].name}`;
+		orderArr[i].comment = comment;
+		orderArr[i].dateOrder = dataOrder;
+		orderArr[i].id_order = orderId;
+		orderPersonalPage.push(orderArr[i]);
+	}
+	localStorage.setItem('ordersPage',JSON.stringify(orderPersonalPage));
+
 orderPage.className='hiddenPage';
 confirmWindow.classList.remove('hiddenPage');
-	 
 }
 
 function saveInfo(userInfo){
@@ -65,10 +76,6 @@ function saveInfo(userInfo){
 
 	historyOrders.push(userInfo);
 	localStorage.setItem('historyOrders', JSON.stringify(historyOrders));
-	for(let key in orderArr) {
-		orderPage.push(orderArr[key]);
-	}
-	localStorage.setItem('ordersPage',JSON.stringify(orderPage));
 }
 
 document.getElementById('final_confirm_page').addEventListener('click',() => {
