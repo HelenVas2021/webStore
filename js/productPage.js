@@ -42,9 +42,16 @@ function addToShoppingCart() {
     const order = {
         img: product.main_images,
         name: product.name,
+        diagonal: product.diagonal,
         price: price,
+        color: product.color,
+        memory: product.memory,
+        processor: product.processor,
+        main_images: product.main_images,
+        image_arr: product.image_arr,
+        availability : product.availability,
         value: Number(value),
-        sum: value*product.price,
+        sum: value * price,
     }
     const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
     let indexProduct = undefined;

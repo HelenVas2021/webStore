@@ -1,3 +1,5 @@
+let buyerPrice;
+
 function showShoppingCart() {
     pageCleanup();
     document.getElementById('pageShoppingCart').classList.remove('hidden')
@@ -64,6 +66,7 @@ function showShoppingCart() {
             totalPrice = totalPrice + priceArr[i].sum;
         }
         document.getElementById('totalPrice').innerHTML = totalPrice + ' UAN';
+        buyerPrice = totalPrice;
     }
     price();
     // discount
@@ -75,8 +78,9 @@ function showShoppingCart() {
                 let finalPrice = totalPrice * 0.8;
                 discountIndex++;
                 document.getElementById('totalPrice').innerHTML = finalPrice.toFixed(2) + ' UAN';
+                buyerPrice = finalPrice.toFixed(2)
             }    
-        }  
+        }
     }
 }
 
