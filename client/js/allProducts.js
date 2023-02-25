@@ -6,7 +6,6 @@ let modalOFWindow = document.getElementById('modalWindow');
 allProductBtn.addEventListener('click', showAllProduct);
 buttonSaveFilter.addEventListener('click', getCheckedCheckBoxes);
 filtersAvailabilityBtn.addEventListener('click', checkAvailability);
-// let data = [];
 
 document.getElementById("filters-minPriceBtn").oninput = function () {
     let minPriceSlider = document.getElementById('filters-minPriceBtn');
@@ -37,50 +36,44 @@ function showAllProduct() {
     let availability;
     // фильтр по типу
     showFilters();
-    fetch(API_CATEGORIES_LIST)
-        .then(res => res.json())
-        .then(res => {
-            data = res.slice(0);
-            for (let i = 0; i < data.length; i++) {
-                for (let j = 0; j < data[i].products.length; j++){
-                    if (data[i].products[j].availability === 0) {
-                        availability = 'is expected';
-                    } else {
-                        availability = 'on sale';
-                    }
-                    let discount = data[i].products[j].discount;
-                    createElement('div', { id: `card${index}`, className: data[i].name, 'data-priceAllProducts' : data[i].products[j].price }, null, null, allProducts);
-                    let elem = document.getElementById(`card${index}`);
-                    elem.classList.add('allProducts-card');
-                    elem.classList.add('showAllProducts');
-                    elem.classList.add(data[i].products[j].color);
-                    createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elem);
-                    createElement('img', { id: `img${index}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elem);
-                    if(data[i].products[j].sale === true) {
-                        let newPrice = Math.round(data[i].products[j].price - (data[i].products[j].price * discount/100));
-                        let img_sale = createElement('span', { className: 'img_sale' }, null, null, elem);
-                        img_sale.innerHTML = `<svg id="sale_img"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
-                                            <span class="text_sale">-${discount}%</span>`;
-                        createElement('span', { id: newPrice, className: 'allProductPrice _mod_discount' }, null, `${newPrice} UAH`, elem);
-                    } else {
-                        createElement('span', { id: data[i].products[j].price, className: 'allProductPrice' }, null, `${data[i].products[j].price} UAH`, elem);
-                    }
-                    createElement('span', { id: `availability${index}`, className: 'allProductAvailability' }, null, availability, elem);
-                    createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParent, 'data-product': indexChild }, { click: showProductPage }, 'explore', elem);
-                    let card = document.getElementById(`card${index}`);
-                    if (availability === 'is expected') {  
-                        let elem = document.getElementById(`availability${index}`);
-                        elem.classList.add('filter-notAviability');
-                        card.classList.add('allProducts-card__notActive');
-                    }
-                    index++;
-                    indexChild++;
-                }
-                indexParent++;
-                indexChild = 0;
+    for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data[i].products.length; j++){
+            if (data[i].products[j].availability === 0) {
+                availability = 'is expected';
+            } else {
+                availability = 'on sale';
             }
+            let discount = data[i].products[j].discount;
+            createElement('div', { id: `card${index}`, className: data[i].name, 'data-priceAllProducts' : data[i].products[j].price }, null, null, allProducts);
+            let elem = document.getElementById(`card${index}`);
+            elem.classList.add('allProducts-card');
+            elem.classList.add('showAllProducts');
+            elem.classList.add(data[i].products[j].color);
+            createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elem);
+            createElement('img', { id: `img${index}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elem);
+            if(data[i].products[j].sale === true) {
+                let newPrice = Math.round(data[i].products[j].price - (data[i].products[j].price * discount/100));
+                let img_sale = createElement('span', { className: 'img_sale' }, null, null, elem);
+                img_sale.innerHTML = `<svg id="sale_img"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                                    <span class="text_sale">-${discount}%</span>`;
+                createElement('span', { id: newPrice, className: 'allProductPrice _mod_discount' }, null, `${newPrice} UAH`, elem);
+            } else {
+                createElement('span', { id: data[i].products[j].price, className: 'allProductPrice' }, null, `${data[i].products[j].price} UAH`, elem);
+            }
+            createElement('span', { id: `availability${index}`, className: 'allProductAvailability' }, null, availability, elem);
+            createElement('button', { type: 'button', className: 'allProduct_btn', 'data-category':indexParent, 'data-product': indexChild }, { click: showProductPage }, 'explore', elem);
+            let card = document.getElementById(`card${index}`);
+            if (availability === 'is expected') {  
+                let elem = document.getElementById(`availability${index}`);
+                elem.classList.add('filter-notAviability');
+                card.classList.add('allProducts-card__notActive');
+            }
+            index++;
+            indexChild++;
         }
-    )
+        indexParent++;
+        indexChild = 0;
+    }
 }
 function showFilters() {
     const fieldsetType = document.getElementById('filtersType');
