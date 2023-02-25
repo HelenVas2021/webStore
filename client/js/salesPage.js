@@ -41,7 +41,7 @@ function showAllSaleProduct() {
                     elemSale.classList.add('showAllProducts');
                     elemSale.classList.add(data[i].products[j].color);
                     createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elemSale);
-                    createElement('img', { id: `img${indexSale}`, src: `./client/`+ data[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
+                    createElement('img', { id: `img${indexSale}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elemSale);
                     createElement('span', {id: data[i].products[j].price , className: 'allSalePrice' }, null, `${data[i].products[j].price}UAH`, elemSale);
                     createElement('span', {id: data[i].products[j].price , className: 'discount', id:'discount' }, null, `Discount: ${percent}`, elemSale);
                     createElement('span', {id: data[i].products[j].price , className: 'allSaleWithDiscout' }, null, `${elemValueWithSale}UAH`, elemSale);
@@ -175,7 +175,7 @@ function saleCharacteristic(categoryIndexSale, productIndexSale) {
     const parentSale = document.getElementById('listCharacteristic');
     let elemValueWithSale = Math.round(productCharacteristicSale.price-(productCharacteristicSale.price/100*parseFloat(percent))) ;
     parentSale.innerHTML = '';
-    document.getElementById('imgOneItem').setAttribute('src',`client/`+ productCharacteristicSale.main_images);
+    document.getElementById('imgOneItem').setAttribute('src', productCharacteristicSale.main_images);
     document.getElementById('titleOneItem').innerHTML = productCharacteristicSale.name;
     document.getElementById('priceOneItem').innerHTML = elemValueWithSale + ' UAH';
     for (let key in productCharacteristicSale) {
@@ -194,12 +194,12 @@ function saleCharacteristic(categoryIndexSale, productIndexSale) {
     let allPhotoArrSale = productCharacteristicSale.image_arr;
     let indexPhotoSale = 0;
     for (let i = 0; i < allPhotoArrSale.length; i++) {
-        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhotoSale, src:`client/` + allPhotoArrSale[i] },  { click: miniPhotoShowSale }, null, allPhotoSale);
+        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhotoSale, src: allPhotoArrSale[i] },  { click: miniPhotoShowSale }, null, allPhotoSale);
         indexPhotoSale++
     }
     function miniPhotoShowSale(event) {
         const miniPhotoIndexSale = event.target.getAttribute('data-photo');
-        document.getElementById('imgOneItem'). setAttribute('src',`client/` + data[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
+        document.getElementById('imgOneItem'). setAttribute('src', data[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
     }
 }
 

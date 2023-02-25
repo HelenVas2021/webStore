@@ -1,13 +1,15 @@
-let a = JSON.stringify(data);
-let arrCategories = JSON.parse(a);
-console.log(arrCategories)
+let arrCategories = [];
+getDataArr();
+async function getDataArr() {
+    await fetch(API_CATEGORIES_LIST)
+        .then(res => res.json())
+        .then(categories => {
+            arrCategories = categories;
+        }) 
+        showCategories();
+        showCardDiscount();
+}
 
-fetch(API_CATEGORIES_LIST)
-    .then(res => res.json())
-    .then(categories => {
-        console.log(categories)
-    }) 
-    // arrCategories ===  categories 
 
 //подтягивает название категорий в меню
 function showCategories() {
@@ -45,7 +47,7 @@ function showContacts() {
     contacts.classList.remove('hidden');
 }
 
-showCategories();
+
 // взаимодеймтвие с категориями
 function showProducts(event) {
     window.scrollTo(0,0);
@@ -320,6 +322,6 @@ function showCardDiscount() {
         createElement('p', { className: 'prodact_price', 'data-category': arrCardWithDiscount[arrNumber[i]].category, 'data-product': arrCardWithDiscount[arrNumber[i]].productId}, null, `${newPrice} UAH`, parentText);
     }
 }
-showCardDiscount();
+
 
 

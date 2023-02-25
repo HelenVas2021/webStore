@@ -55,7 +55,7 @@ function showAllProduct() {
                     elem.classList.add('showAllProducts');
                     elem.classList.add(data[i].products[j].color);
                     createElement('span', { className: 'allProductName'}, null, data[i].products[j].name, elem);
-                    createElement('img', { id: `img${index}`, src: `./client/`+data[i].products[j].main_images , className: 'allProductImg' }, null, null, elem);
+                    createElement('img', { id: `img${index}`, src: data[i].products[j].main_images , className: 'allProductImg' }, null, null, elem);
                     if(data[i].products[j].sale === true) {
                         let newPrice = Math.round(data[i].products[j].price - (data[i].products[j].price * discount/100));
                         let img_sale = createElement('span', { className: 'img_sale' }, null, null, elem);
