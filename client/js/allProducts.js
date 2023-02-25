@@ -6,7 +6,7 @@ let modalOFWindow = document.getElementById('modalWindow');
 allProductBtn.addEventListener('click', showAllProduct);
 buttonSaveFilter.addEventListener('click', getCheckedCheckBoxes);
 filtersAvailabilityBtn.addEventListener('click', checkAvailability);
-let data = [];
+// let data = [];
 
 document.getElementById("filters-minPriceBtn").oninput = function () {
     let minPriceSlider = document.getElementById('filters-minPriceBtn');

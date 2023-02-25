@@ -1,4 +1,15 @@
+let data = [];
+getData();
+async function getData() {
+    await fetch(API_CATEGORIES_LIST)
+        .then(res => res.json())
+        .then(res => {
+            data = res;
+        }) 
+}
+
 // для скрытия и показа блоков
+
 let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart'];
 const mainPage = document.querySelector('#mainPage');
 const categoryBlock = document.querySelector('#category');
