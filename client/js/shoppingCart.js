@@ -16,7 +16,7 @@ function showShoppingCart() {
         let elem = createElement('div', { className: 'cart-table__title' }, null, null, orders);
         let deleteProductBtn = createElement('span', {className: 'deleteBtn','data-delete': i }, {click: deleteProduct}, 'x', elem);
         let article = createElement('div',{className: "cart-table__order"}, null, null, elem);
-        createElement('img', { src:`client/`+ orderArr[i].img }, null, null, article);
+        createElement('img', { src: orderArr[i].img }, null, null, article);
         createElement('span',null, null, orderArr[i].name, article);
         createElement('span', {className: "cart-table__inform"}, null, orderArr[i].price + ' UAN', elem);
         let value = createElement(
