@@ -2,6 +2,7 @@ const allProductBtn = document.getElementById('allProductBtn');
 const buttonSaveFilter = document.getElementById('buttonSaveFilter');
 const filtersAvailabilityBtn = document.getElementById('filtersAvailabilityBtn');
 const allProductHeader = document.getElementById('allProductHeader');
+let modalOFWindow = document.getElementById('modalWindow');
 allProductBtn.addEventListener('click', showAllProduct);
 buttonSaveFilter.addEventListener('click', getCheckedCheckBoxes);
 filtersAvailabilityBtn.addEventListener('click', checkAvailability);
@@ -19,6 +20,7 @@ document.getElementById("filters-maxPriceBtn").oninput = function () {
 }
 
 function showAllProduct() {
+    modalOFWindow.classList.add('hidden')
     removeSort('ascendingAllProducts', 'descendingAllProducts', 'filtersAvailabilityBtn');
     document.getElementById('allProducts').textContent = '';
     pageCleanup();

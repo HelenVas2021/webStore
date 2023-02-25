@@ -12,9 +12,9 @@ const orderPage = document.getElementById("order");
 const basket = document.getElementById('pageShoppingCart');
 const parents = document.getElementById('product_order');
 parents.innerHTML = '';
-let totalPrice = 0;
+// let totalPrice = 0;
 orderArr.forEach(items => {
-	totalPrice += +items.price;
+	// totalPrice += +items.price;
 	let trItems = createElement('tr', { className: 'checked_product'}, null, null, parents);
 	createElement('td', { className: 'checked_product_text'}, null, ` ${items.name}`, trItems);
 	createElement('td', { className: 'checked_product_text'}, null, ` ${items.price} X ${items.value}`, trItems);
@@ -25,7 +25,6 @@ createElement('td', { className: 'checked_total_text'}, null, `${buyerPrice} $`,
 
 orderPage.classList.remove('hidden');
 basket.className = 'hidden';
-
 }
 
 
@@ -66,6 +65,7 @@ function userInfo(){
 
 orderPage.className='hiddenPage';
 confirmWindow.classList.remove('hiddenPage');
+
 }
 
 function saveInfo(userInfo){

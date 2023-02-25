@@ -1,5 +1,6 @@
 let buyerPrice;
-
+let modalWindow = document.getElementById('modalWindow');
+let modalBtn = document.getElementById('modalBtn');
 function showShoppingCart() {
     pageCleanup();
     document.getElementById('pageShoppingCart').classList.remove('hidden')
@@ -64,7 +65,9 @@ function showShoppingCart() {
         totalPrice = 0;
         let priceArr = JSON.parse(localStorage.getItem('orderArr'));
         if(priceArr===null){
-          return [];
+        modalWindow.classList.remove('hidden');
+       modalBtn.addEventListener('click',showAllProduct);
+       return [];
         }
         for (let i = 0; i < priceArr.length; i++) {
             totalPrice = totalPrice + priceArr[i].sum;

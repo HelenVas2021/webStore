@@ -385,7 +385,9 @@ textarea {
   width: 272px;
   height: 68px;
   font-size: 17px;
-
+  border: 1px solid #6e9c9f;
+  background: #6e9c9f;
+  color: #ffffff;
 } 
  .confirm_button:hover{
   background-color: #F8F9FA;
