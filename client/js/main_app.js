@@ -21,6 +21,7 @@ document.querySelector('#main_page_btn').addEventListener('click', ()=> {
     mainPage.classList.remove('hidden');
 });
 
+
 document.querySelector('#user_basket').addEventListener('click', ()=> {
     pageCleanup();
     shoppingCart.classList.remove('hidden');

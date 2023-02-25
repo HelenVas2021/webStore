@@ -29,7 +29,8 @@ function showAllSaleProduct() {
     let indexChildSale = 0;
     fetch(API_CATEGORIES_LIST)
         .then(res => res.json())
-        .then(data => {
+        .then(res => {
+            data = res.slice(0);
             for (let i = 0; i < data.length; i++) {
                 for (let j = 0; j < data[i].products.length; j++){
                     if (data[i].products[j].sale === true) {
@@ -174,7 +175,7 @@ function saleCharacteristic(categoryIndexSale, productIndexSale) {
     const parentSale = document.getElementById('listCharacteristic');
     let elemValueWithSale = Math.round(productCharacteristicSale.price-(productCharacteristicSale.price/100*parseFloat(percent))) ;
     parentSale.innerHTML = '';
-    document.getElementById('imgOneItem').setAttribute('src', productCharacteristicSale.main_images);
+    document.getElementById('imgOneItem').setAttribute('src',`client/`+ productCharacteristicSale.main_images);
     document.getElementById('titleOneItem').innerHTML = productCharacteristicSale.name;
     document.getElementById('priceOneItem').innerHTML = elemValueWithSale + ' UAH';
     for (let key in productCharacteristicSale) {
@@ -193,12 +194,12 @@ function saleCharacteristic(categoryIndexSale, productIndexSale) {
     let allPhotoArrSale = productCharacteristicSale.image_arr;
     let indexPhotoSale = 0;
     for (let i = 0; i < allPhotoArrSale.length; i++) {
-        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhotoSale, src: allPhotoArrSale[i] },  { click: miniPhotoShowSale }, null, allPhotoSale);
+        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhotoSale, src:`client/` + allPhotoArrSale[i] },  { click: miniPhotoShowSale }, null, allPhotoSale);
         indexPhotoSale++
     }
     function miniPhotoShowSale(event) {
         const miniPhotoIndexSale = event.target.getAttribute('data-photo');
-        document.getElementById('imgOneItem'). setAttribute('src', data[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
+        document.getElementById('imgOneItem'). setAttribute('src',`client/` + data[categoryIndex].products[productIndex].image_arr[miniPhotoIndexSale])
     }
 }
 

@@ -8,7 +8,7 @@ html {
 }
  .order_main {
   flex: 1 1 auto;
-  
+
 }
 
 .main_order {
@@ -341,27 +341,30 @@ textarea {
   top: 269px;
   left: 250px;
 }
+.confirm_window{
+  margin: 0 auto;
+}
 .get_order{
   width: 500px;
   height: 61px;
   font-size: 55px;
   line-height: 61px;
-  text-align: left;
+  text-align: center;
 }
 .marker_square{
   width: 72px;
   height: 84px;
   padding-left: 30px;
-  padding-top:250px;
+  padding-top:60px;
 }
 .marker_arrow{
   position: absolute;
-  top: 340px;
+  top: 150px;
   left:50px
 }
 .confirm_text_header{
   position: absolute;
-  top: 300px;
+  top: 150px;
   left:120px;
   font-size: 25px;
   line-height: 35px;
@@ -369,7 +372,7 @@ textarea {
 }
 .confirm_connection_text{
   position: absolute;
-  top: 335px;
+  top: 185px;
   left:120px;
   font-size: 17px;
   line-height: 24px;
@@ -377,8 +380,8 @@ textarea {
 }
 .confirm_button{
   position: absolute;
-  top: 320px;
-  margin-left: 500px;
+  top: 150px;
+  margin-left: 300px;
   width: 272px;
   height: 68px;
   font-size: 17px;

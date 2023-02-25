@@ -24,6 +24,7 @@ function showProductPage(event) {
         button.classList.remove('notButton');
         button.innerHTML='Buy'
     }
+
     breadcrumbs(categoryIndex, productIndex, pagesArr);
     characteristic(categoryIndex, productIndex);
     responses(categoryIndex, productIndex);
@@ -95,13 +96,13 @@ function breadcrumbs(categoryIndex, productIndex, pagesArr) {
 }
  // Блок характеристик 
 function characteristic(categoryIndex, productIndex) {
-    let productCharacteristic = data[categoryIndex].products[productIndex];
+    let productCharacteristic =  data[categoryIndex].products[productIndex];
     let discount = productCharacteristic.discount;
     let priceParrent = document.getElementById('priceSpan')
     priceParrent.innerHTML = '';
     const parent = document.getElementById('listCharacteristic');
     parent.innerHTML = '';
-    document.getElementById('imgOneItem').setAttribute('src', productCharacteristic.main_images);
+    document.getElementById('imgOneItem').setAttribute('src', `client/`+ productCharacteristic.main_images);
     document.getElementById('titleOneItem').innerHTML = productCharacteristic.name;
     let price = document.getElementById('priceOneItem');
     if (price.classList.contains('oneItem-price__sale')) {
@@ -127,12 +128,12 @@ function characteristic(categoryIndex, productIndex) {
     let allPhotoArr = productCharacteristic.image_arr;
     let indexPhoto = 0;
     for (let i = 0; i < allPhotoArr.length; i++) {
-        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhoto, src: allPhotoArr[i] },  { click: miniPhotoShow }, null, allPhoto);
+        createElement('img', { className: `oneItem__allPhoto`,'data-photo': indexPhoto, src:`client/`+ allPhotoArr[i] },  { click: miniPhotoShow }, null, allPhoto);
         indexPhoto++
     }
     function miniPhotoShow(event) {
         const miniPhotoIndex = event.target.getAttribute('data-photo');
-        document.getElementById('imgOneItem'). setAttribute('src', data[categoryIndex].products[productIndex].image_arr[miniPhotoIndex])
+        document.getElementById('imgOneItem'). setAttribute('src',`client/` + data[categoryIndex].products[productIndex].image_arr[miniPhotoIndex])
     }
 }
 // Блок с отзывами

@@ -1,3 +1,4 @@
+
 document.getElementById('confirm').addEventListener('click', userInfo);
 document.getElementById('checkout_btn').addEventListener('click', showOrderPage);
 
@@ -16,11 +17,11 @@ orderArr.forEach(items => {
 	totalPrice += +items.price;
 	let trItems = createElement('tr', { className: 'checked_product'}, null, null, parents);
 	createElement('td', { className: 'checked_product_text'}, null, ` ${items.name}`, trItems);
-	createElement('td', { className: 'checked_product_text'}, null, ` ${items.price}`, trItems);
+	createElement('td', { className: 'checked_product_text'}, null, ` ${items.price} X ${items.value}`, trItems);
 });
 let totalTR = createElement('tr', { className: 'checked_total'}, null, null, parents);
 createElement('td', { className: 'checked_total_text'}, null, 'TOTAL', totalTR);
-createElement('td', { className: 'checked_total_text'}, null, `${totalPrice} $`, totalTR);
+createElement('td', { className: 'checked_total_text'}, null, `${buyerPrice} $`, totalTR);
 
 orderPage.classList.remove('hidden');
 basket.className = 'hidden';
@@ -40,7 +41,7 @@ function userInfo(){
 		city: document.forms[5].elements.city.value,
 		street: document.forms[5].elements.street.value,
 		house: document.forms[5].elements.house.value,
-		apartment: document.forms[5].elements.apartment.value,
+		
 	  }
 	  defaultValue();
 

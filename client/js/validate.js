@@ -7,7 +7,6 @@ const validate = {
 	city: /[A-Za-z]{1,15}/,
 	street: /[A-Za-z]{1,15}/,
 	house: /[0-9]{1,3}/,
-	apartment: /[0-9]{1,3}/,
 }
 
 function checkValidate(userInfo) {
