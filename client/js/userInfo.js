@@ -3,8 +3,6 @@ document.getElementById('confirm').addEventListener('click', userInfo);
 document.getElementById('checkout_btn').addEventListener('click', showOrderPage);
 
 let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
-let orderPersonalPage = JSON.parse(localStorage.getItem('ordersPage'));
-
 
 function showOrderPage(){
 let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
@@ -51,17 +49,42 @@ function userInfo(){
 	 saveInfo(userInfo);
 	 document.forms[4].reset();
 	 document.forms[5].reset();
+	
+	//создание объекта и отправка его на сервер
+
+	let orderUser = {
+		id_order: `order_${Date.now()}`,
+		order_number: Date.now(),
+        dateOrder: new Date().toLocaleDateString(),
+        totalCost: buyerPrice,
+        products: [],
+		contacts: [
+			{
+				name: userInfo.formName,
+				eMail: userInfo.eMail,
+				phoneNumber: userInfo.phoneNumber,
+				country: userInfo.country,
+				city: userInfo.city,
+				street: userInfo.street,
+				house: userInfo.house,
+			}
+		]
+	}
 
 	 for(let i=0; i < orderArr.length; i++) {
 		let comment = document.querySelector('#comment').value;
-		let dataOrder = new Date().toLocaleDateString();
-		let orderId = `order_${orderArr[i].name}${Date.now()}`;
+		orderArr[i].id_product = `${orderUser.id_order}${orderArr[i].sum}`;
 		orderArr[i].comment = comment;
-		orderArr[i].dateOrder = dataOrder;
-		orderArr[i].id_order = orderId;
-		orderPersonalPage.push(orderArr[i]);
+		orderUser.products.push(orderArr[i]);
 	}
-	localStorage.setItem('ordersPage',JSON.stringify(orderPersonalPage));
+
+	fetch(API_ORDERS_LIST, {
+		    method: 'POST',
+		    body: JSON.stringify(orderUser),
+		    headers: {
+		        "Content-Type":"application/json"
+		    }
+		}).then(response => console.log(response))
 
 orderPage.className='hiddenPage';
 confirmWindow.classList.remove('hiddenPage');

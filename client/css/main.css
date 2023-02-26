@@ -559,14 +559,25 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    height: 500px;
+    min-height: 500px;
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
     margin: 50px 0;
 }
+.orders_block_info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #B3B3BA;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
 .orders_block {
     text-align: left;
-    width: 50%;
+    width: 60%;
 }
+
 .orders_block h2,
 .person_info_block h2,
 .orders_details h2 {
@@ -583,26 +594,57 @@ body {
     margin-bottom: 0;
 
 }
+.order_contacts {
+    color: #717171;
+    font-size: 12px;
+}
 .order_info {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
-    margin-bottom: 25px;
     cursor: pointer;
     display: inline-block;
+    width: 18%;
 }
-.order_info:hover {
-    color:#579763;
+.order_svg svg {
+    width: 18px;
+    fill: #6E9C9F;
 }
-.btn_delete {
-    margin: 0 15px;
-    font-size: 14px;
-    padding: 3px 15px;
-    text-transform: uppercase;
-    background: #6E9C9F;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border-radius: 4px;
-    border: none;
+.order_done {
+    width: 10%;
+    color: #579763;
+    font-weight: 600;
+    text-align: center;
+}
+.btn_delete, .order_svg {
+    width: 10%;
+    text-align: center;
     cursor: pointer;
+    padding: 15px 0;
+}
+.btn_delete svg {
+    width: 18px;
+    fill: rgb(237 37 37);
+    pointer-events: all;
+}
+.orders_block_info_product {
+    width: 100%;
+}
+.order_product {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.product_det {
+    text-transform: uppercase;
+    color: #6E9C9F;
+}
+.product_det:hover {
+    color:#579763;
+    cursor: pointer;
+}
+.order_svg:hover, .btn_delete:hover {
+    background: #fdfbfb;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 .person_info_block {
     font-family: 'Inter';
@@ -636,6 +678,11 @@ body {
     align-items: center;
     padding: 30px;
 }
+._cost {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+}
 
 .details_close {
     position: absolute;
@@ -663,6 +710,8 @@ body {
     filter: blur(0.3rem);
     pointer-events: none;
 }
+
+
 .orders_details_img {
     height: 250px;
 }
@@ -756,4 +805,5 @@ body {
     fill: #ffffff;
     margin-bottom: 20px;
 }
+
 

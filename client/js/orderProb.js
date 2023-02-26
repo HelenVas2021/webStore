@@ -1,4 +1,4 @@
-const orders = [
+const ord = [
     {
         id_order: "order_3",
         dateOrder: "12.02.2023",
@@ -6,7 +6,6 @@ const orders = [
         totalCost: 67998,
         products: [
             {
-            id_product: "order_3_29999",
             comment: "gift item, please pack nicely",
             name: "Samsung Galaxy S22",
             diagonal: 6.1,
@@ -21,17 +20,13 @@ const orders = [
             value: 1,
             },
             {
-            id_product: "order_3_37999",
             name: "ASUS TUF Gaming A15",
-            comment: "gift item, please pack nicely",
             diagonal: 15.6,
             price: 37999,
             color: "Black",
             processor: "Six-core processor AMD Rizen 3",
             OS: "without OS",
             memory: "512GB/16GB",
-            sum: 37999,
-            value: 1,
             main_images:'./client/images/salesData/saleLaptops/asus1.jpg',
             image_arr: ['./client/images/salesData/saleLaptops/asus1.jpg', './client/images/salesData/saleLaptops/asus1.1.jpg', './client/images/salesData/saleLaptops/asus1.2.jpg'],
             }
@@ -55,7 +50,6 @@ const orders = [
         totalCost: 35999,
         products: [
             {
-            id_product: "order_2_35999",
             comment: "gift item, please pack nicely",
             name: "Apple iPhone 13",
             diagonal: 6.1,
@@ -89,7 +83,6 @@ const orders = [
         totalCost: 48888,
         products: [
             {
-            id_product: "order_1_48888",
             comment: "gift item, please pack nicely",
             name: "Lenovo IdeaPad 5 Pro 16ACH6",
             diagonal: 16.0,
@@ -118,5 +111,3 @@ const orders = [
 		]
     }
 ]
-
-export default orders;
