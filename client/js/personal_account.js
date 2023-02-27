@@ -29,9 +29,7 @@ function initialOrders() {
             createElement('div', { className: 'order_info'}, null, ` From ${arrOrdersPersonalPage[i].dateOrder}`, parent);
             createElement('div', { className: 'order_info _cost'}, null, ` Total cost: ${arrOrdersPersonalPage[i].totalCost} UAH`, parent);
             createElement('div', { className: 'order_done'}, null, 'DONE', parent);
-
-            const btn_delete = createElement('div', { className: 'btn_delete', 'data-delete': `${arrOrdersPersonalPage[i].id_order}`,'data-info': i}, {click: deleteOrder},null, parent);
-            btn_delete.innerHTML = `<svg data-delete: ${arrOrdersPersonalPage[i].id_order} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>`
+            
             const img = createElement('div', { 'data-orderInfo': arrOrdersPersonalPage[i].order_number , className: 'order_svg', id:`${arrOrdersPersonalPage[i].id_order}`}, {click: showProductsOrder}, null, parent);
             img.innerHTML = `<svg id=${arrOrdersPersonalPage[i].id_order} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>`;
             createElement('div', { className: 'orders_block_info_product', id :arrOrdersPersonalPage[i].order_number}, null, null, parent);
@@ -79,24 +77,6 @@ function showProductsOrder(event) {
         intervalId = setTimeout (() => {
             list.classList.remove('open_list');
         },0);
-    }
-}
-function deleteOrder(event) {
-    const orderIndex = Number(event.target.getAttribute('data-info')); 
-   
-    if (event.target.className === 'btn_delete'){
-        document.querySelector('#popup').classList.add('open');
-            document.querySelector('#popup_delete').addEventListener ('click', function() {
-
-            // arrOrdersPersonalPage.splice(orderIndex, 1);
-            // localStorage.setItem('ordersPage', JSON.stringify(arrOrdersPersonalPage));        
-            // event.target.closest('div').remove();
-
-            document.querySelector('#popup').classList.remove('open');
-        });
-        document.querySelector('#popup_cancel').addEventListener ('click', function() {
-        document.querySelector('#popup').classList.remove('open');
-        });
     }
 }
 
