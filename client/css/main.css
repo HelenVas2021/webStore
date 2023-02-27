@@ -813,5 +813,41 @@ main {
     fill: #ffffff;
     margin-bottom: 20px;
 }
-
+.error {
+    border: 2px solid #c91414 !important;
+}
+.message, .message_pass {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #c91414;
+    display: none;
+}
+.show_message {
+    display: block;
+}
+.mode__size {
+    width: 44%;
+}
+.message_contacts {
+    width: 48%;
+}
+.message_contacts h2 {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    color: #579763;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.message_contacts p {
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 46px;
+}
 

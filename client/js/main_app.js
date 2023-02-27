@@ -26,6 +26,8 @@ document.querySelector('#aboutBtn').addEventListener('click', ()=> {
 document.querySelector('#contactsBtn').addEventListener('click', ()=> {
     pageCleanup()
     contacts.classList.remove('hidden');
+    document.querySelector('#form_contacts_person').classList.remove('hidden');
+	document.querySelector('.message_contacts').classList.add('hidden');
 });
 document.querySelector('#main_page_btn').addEventListener('click', ()=> {
     pageCleanup()

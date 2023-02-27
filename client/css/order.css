@@ -331,6 +331,13 @@ textarea {
   background-position: right 0.5625rem center;
   background-size: 15.125rem 1.125rem;
 }
+.mode__size {
+  width: 44%;
+}
+._telError {
+  margin-left: 45px;
+  background-position: right 55px center;
+}
 
 .hidden{
   visibility: hidden;

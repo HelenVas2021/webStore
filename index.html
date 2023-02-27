@@ -337,16 +337,21 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10163.16204060085!2d30.51128649621849!3d50.44500261937618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfb1fa95245d%3A0x315e64e66a95dc45!2zSmFjYWRpINCm0KPQnA!5e0!3m2!1sru!2sua!4v1674336865808!5m2!1sru!2sua" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="contacts-block_form">
-                    <form action="#" method="get">
+                <div class="contacts-block_form" id="form_contacts_person">
+                    <form id="contacts_form" name="contacts_form">
                         <h2>Have any questions? Contact us</h2>
-                        <p><input type="text" id="name" name="name" placeholder="Name"></p>
+                        <p><input type="text" id="name" name="name_contact" placeholder="Name"></p>
                         <p><input type="text" id="message" name="message" placeholder="Message"></p>
                         <h3>How to answer you?</h3>
                         <p><input type="tel" name="tel" id="tel" placeholder="Phone number"></p>
-                        <p><input type="email" name="email" id="email" placeholder="Email"></p>
-                        <button class="btn-accent">Send message</button>
+                        <p><input type="email" name="email_contact" id="email_contact" placeholder="Email"></p>
+                        <input type="button" class="btn-accent" id="btn_form_contact" value="Send message"></input>
                     </form>
+                </div>
+                <div class="message_contacts hidden">
+                    <h2>Thank you for your submission!</h2>
+                    <p>If you have any additional questions, please call us at +38050-333-22-55.</p>
+                    <p>Have a nice day!</p>
                 </div>
             </div>
         </div>
@@ -529,7 +534,6 @@
                 <h3 class = "b-popup-content">Cart is currently empty, let's fix it!</h3>
                 <button class="modalBtn" id = 'modalBtn'>Go to product list</button>
           </div>
-
     </main>
     <footer class="footer">
         <div class="container">
