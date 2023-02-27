@@ -66,7 +66,11 @@ function showShoppingCart() {
         let priceArr = JSON.parse(localStorage.getItem('orderArr'));
         if(priceArr===null){
         modalWindow.classList.remove('hidden');
-       modalBtn.addEventListener('click',showAllProduct);
+        document.getElementById('pageShoppingCart').classList.add('block_blurs');
+        modalBtn.addEventListener('click',() => {
+            document.getElementById('pageShoppingCart').classList.remove('block_blurs');
+            showAllProduct();
+        });
        return [];
         }
         for (let i = 0; i < priceArr.length; i++) {
