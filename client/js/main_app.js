@@ -10,15 +10,20 @@ async function getData() {
 
 // для скрытия и показа блоков
 
-let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart'];
+let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart','confirm_window'];
 const mainPage = document.querySelector('#mainPage');
 const categoryBlock = document.querySelector('#category');
 const about = document.querySelector('#about');
 const contacts = document.querySelector('#contacts');
 const userPage = document.querySelector('#personal_page');
 const shoppingCart = document.getElementById('pageShoppingCart');
+const salesPage = document.getElementById('allProductPage');
 
 
+document.getElementById('allSaleBtn').addEventListener('click', ()=>{
+    pageCleanup();
+    salesPage.classList.remove('hidden');
+})
 document.querySelector('#aboutBtn').addEventListener('click', ()=> {
     pageCleanup()
     about.classList.remove('hidden');
@@ -44,6 +49,7 @@ document.querySelector('#user_page').addEventListener('click', ()=> {
     pageCleanup();
     userPage.classList.remove('hidden');
 });
+
 
 function pageCleanup() {
     for (let i = 0; i < pageArr.length; i++) {

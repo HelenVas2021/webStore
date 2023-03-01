@@ -27,6 +27,7 @@ function showAllSaleProduct() {
     let indexSale = 0;
     let indexParentSale = 0;
     let indexChildSale = 0;
+    showFilters();
     fetch(API_CATEGORIES_LIST)
         .then(res => res.json())
         .then(res => {

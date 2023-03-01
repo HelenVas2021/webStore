@@ -128,6 +128,7 @@ textarea:focus {
 
 .text-field_floating-3 .text-field__input,
 textarea {
+  position: relative;
   border: none;
   border-bottom: 1px solid #000;
   border-radius: 0;
@@ -137,6 +138,7 @@ textarea {
   line-height: 1.25;
   padding: 1rem 0.75rem;
   margin: 10px;
+  
   
 } 
  
@@ -237,7 +239,6 @@ textarea {
   text-align: left;
 } 
 
-
  .checked_total {
   height: 57px;
   background-color: #f1eadc;
@@ -246,14 +247,12 @@ textarea {
 }
 
 .checked_total_text {
- 
   text-align: left;
   padding: 15px;
   font-size: 20px;
   line-height: 28px;
   color: #000000;
   letter-spacing: 2%;
-
 }
 .checked_payment {
   margin-top: 160px;
@@ -319,7 +318,6 @@ textarea {
 
 .text-field__message {
     position: absolute;
-    /* padding-left: 5px; */
   display: block;
   width: 80%;
   margin-top: .25rem;
@@ -330,6 +328,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: right 0.5625rem center;
   background-size: 15.125rem 1.125rem;
+  z-index: -1;
 }
 .mode__size {
   width: 44%;
@@ -344,9 +343,10 @@ textarea {
   
 }
 .final_confirm{
-  position: absolute;
-  top: 269px;
-  left: 250px;
+  flex: 1 1 auto;
+  min-height: 100%;
+  margin-left: 250px;
+  margin-bottom: 50px;
 }
 .confirm_window{
   margin: 0 auto;
@@ -367,12 +367,12 @@ textarea {
 .marker_arrow{
   position: absolute;
   top: 150px;
-  left:50px
+  left:300px
 }
 .confirm_text_header{
   position: absolute;
   top: 150px;
-  left:120px;
+  left:380px;
   font-size: 25px;
   line-height: 35px;
   text-align: left;
@@ -380,14 +380,12 @@ textarea {
 .confirm_connection_text{
   position: absolute;
   top: 185px;
-  left:120px;
+  left:380px;
   font-size: 17px;
   line-height: 24px;
   text-align: left;
 }
 .confirm_button{
-  position: absolute;
-  top: 150px;
   margin-left: 300px;
   width: 272px;
   height: 68px;
@@ -402,9 +400,5 @@ textarea {
   border: 1px solid #579763;
   box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
   cursor: pointer;
-  
-} 
-.final_confirm {
-  flex: 1 1 auto;
   
 } 

@@ -1,4 +1,4 @@
-
+const confirmPage = document.getElementById('order');
 document.getElementById('confirm').addEventListener('click', userInfo);
 document.getElementById('checkout_btn').addEventListener('click', showOrderPage);
 
@@ -6,7 +6,7 @@ let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
 
 function showOrderPage(){
 let orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
-const orderPage = document.getElementById("order");
+const orderPage = document.getElementById("order_page");
 const basket = document.getElementById('pageShoppingCart');
 const parents = document.getElementById('product_order');
 parents.innerHTML = '';
@@ -22,6 +22,7 @@ createElement('td', { className: 'checked_total_text'}, null, 'TOTAL', totalTR);
 createElement('td', { className: 'checked_total_text'}, null, `${buyerPrice} $`, totalTR);
 
 orderPage.classList.remove('hidden');
+confirmPage.classList.remove('hidden');
 basket.className = 'hidden';
 }
 
@@ -86,9 +87,10 @@ function userInfo(){
 		    }
 		}).then(response => console.log(response))
 
-orderPage.className='hiddenPage';
-confirmWindow.classList.remove('hiddenPage');
-
+orderPage.className='hidden';
+confirmWindow.classList.remove('hidden');
+confirmPage.classList.remove('hidden');
+localStorage.removeItem('orderArr');
 }
 
 function saveInfo(userInfo){
@@ -102,10 +104,10 @@ function saveInfo(userInfo){
 	localStorage.setItem('historyOrders', JSON.stringify(historyOrders));
 }
 
-document.getElementById('final_confirm_page').addEventListener('click',() => {
+  document.getElementById('final_confirm_page').addEventListener('click',() => {
 	const confirmWindow = document.getElementById('confirm_window');
-	confirmWindow.className = 'hiddenPage';
-	
+	confirmWindow.className = 'hidden';
+	confirmPage.className = 'hidden';;
 })
 
 
