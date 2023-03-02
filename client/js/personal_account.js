@@ -16,6 +16,8 @@ let clientInfoPage = JSON.parse(localStorage.getItem('client'));
 function initialOrders() {
     const parentListPerson = document.querySelector('.person_info_block');
     const parentListOrder = document.querySelector('.orders_block');
+    parentListOrder.innerHTML = "";
+    parentListPerson.innerHTML = "";
     
     for (const key in clientInfoPage) {      
         createElement('div', { className: 'person_info'}, null, `Name: ${client[key].name}`, parentListPerson);

@@ -581,13 +581,13 @@ main {
     margin-bottom: 10px;
     justify-content: space-between;
 }
-.orders_block {
+.orders_block_main {
     text-align: left;
     width: 60%;
 }
 
-.orders_block h2,
-.person_info_block h2,
+.orders_block_main h2,
+.person_info_block_main h2,
 .orders_details h2 {
     font-family: 'Inter';
     font-size: 30px;
@@ -654,14 +654,14 @@ main {
     background: #fdfbfb;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
-.person_info_block {
+.person_info_block_main {
     font-family: 'Inter';
     font-size: 20px;
     padding: 30px;
     background: rgb(110, 156, 159, 50%);
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
 }
-.person_info_block h2 {
+.person_info_block_main h2 {
     font-size: 20px;
     color: #ffffff;
 }

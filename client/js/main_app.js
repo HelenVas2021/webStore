@@ -48,6 +48,7 @@ document.querySelector('#user_basket').addEventListener('click', ()=> {
 document.querySelector('#user_page').addEventListener('click', ()=> {
     pageCleanup();
     userPage.classList.remove('hidden');
+    getDataOrderArr();
 });
 
 

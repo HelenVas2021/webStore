@@ -55,18 +55,7 @@ function addToShoppingCart() {
         value: Number(value),
         sum: value * price,
     }
-
-    // fetch(API_ORDERS_LIST, {
-    //     method: 'POST',
-    //     body: JSON.stringify(order),
-    //     headers: {
-    //         "Content-Type":"application/json"
-    //     }
-    // }).then(response => console.log(response))
     
-    // fetch(API_ORDERS_LIST)
-    //     .then(res => res.json())
-    //     .then(res => console.log(res))
     
     const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
     let indexProduct = undefined;
