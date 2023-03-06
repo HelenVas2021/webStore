@@ -3,7 +3,9 @@ let modalWindow = document.getElementById('modalWindow');
 let modalBtn = document.getElementById('modalBtn');
 function showShoppingCart() {
     pageCleanup();
-    document.getElementById('pageShoppingCart').classList.remove('hidden')
+    const pageShoppingCart = document.getElementById('pageShoppingCart');
+    pageShoppingCart.classList.remove('hidden');
+    pageShoppingCart.classList.add('container_slim');
     breadcrumbsCart();
     const orderArr = JSON.parse(localStorage.getItem('orderArr')) || [];
     let orders = document.getElementById('orders')
