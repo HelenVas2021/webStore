@@ -90,7 +90,9 @@ function userInfo(){
 orderPage.className='hidden';
 confirmWindow.classList.remove('hidden');
 confirmPage.classList.remove('hidden');
+countProduct = 0;
 localStorage.removeItem('orderArr');
+
 }
 
 function saveInfo(userInfo){
