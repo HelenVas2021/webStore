@@ -24,7 +24,7 @@
 
 - **Product catalog with the ability to filter and sort**
 <p align="center">
-<img src="./client/images/readme/product.jpg" width="80%"></p>
+<img src="./client/images/readme/products.jpg" width="80%"></p>
 
 - **Personal page with a list of completed orders**
 <p align="center">
