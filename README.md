@@ -16,7 +16,26 @@
 
 - **Slider**
 <p align="center">
-<img src="./client/images/readme" width="80%"></p>
+<img src="./client/images/readme/slider.jpg" width="80%"></p>
 
+- **Drop-down menu**
+<p align="center">
+<img src="./client/images/readme/menu.jpg" width="80%"></p>
+
+- **Product catalog with the ability to filter and sort**
+<p align="center">
+<img src="./client/images/readme/product.jpg" width="80%"></p>
+
+- **Personal page with a list of completed orders**
+<p align="center">
+<img src="./client/images/readme/orders.jpg" width="80%"></p>
+
+- **Using modal windows**
+<p align="center">
+<img src="./client/images/readme/modal.jpg" width="80%"></p>
+
+- **Shopping cart with the ability to delete and change the number of products**
+<p align="center">
+<img src="./client/images/readme/cart.jpg" width="80%"></p>
 
 
