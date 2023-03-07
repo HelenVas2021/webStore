@@ -4,7 +4,6 @@ let countProduct = 0;
 
 
 function showProductPage(event) {
-    console.log(data)
     window.scrollTo(0,0);
     let pagesArr = ['category', 'mainPage', 'oneItem', 'allProductPage'];
     pageCleanup()
