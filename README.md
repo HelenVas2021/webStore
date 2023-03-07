@@ -12,6 +12,18 @@
 - **SPA - Single Page Application**
 - **Backend implementation for sending and receiving data**
 
+<h3 align="center">How to start a project:</h3>
+
+- in the root folder in the terminal enter: **npm i**
+- run command **gulp**
+<p>Launch terminal 2 (for backend operation):</p>
+
+- in the terminal go to the folder "server": **cd server**
+- then to folder "js": **cd js**
+- run command **node app.js**
+
+<p>Use file **INDEX.HTML** from folder "build"</p>
+
 <h2 align="center">Project details</h2>
 
 - **Slider**
