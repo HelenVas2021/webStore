@@ -19,6 +19,7 @@
 <p>Launch terminal 2 (for backend operation):</p>
 
 - in the terminal go to the folder "server": **cd server**
+- enter: **npm i**
 - then to folder "js": **cd js**
 - run command **node app.js**
 
@@ -28,26 +29,26 @@
 
 - **Slider**
 <p align="center">
-<img src="./client/images/readme/slider.jpg" width="80%"></p>
+<img src="./client/images/readme/slider.jpg" width="100%"></p>
 
 - **Drop-down menu**
 <p align="center">
-<img src="./client/images/readme/menu.jpg" width="80%"></p>
+<img src="./client/images/readme/menu.jpg" width="100%"></p>
 
 - **Product catalog with the ability to filter and sort**
 <p align="center">
-<img src="./client/images/readme/products.jpg" width="80%"></p>
+<img src="./client/images/readme/products.jpg" width="100%"></p>
 
 - **Personal page with a list of completed orders**
 <p align="center">
-<img src="./client/images/readme/orders.jpg" width="80%"></p>
+<img src="./client/images/readme/orders.jpg" width="100%"></p>
 
 - **Using modal windows**
 <p align="center">
-<img src="./client/images/readme/modal.jpg" width="80%"></p>
+<img src="./client/images/readme/modal.jpg" width="100%"></p>
 
 - **Shopping cart with the ability to delete and change the number of products**
 <p align="center">
-<img src="./client/images/readme/cart.jpg" width="80%"></p>
+<img src="./client/images/readme/cart.jpg" width="100%"></p>
 
 
