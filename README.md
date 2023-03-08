@@ -57,7 +57,7 @@
 
 - **Product feedback form**
 <p align="center">
-<img src="./client/images/readme/feedback.jpg" width="100%"></p>
+<img src="./client/images/readme/feedback.jpg" width="60%"></p>
 
 - **Order form (order information sent to the backend and displayed in the personal page)**
 <p align="center">
