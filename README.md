@@ -23,7 +23,7 @@
 - then to folder "js": **cd js**
 - run command **node app.js**
 
-<p>Use file **INDEX.HTML** from folder "build"</p>
+<p>Use file INDEX.HTML from folder "build"</p>
 
 <h2 align="center">Project details</h2>
 
