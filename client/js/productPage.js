@@ -73,7 +73,7 @@ function addToShoppingCart() {
             orderArr.push(order);
         }
     } else {
-        orderArr[indexProduct].value += 1;
+        orderArr[indexProduct].value += Number(value);
         orderArr[indexProduct].sum = orderArr[indexProduct].value * orderArr[indexProduct].price;
     }
     countProduct++;
@@ -102,6 +102,7 @@ function characteristic(categoryIndex, productIndex) {
     let discount = productCharacteristic.discount;
     let priceParrent = document.getElementById('priceSpan')
     priceParrent.innerHTML = '';
+    document.getElementById('numberOfGoods').value = 1;
     const parent = document.getElementById('listCharacteristic');
     parent.innerHTML = '';
     document.getElementById('imgOneItem').setAttribute('src', productCharacteristic.main_images);
