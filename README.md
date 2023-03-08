@@ -51,4 +51,16 @@
 <p align="center">
 <img src="./client/images/readme/cart.jpg" width="100%"></p>
 
+- **Product page with product details and photos**
+<p align="center">
+<img src="./client/images/readme/product_page.jpg" width="100%"></p>
+
+- **Product feedback form**
+<p align="center">
+<img src="./client/images/readme/feedback.jpg" width="100%"></p>
+
+- **Order form (order information sent to the backend and displayed in the personal page)**
+<p align="center">
+<img src="./client/images/readme/order_page.jpg" width="100%"></p>
+
 
