@@ -10,7 +10,7 @@ async function getData() {
 
 // для скрытия и показа блоков
 
-let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart','confirm_window'];
+let pageArr = ['mainPage', 'category', 'allProductPage', 'about', 'contacts', 'oneItem','personal_page','pageShoppingCart','confirm_window', 'order'];
 const mainPage = document.querySelector('#mainPage');
 const categoryBlock = document.querySelector('#category');
 const about = document.querySelector('#about');
