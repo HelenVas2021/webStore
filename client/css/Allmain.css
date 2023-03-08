@@ -825,9 +825,6 @@ main {
 .show_message {
     display: block;
 }
-.mode__size {
-    width: 44%;
-}
 .message_contacts {
     width: 48%;
 }
